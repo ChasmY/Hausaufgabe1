@@ -1,4 +1,4 @@
-public class Client extends Person implements Gamble{
+public class Client extends Person{
     public int currentMoney, winnings, losses;
 
     public Client(String firstName, String secondName, int age, int currentMoney) {

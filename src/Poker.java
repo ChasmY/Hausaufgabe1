@@ -1,2 +1,2 @@
-public class Poker implements Gamble{
+public class Poker{
 }

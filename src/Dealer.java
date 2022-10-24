@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Dealer extends Person implements Gamble{
+public class Dealer extends Person{
 
     public List<AvailableGames> gamesKnown = new ArrayList<AvailableGames>();
 
