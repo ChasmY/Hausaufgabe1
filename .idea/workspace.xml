@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="First" />
+    <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="Second">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gamble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gamble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Poker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Poker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Roulette.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roulette.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,6 +58,14 @@
       <workItem from="1666620955575" duration="297000" />
       <workItem from="1666624272005" duration="3829000" />
     </task>
+    <task id="LOCAL-00001" summary="Second">
+      <created>1666629431147</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666629431147</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -68,5 +81,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Second" />
+    <option name="LAST_COMMIT_MESSAGE" value="Second" />
   </component>
 </project>
