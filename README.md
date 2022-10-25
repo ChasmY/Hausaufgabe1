@@ -17,3 +17,7 @@ er leiht sich von einem anderen Kunden mit der Bedingung, dass er dieselbe Gelds
 er leiht sich von einer Bank mit der Bedingung, dass er dieselbe Geldsumme mit einer bestimmten Zins zurückgibt.
 
 
+![image](https://user-images.githubusercontent.com/57799203/197743449-1b3ecd8c-4f6a-4103-b573-043ce2a4eb07.png)
+
+
+
