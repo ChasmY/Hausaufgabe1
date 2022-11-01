@@ -1,10 +1,8 @@
 package Repository.InMemory;
 
 import Repository.CrudRepo;
-import model.Dealer;
 import model.User;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
