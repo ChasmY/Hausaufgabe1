@@ -1,7 +1,6 @@
 package Repository.InMemory;
 import Repository.CrudRepo;
 import Repository.Games.AvailableGames;
-import com.sun.xml.internal.bind.v2.model.core.ID;
 import model.Dealer;
 
 import java.util.List;
@@ -12,7 +11,7 @@ public class DealerRepositoryMemory implements CrudRepo<String, Dealer> {
 
     public DealerRepositoryMemory(List<Dealer> allDealers){
         this.allDealers = allDealers;
-        populateDealers();
+        //populateDealers();
     }
 
     public void populateDealers(){
@@ -44,8 +43,8 @@ public class DealerRepositoryMemory implements CrudRepo<String, Dealer> {
 
     @Override
     public void update(String s, Dealer newEntity) {
-        for(Dealer dealer: allDealers)
-            if(Objects.equals(dealer.getName(), s))
+        for (Dealer dealer : allDealers)
+            if (Objects.equals(dealer.getName(), s))
                 dealer = newEntity;
     }
 
@@ -55,5 +54,12 @@ public class DealerRepositoryMemory implements CrudRepo<String, Dealer> {
             if(Objects.equals(dealer.getName(), s))
                 return dealer;
         return null;
+    }
+
+    public int size(){
+        int k=0;
+        for(Dealer dealer: allDealers)
+            k+=1;
+        return k;
     }
 }

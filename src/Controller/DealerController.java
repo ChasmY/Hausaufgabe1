@@ -30,4 +30,9 @@ public class DealerController extends DealerRepositoryMemory {
     public Dealer findById(String s) {
         return super.findById(s);
     }
+
+    @Override
+    public int size(){
+        return super.size();
+    }
 }
