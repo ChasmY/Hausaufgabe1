@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="5th">
-      <change afterPath="$PROJECT_DIR$/src/Controller/ClientController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/ClientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/Games/Cards.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/InMemory/ClientRepositoryMemory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ViewLayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DealerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DealerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DealerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DealerControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/Games/Poker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/Games/Poker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/InMemory/DealerRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/InMemory/DealerRepositoryMemory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/InMemory/UserRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/InMemory/UserRepositoryMemory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Dealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Dealer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Server.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
-    </list>
+    <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="Poker + view si sortari implementate" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -210,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667828225305</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Poker + view si sortari implementate">
+      <created>1668885867574</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668885867574</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +221,8 @@
     <MESSAGE value="Third" />
     <MESSAGE value="4th" />
     <MESSAGE value="5th" />
-    <option name="LAST_COMMIT_MESSAGE" value="5th" />
+    <MESSAGE value="Poker + view si sortari implementate" />
+    <option name="LAST_COMMIT_MESSAGE" value="Poker + view si sortari implementate" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -241,16 +231,6 @@
           <url>file://$PROJECT_DIR$/src/Main.java</url>
           <line>31</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ViewLayer.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ViewLayer.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
