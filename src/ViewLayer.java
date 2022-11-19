@@ -1,6 +1,7 @@
 import Controller.ClientController;
 import Controller.DealerController;
 import Controller.UserController;
+import Repository.Games.Poker.Poker;
 import model.Client;
 import model.Dealer;
 import model.User;
@@ -72,7 +73,10 @@ public class ViewLayer {
         while(ok.hasNextInt()) {
             int var = ok.nextInt();
             if (var == 1) {
-                //de ales jocul
+                Poker game = new Poker();
+
+                // play game
+                game.play();
                 clientLoged();
             }
             if (var == 2) {
