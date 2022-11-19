@@ -1,6 +1,7 @@
 package model;
 
 public class Client extends User {
+    private int currentMoney, winnings, losses;
     public int getCurrentMoney() {
         return currentMoney;
     }
@@ -25,10 +26,9 @@ public class Client extends User {
         this.losses = losses;
     }
 
-    private int currentMoney, winnings, losses;
-
     public Client(String name, String password, int age, int currentMoney) {
         super(name, password, age);
+
         this.currentMoney = currentMoney;
         this.winnings = 0;
         this.losses = 0;

@@ -1,7 +1,8 @@
 package model;
 
 public class User {
-    public String name;
+    private int age;
+    private String name, password;
 
     public String getPassword() {
         return password;
@@ -11,9 +12,7 @@ public class User {
         this.password = password;
     }
 
-    public String password;
-
-    public String getName() {
+    public String getName(){
         return name;
     }
 
@@ -21,14 +20,13 @@ public class User {
         this.name = name;
     }
 
-    public int getAge() {
+    public int getAge(){
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(int age){
         this.age = age;
     }
-    private int age;
 
     public User(String name, String password, int age) {
         this.name = name;

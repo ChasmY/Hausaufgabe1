@@ -1,5 +1,6 @@
 package Controller;
 
+import Repository.InMemory.DealerRepositoryMemory;
 import model.Dealer;
 import sun.awt.util.IdentityArrayList;
 
@@ -10,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class DealerControllerTest {
     private List<Dealer> dealerList = new ArrayList<Dealer>();
-    DealerController dealers = new DealerController(dealerList);
+    DealerController dealers = new DealerController((ArrayList<Dealer>) dealerList);
 
 
     @org.junit.jupiter.api.Test

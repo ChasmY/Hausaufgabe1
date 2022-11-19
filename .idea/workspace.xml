@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="4th">
-      <change afterPath="$PROJECT_DIR$/src/Controller/DealerControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/UserControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Server.java" afterDir="false" />
+    <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="5th">
+      <change afterPath="$PROJECT_DIR$/src/Controller/ClientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/ClientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/Games/Cards.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/InMemory/ClientRepositoryMemory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ViewLayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hausaufgabe1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Hausaufgabe1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/DealerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DealerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DealerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DealerControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/Games/Poker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/Games/Poker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/InMemory/DealerRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/InMemory/DealerRepositoryMemory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/InMemory/UserRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/InMemory/UserRepositoryMemory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Dealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Dealer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +28,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="JUnit5 Test Class" />
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -62,11 +71,14 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="Repository.InMemory" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="Controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DealerControllerTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Hausaufgabe1" />
@@ -123,10 +135,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.DealerControllerTest" />
         <item itemvalue="JUnit.DealerControllerTest.update" />
         <item itemvalue="JUnit.DealerControllerTest.add" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -153,7 +165,15 @@
       <workItem from="1667297792270" duration="3906000" />
       <workItem from="1667491082050" duration="189000" />
       <workItem from="1667494338395" duration="632000" />
-      <workItem from="1667823744004" duration="4298000" />
+      <workItem from="1667823744004" duration="4453000" />
+      <workItem from="1667828311232" duration="382000" />
+      <workItem from="1668096725376" duration="1800000" />
+      <workItem from="1668363573641" duration="1903000" />
+      <workItem from="1668432633817" duration="3187000" />
+      <workItem from="1668437816177" duration="1538000" />
+      <workItem from="1668441240925" duration="12598000" />
+      <workItem from="1668507904667" duration="3883000" />
+      <workItem from="1668863107077" duration="2329000" />
     </task>
     <task id="LOCAL-00001" summary="Second">
       <created>1666629431147</created>
@@ -183,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667300198638</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="5th">
+      <created>1667828225305</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667828225305</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +231,29 @@
     <MESSAGE value="Second" />
     <MESSAGE value="Third" />
     <MESSAGE value="4th" />
-    <option name="LAST_COMMIT_MESSAGE" value="4th" />
+    <MESSAGE value="5th" />
+    <option name="LAST_COMMIT_MESSAGE" value="5th" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ViewLayer.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ViewLayer.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -3,6 +3,7 @@ package Repository.InMemory;
 import Repository.CrudRepo;
 import model.User;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -11,7 +12,7 @@ public class UserRepositoryMemory implements CrudRepo<String, User> {
 
     public UserRepositoryMemory(List<User> allUsers) {
         this.allUsers = allUsers;
-        populateUsers();
+//        populateUsers();
     }
 
     public void populateUsers() {

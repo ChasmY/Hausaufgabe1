@@ -3,17 +3,16 @@ import Repository.CrudRepo;
 import Repository.Games.AvailableGames;
 import model.Dealer;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class DealerRepositoryMemory implements CrudRepo<String, Dealer> {
-    private List<Dealer> allDealers;
+    private final List<Dealer> allDealers = new ArrayList<>();
 
-    public DealerRepositoryMemory(List<Dealer> allDealers){
-        this.allDealers = allDealers;
-        //populateDealers();
+    public ArrayList<Dealer> getList(){
+        return (ArrayList<Dealer>) this.allDealers;
     }
-
     public void populateDealers(){
         Dealer dealer1 = new Dealer("Vasile", "4564", 35);
         Dealer dealer2 = new Dealer("George", "4514", 45);
