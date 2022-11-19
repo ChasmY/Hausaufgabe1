@@ -10,7 +10,7 @@ public class DealerController extends DealerRepositoryMemory {
     private DealerRepositoryMemory sortedAllDealers;
     public DealerController(ArrayList<Dealer> allDealers) {
         this.allDealers = allDealers;
-        populateDealers();
+//        populateDealers();
     }
 
     public ArrayList<Dealer> getList(){

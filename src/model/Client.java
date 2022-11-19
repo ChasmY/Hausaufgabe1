@@ -28,7 +28,6 @@ public class Client extends User {
 
     public Client(String name, String password, int age, int currentMoney) {
         super(name, password, age);
-
         this.currentMoney = currentMoney;
         this.winnings = 0;
         this.losses = 0;

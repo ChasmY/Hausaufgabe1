@@ -23,7 +23,6 @@ public class Dealer extends User {
         this.gamesKnown.add(game);
     }
     public Dealer(String name, String password, int age) {
-
         super(name, password, age);
         this.gamesKnown = new ArrayList<AvailableGames>();
     }
