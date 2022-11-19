@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="5th">
-      <change afterPath="$PROJECT_DIR$/src/Controller/ClientController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/ClientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/Games/Cards.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/InMemory/ClientRepositoryMemory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ViewLayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DealerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DealerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DealerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DealerControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/Games/Poker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/Games/Poker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/InMemory/DealerRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/InMemory/DealerRepositoryMemory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/InMemory/UserRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/InMemory/UserRepositoryMemory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Dealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Dealer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Server.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hausaufgabe1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Hausaufgabe1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ViewLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ViewLayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,6 +160,7 @@
       <workItem from="1668441240925" duration="12598000" />
       <workItem from="1668507904667" duration="3883000" />
       <workItem from="1668863107077" duration="2329000" />
+      <workItem from="1668869706937" duration="4044000" />
     </task>
     <task id="LOCAL-00001" summary="Second">
       <created>1666629431147</created>
@@ -233,27 +220,6 @@
     <MESSAGE value="4th" />
     <MESSAGE value="5th" />
     <option name="LAST_COMMIT_MESSAGE" value="5th" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ViewLayer.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ViewLayer.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
