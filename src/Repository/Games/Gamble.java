@@ -33,7 +33,4 @@ public class Gamble {
     public void setDealer(Dealer dealer) {
         this.dealer = dealer;
     }
-
-
-
 }

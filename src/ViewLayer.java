@@ -1,7 +1,9 @@
 import Controller.ClientController;
 import Controller.DealerController;
 import Controller.UserController;
+import Repository.Games.AvailableGames;
 import Repository.Games.Poker.Poker;
+import Repository.Games.Roulette;
 import model.Client;
 import model.Dealer;
 import model.User;
@@ -9,6 +11,7 @@ import sun.invoke.empty.Empty;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class ViewLayer {
@@ -19,7 +22,7 @@ public class ViewLayer {
     User user = new User("", "", 21);
     UserController userList = new UserController(new ArrayList<>());
 
-    public void start(){
+    public void start() throws Exception {
 //        printingLists();
 //        System.exit(0);
         System.out.println("1 - Log in as a client");
@@ -65,7 +68,38 @@ public class ViewLayer {
         clientList.add(client);
     }
 
-    public void clientLoged(){
+    public void playGames() throws Exception {
+        boolean found = false;
+        System.out.println("What game would you want to play?");
+        System.out.println("Poker - Play Poker");
+        System.out.println("Roulette - Play Roulette");
+        System.out.println("Blackjack - Play Blackjack");
+        System.out.println("Slots - Play Slots");
+        Scanner gameMode = new Scanner(System.in);
+        while(gameMode.hasNextLine()) {
+            found = false;
+            String game = gameMode.nextLine();
+            for (AvailableGames availableGames : AvailableGames.values())
+                if (Objects.equals(game, availableGames)) {
+                    found = true;
+                    break;
+                }
+            if (!found)
+                throw new Exception("Incorrect game name. Choose another one");
+            else {
+                if (Objects.equals(game, "Poker")) {
+                    Poker poker = new Poker();
+                    poker.play();
+                }
+                if (Objects.equals(game, "Roulette")) {
+                    Roulette roulette = new Roulette();
+                    roulette.play();
+                }
+            }
+        }
+    }
+
+    public void clientLoged() throws Exception {
         System.out.println("1 - Choose game");
         System.out.println("2 - Deposit money");
         System.out.println("3 - Check current money");
@@ -75,10 +109,7 @@ public class ViewLayer {
         while(ok.hasNextInt()) {
             int var = ok.nextInt();
             if (var == 1) {
-                Poker game = new Poker();
-
-                // play game
-                game.play();
+                playGames();
                 clientLoged();
             }
             if (var == 2) {
