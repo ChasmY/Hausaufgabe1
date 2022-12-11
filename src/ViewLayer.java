@@ -32,10 +32,10 @@ public class ViewLayer {
             int c = console.nextInt();
             if (c == 1) {
                 loginClient();
-                clientLoged();
+                clientLogged();
             } else if (c == 2) {
                 loginDealer();
-                dealerLoged();
+                dealerLogged();
             }
         }
     }
@@ -74,32 +74,29 @@ public class ViewLayer {
         System.out.println("Poker - Play Poker");
         System.out.println("Roulette - Play Roulette");
         System.out.println("Blackjack - Play Blackjack");
-        System.out.println("Slots - Play Slots");
         Scanner gameMode = new Scanner(System.in);
-        while(gameMode.hasNextLine()) {
-            found = false;
-            String game = gameMode.nextLine();
-            for (AvailableGames availableGames : AvailableGames.values())
-                if (Objects.equals(game, availableGames)) {
-                    found = true;
-                    break;
-                }
-            if (!found)
-                throw new Exception("Incorrect game name. Choose another one");
-            else {
-                if (Objects.equals(game, "Poker")) {
-                    Poker poker = new Poker();
-                    poker.play();
-                }
-                if (Objects.equals(game, "Roulette")) {
-                    Roulette roulette = new Roulette();
-                    roulette.play();
-                }
+        String game = gameMode.next();
+        found = false;
+        for (AvailableGames availableGames : AvailableGames.values())
+            if (Objects.equals(game, availableGames.name())) {
+                found = true;
+                break;
+            }
+        if (!found)
+            throw new Exception("Incorrect game name. Choose another one");
+        else {
+            if (Objects.equals(game, "Poker")) {
+                Poker poker = new Poker();
+                poker.play();
+            }
+            if (Objects.equals(game, "Roulette")) {
+                Roulette roulette = new Roulette();
+                roulette.play();
             }
         }
     }
 
-    public void clientLoged() throws Exception {
+    public void clientLogged() throws Exception {
         System.out.println("1 - Choose game");
         System.out.println("2 - Deposit money");
         System.out.println("3 - Check current money");
@@ -110,26 +107,26 @@ public class ViewLayer {
             int var = ok.nextInt();
             if (var == 1) {
                 playGames();
-                clientLoged();
+                clientLogged();
             }
             if (var == 2) {
                 System.out.println("Enter deposit ");
                 Scanner ok1 = new Scanner(System.in);
                 client.setWinnings(ok1.nextInt());
                 System.out.println(client.getWinnings());
-                clientLoged();
+                clientLogged();
             }
             if (var == 3) {
                 System.out.println(client.getCurrentMoney());
-                clientLoged();
+                clientLogged();
             }
             if (var == 4) {
                 System.out.println(client.getWinnings());
-                clientLoged();
+                clientLogged();
             }
             if (var == 5) {
                 System.out.println(client.getLosses());
-                clientLoged();
+                clientLogged();
             }
         }
     }
@@ -147,7 +144,7 @@ public class ViewLayer {
         userList.add(dealer);
     }
 
-    private void dealerLoged() {
+    private void dealerLogged() {
 
         System.out.println("1 - Show dealers sorted by name");
         System.out.println("2 - Show dealers sorted by age");
@@ -170,12 +167,6 @@ public class ViewLayer {
                 } else dealerList.sortByAgeDsc();
             }
         }
-
-
-
-    }
-    public void chooseGame(){
-
     }
     public void printingLists(){
         dealerList.sortByNameAsc();

@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="acum poti juca poker!">
+    <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/Games/AvailableGames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/Games/AvailableGames.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/Games/Gamble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/Games/Gamble.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/Games/Roulette.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/Games/Roulette.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ViewLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ViewLayer.java" afterDir="false" />
     </list>
-=======
-    <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="acum poti juca poker!" />
->>>>>>> Stashed changes
-=======
-    <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="acum poti juca poker!" />
->>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -170,17 +164,11 @@
       <workItem from="1668441240925" duration="12598000" />
       <workItem from="1668507904667" duration="3883000" />
       <workItem from="1668863107077" duration="2329000" />
-<<<<<<< Updated upstream
       <workItem from="1668869706937" duration="6709000" />
       <workItem from="1670678258190" duration="7636000" />
-<<<<<<< Updated upstream
-=======
       <workItem from="1668869706937" duration="6834000" />
       <workItem from="1670695720201" duration="6000" />
->>>>>>> Stashed changes
-=======
       <workItem from="1670695687210" duration="8000" />
->>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="Second">
       <created>1666629431147</created>

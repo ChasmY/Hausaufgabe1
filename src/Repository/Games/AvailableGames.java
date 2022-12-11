@@ -1,5 +1,5 @@
 package Repository.Games;
 
 public enum AvailableGames {
-    Poker, Blackjack, Roulette, Slots
+    Poker, Blackjack, Roulette;
 }
