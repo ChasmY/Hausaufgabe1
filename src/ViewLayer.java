@@ -14,17 +14,20 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
 
+import static java.sql.Types.NULL;
+
 public class ViewLayer {
-    Dealer dealer = new Dealer("", "", 22);
+    Dealer dealer = new Dealer("", "", NULL);
     DealerController dealerList = new DealerController(new ArrayList<>());
-    Client client = new Client("", "", 21, 0);
+    Client client = new Client("", "", NULL, NULL);
     ClientController clientList=new ClientController(new ArrayList<>());
-    User user = new User("", "", 21);
+    User user = new User("", "", NULL);
     UserController userList = new UserController(new ArrayList<>());
 
     public void start() throws Exception {
 //        printingLists();
 //        System.exit(0);
+
         System.out.println("1 - Log in as a client");
         System.out.println("2 - Log in as a dealer");
         Scanner console = new Scanner(System.in);
@@ -61,8 +64,8 @@ public class ViewLayer {
 
         System.out.println("Money to deposit ");
         client.setCurrentMoney(console.nextInt());
-        client.setWinnings(0);
-        client.setLosses(0);
+        client.setWonMoney(0);
+        client.setLostMoney(0);
         System.out.println(client.getCurrentMoney());
 
         clientList.add(client);
@@ -90,8 +93,13 @@ public class ViewLayer {
                 poker.play();
             }
             if (Objects.equals(game, "Roulette")) {
-                Roulette roulette = new Roulette();
+                Roulette roulette = new Roulette(client.getCurrentMoney(), client.getWonMoney(), client.getLostMoney(), client.getWonGames(), client.getLostGames());
                 roulette.play();
+                client.setCurrentMoney(roulette.getCurrentMoney());
+                client.setLostGames(roulette.getLostGames());
+                client.setWonGames(roulette.getWonGames());
+                client.setWonMoney(roulette.getWonMoney());
+                client.setLostMoney(roulette.getLostMoney());
             }
         }
     }
@@ -100,8 +108,8 @@ public class ViewLayer {
         System.out.println("1 - Choose game");
         System.out.println("2 - Deposit money");
         System.out.println("3 - Check current money");
-        System.out.println("4 - Check winnings");
-        System.out.println("5 - Check losses");
+        System.out.println("4 - Check won money and won games");
+        System.out.println("5 - Check lost money and lost games");
         Scanner ok = new Scanner(System.in);
         while(ok.hasNextInt()) {
             int var = ok.nextInt();
@@ -112,8 +120,8 @@ public class ViewLayer {
             if (var == 2) {
                 System.out.println("Enter deposit ");
                 Scanner ok1 = new Scanner(System.in);
-                client.setWinnings(ok1.nextInt());
-                System.out.println(client.getWinnings());
+                client.setWonMoney(ok1.nextInt());
+                System.out.println(client.getWonMoney());
                 clientLogged();
             }
             if (var == 3) {
@@ -121,11 +129,13 @@ public class ViewLayer {
                 clientLogged();
             }
             if (var == 4) {
-                System.out.println(client.getWinnings());
+                System.out.println("You have won: " + client.getWonMoney() +" money");
+                System.out.println("You have won: " + client.getWonGames() +" games");
                 clientLogged();
             }
             if (var == 5) {
-                System.out.println(client.getLosses());
+                System.out.println("You have lost: " + client.getLostMoney() +" money");
+                System.out.println("You have lost: " + client.getLostGames() +" games");
                 clientLogged();
             }
         }
@@ -155,21 +165,25 @@ public class ViewLayer {
                 System.out.println("1 - Show dealers sorted by name ascending");
                 System.out.println("2 - Show dealers sorted by name descending");
                 Scanner secondChoice = new Scanner(System.in);
-                if (secondChoice.nextInt() == 1) {
-                    dealerList.sortByNameAsc();
-                } else dealerList.sortByNameDsc();
+                while(secondChoice.hasNextInt()) {
+                    if (secondChoice.nextInt() == 1) {
+                        dealerList.sortByNameAsc();
+                    } else dealerList.sortByNameDsc();
+                }
             } else if (c == 2) {
                 System.out.println("1 - Show dealers sorted by age ascending");
                 System.out.println("2 - Show dealers sorted by age descending");
                 Scanner thirdChoice = new Scanner(System.in);
-                if (thirdChoice.nextInt() == 1) {
-                    dealerList.sortByAgeAsc();
-                } else dealerList.sortByAgeDsc();
+                while(thirdChoice.hasNextInt()) {
+                    if (thirdChoice.nextInt() == 1) {
+                        dealerList.sortByAgeAsc();
+                    } else dealerList.sortByAgeDsc();
+                }
             }
         }
     }
-    public void printingLists(){
-        dealerList.sortByNameAsc();
-        clientList.sortByNameAsc();
-    }
+//    public void printingLists(){
+//        dealerList.sortByNameAsc();
+//        clientList.sortByNameAsc();
+//    }
 }

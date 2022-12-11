@@ -11,7 +11,7 @@ public class ClientController extends ClientRepositoryMemory{
 
     private ArrayList<Client> allClients;
 
-    private ClientRepositoryMemory sortedAllClients;
+    ClientRepositoryMemory sortedAllClients;
     public ClientController(ArrayList<Client> allClients){
         this.allClients=allClients;
     }
@@ -83,7 +83,7 @@ public class ClientController extends ClientRepositoryMemory{
     {
         for (Client client : sortedAllClients.getList())
             System.out.println(client.getName() + " " + client.getPassword() + " " + client.getAge() + " "
-                    + client.getCurrentMoney() + " " + client.getWinnings() + " " + client.getLosses());
+                    + client.getCurrentMoney() + " " + client.getWonMoney() + " " + client.getLostMoney());
 
     }
 

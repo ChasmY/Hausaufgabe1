@@ -1,7 +1,7 @@
 package model;
 
 public class Client extends User {
-    private int currentMoney, winnings, losses;
+    private int currentMoney, wonMoney, lostMoney, wonGames, lostGames;
     public int getCurrentMoney() {
         return currentMoney;
     }
@@ -10,26 +10,44 @@ public class Client extends User {
         this.currentMoney = currentMoney;
     }
 
-    public int getWinnings() {
-        return winnings;
+    public int getWonMoney() {
+        return wonMoney;
     }
 
-    public void setWinnings(int winnings) {
-        this.winnings = winnings;
+    public void setWonMoney(int wonGames) {
+        this.wonGames += wonGames;
     }
 
-    public int getLosses() {
-        return losses;
+    public int getLostMoney() {
+        return lostMoney;
     }
 
-    public void setLosses(int losses) {
-        this.losses = losses;
+    public void setLostMoney(int lostMoney) {
+        this.lostMoney += lostMoney;
+    }
+
+    public int getWonGames() {
+        return wonGames;
+    }
+
+    public void setWonGames(int wonGames) {
+        this.wonGames += wonGames;
+    }
+
+    public int getLostGames() {
+        return lostGames;
+    }
+
+    public void setLostGames(int lostGames) {
+        this.lostGames += lostGames;
     }
 
     public Client(String name, String password, int age, int currentMoney) {
         super(name, password, age);
         this.currentMoney = currentMoney;
-        this.winnings = 0;
-        this.losses = 0;
+        this.wonGames = 0;
+        this.lostGames = 0;
+        this.wonMoney = 0;
+        this.lostMoney = 0;
     }
 }

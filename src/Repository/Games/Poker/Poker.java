@@ -10,16 +10,13 @@ import java.util.Scanner;
 
 public class Poker extends Gamble {
 
-        private final int HAND_SIZE = 5;
-        private int again = 1;
+    private int again = 1;
 
-        // instantiate Deck and Player
-        Scanner scan = new Scanner(System.in);
-        Deck deck = new Deck();
-        Player player = new Player();
-        Card[] hand;
-
-
+    // instantiate Deck and Player
+    Scanner scan = new Scanner(System.in);
+    Deck deck = new Deck();
+    Player player = new Player();
+    Card[] hand;
 
         // plays the game
         public void play()
@@ -42,9 +39,7 @@ public class Poker extends Gamble {
                 this.checkHand();
                 hand = this.redraw();
 
-                // display hand again
-                // this.makeHand(); //<--- TA ! un-comment this and change makeHand()
-                this.checkHand();
+                this.makeHand();
 
                 // sort hand
                 Arrays.sort(hand);
@@ -77,6 +72,7 @@ public class Poker extends Gamble {
         // tells player cards in hand
         public void checkHand()
         {
+            int HAND_SIZE = 5;
             for (int handCounter = 0; handCounter < HAND_SIZE; handCounter++)
             {
                 this.display(hand[handCounter]);
@@ -392,7 +388,6 @@ public class Poker extends Gamble {
                 System.out.print("Clubs");
                 System.out.println();
             }
-
         }
 
 }

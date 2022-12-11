@@ -5,7 +5,7 @@ import model.Dealer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Gamble {
+public abstract class Gamble {
     private Dealer dealer;
     private List<Client> clientList = new ArrayList<Client>();
     private int table = 0, playersAllowed = 0;
