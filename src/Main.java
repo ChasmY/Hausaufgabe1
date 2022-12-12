@@ -19,6 +19,7 @@ public class Main {
         UserController userList;
 
         ViewLayer viewLayer = new ViewLayer();
-        viewLayer.start();
+        viewLayer.signIn();
+        return;
     }
 }

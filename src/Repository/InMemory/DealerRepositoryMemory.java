@@ -25,7 +25,7 @@ public class DealerRepositoryMemory implements CrudRepo<String, Dealer> {
 
     public void printing(){
         for(Dealer d :allDealers){
-            System.out.println(d.getName() + d.getGamesKnown());
+            System.out.println(d.getName() + " " + d.getGamesKnown());
 
         }
     }

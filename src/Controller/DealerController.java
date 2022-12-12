@@ -2,20 +2,21 @@ package Controller;
 
 import Repository.InMemory.DealerRepositoryMemory;
 import model.Dealer;
+import java.util.Collections;
 
 import java.util.*;
 
 public class DealerController extends DealerRepositoryMemory {
-    private ArrayList<Dealer> allDealers;
-    private DealerRepositoryMemory sortedAllDealers;
-    public DealerController(ArrayList<Dealer> allDealers) {
-        this.allDealers = allDealers;
-//        populateDealers();
-    }
+    private DealerRepositoryMemory allDealers;
 
-    public ArrayList<Dealer> getList(){
+    public DealerRepositoryMemory getAllDealers() {
         return allDealers;
     }
+
+    public void setAllDealers(DealerRepositoryMemory allDealers) {
+        this.allDealers = allDealers;
+    }
+
     @Override
     public void add(Dealer entity) {
         super.add(entity);
@@ -37,31 +38,33 @@ public class DealerController extends DealerRepositoryMemory {
     }
 
     public void sortByNameAsc(){
-        List<Dealer> sortedAllDealers =allDealers;
-        sortedAllDealers.sort(Comparator.comparing(Dealer::getName));
-        printAllDealers();
+//        Comparator<Dealer> compareByName = new Comparator<Dealer>() {
+//            @Override
+//            public int compare(Dealer o1, Dealer o2) {
+//                return o1.getName().compareTo(o2.getName());
+//            }
+//        };
+//        allDealers.getList().sort(compareByName);
     }
 
     public void sortByNameDsc(){
-        List<Dealer> sortedAllDealers =allDealers;
-        sortedAllDealers.sort(Comparator.comparing(Dealer::getName).reversed());
+        List<Dealer> sortedDealers = allDealers.getList();
+        sortedDealers.sort(Comparator.comparing(Dealer::getName).reversed());
         printAllDealers();
     }
 
     public void sortByAgeDsc(){
-        List<Dealer> sortedAllDealers = allDealers;
-        sortedAllDealers.sort(Comparator.comparing(Dealer::getAge).reversed());
+        allDealers.getList().sort(Comparator.comparing(Dealer::getAge).reversed());
         printAllDealers();
     }
     public void sortByAgeAsc(){
-        List<Dealer> sortedAllDealers = allDealers;
-        sortedAllDealers.sort(Comparator.comparing(Dealer::getAge));
+        allDealers.getList().sort(Comparator.comparing(Dealer::getAge));
         printAllDealers();
     }
 
     public void printAllDealers()
     {
-        for (Dealer dealer :sortedAllDealers.getList())
+        for (Dealer dealer : allDealers.getList())
             System.out.println(dealer.getName() + " " + dealer.getPassword() + " " + dealer.getAge() + " " + dealer.getGamesKnown());
 
     }

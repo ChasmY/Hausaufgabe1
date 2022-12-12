@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.Objects;
 public class ClientRepositoryMemory implements ClientRepository {
     private ArrayList<Client> allClients = new ArrayList<>();
-
     
     @Override
     public void populateClients(){

@@ -1,7 +1,11 @@
 package model;
 
 public class Client extends User {
-    private int currentMoney, wonMoney, lostMoney, wonGames, lostGames;
+    private int currentMoney;
+    private int wonMoney;
+    private int lostMoney;
+    private int wonGames;
+    private int lostGames;
     public int getCurrentMoney() {
         return currentMoney;
     }
@@ -14,8 +18,8 @@ public class Client extends User {
         return wonMoney;
     }
 
-    public void setWonMoney(int wonGames) {
-        this.wonGames += wonGames;
+    public void setWonMoney(int wonMoney) {
+        this.wonMoney += wonMoney;
     }
 
     public int getLostMoney() {
@@ -43,7 +47,7 @@ public class Client extends User {
     }
 
     public Client(String name, String password, int age, int currentMoney) {
-        super(name, password, age);
+        super(name, password, age, "Client");
         this.currentMoney = currentMoney;
         this.wonGames = 0;
         this.lostGames = 0;

@@ -16,8 +16,8 @@ public class UserRepositoryMemory implements CrudRepo<String, User> {
     }
 
     public void populateUsers() {
-        User user1 = new User("Ion", "134", 78);
-        User user2 = new User("Marie", "124", 30);
+        User user1 = new User("Ion", "134", 78, "Dealer");
+        User user2 = new User("Marie", "124", 30, "Client");
         this.allUsers.add(user1);
         this.allUsers.add(user2);
     }

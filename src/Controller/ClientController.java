@@ -9,12 +9,7 @@ import java.util.List;
 
 public class ClientController extends ClientRepositoryMemory{
 
-    private ArrayList<Client> allClients;
-
-    ClientRepositoryMemory sortedAllClients;
-    public ClientController(ArrayList<Client> allClients){
-        this.allClients=allClients;
-    }
+    ClientRepositoryMemory allClients;
     @Override
     public void add(Client entity) {
         super.add(entity);
@@ -36,52 +31,44 @@ public class ClientController extends ClientRepositoryMemory{
     }
 
     public void sortByNameAsc(){
-        List<Client> sortedAllClients= allClients;
-        sortedAllClients.sort(Comparator.comparing(Client::getName));
+        allClients.getList().sort(Comparator.comparing(Client::getName));
         printAllClients();
     }
     public void sortByNameDsc(){
-        List<Client> sortedAllClients= allClients;
-        sortedAllClients.sort(Comparator.comparing(Client::getName));
+        allClients.getList().sort(Comparator.comparing(Client::getName));
         printAllClients();
     }
 
     public void sortByAgeAsc(){
-        List<Client> sortedAllClients= allClients;
-        sortedAllClients.sort(Comparator.comparing(Client::getAge));
+        allClients.getList().sort(Comparator.comparing(Client::getAge));
         printAllClients();
     }
     public void sortByAgeDsc(){
-        List<Client> sortedAllClients= allClients;
-        sortedAllClients.sort(Comparator.comparing(Client::getAge).reversed());
+        allClients.getList().sort(Comparator.comparing(Client::getAge).reversed());
         printAllClients();
     }
 
-    public void sortByWinningsAsc(){
-        List<Client> sortedAllClients= allClients;
-        sortedAllClients.sort(Comparator.comparing(Client::getAge));
+    public void sortByWonMoneyAsc(){
+        allClients.getList().sort(Comparator.comparing(Client::getWonMoney));
         printAllClients();
     }
-    public void sortByWinningsDsc(){
-        List<Client> sortedAllClients= allClients;
-        sortedAllClients.sort(Comparator.comparing(Client::getAge).reversed());
-        printAllClients();
-    }
-
-    public void sortByLossesAsc(){
-        List<Client> sortedAllClients= allClients;
-        sortedAllClients.sort(Comparator.comparing(Client::getAge));
+    public void sortByWonMoneyDsc(){
+        allClients.getList().sort(Comparator.comparing(Client::getWonMoney).reversed());
         printAllClients();
     }
 
-    public void sortByLossesDsc(){
-        List<Client> sortedAllClients= allClients;
-        sortedAllClients.sort(Comparator.comparing(Client::getAge).reversed());
+    public void sortByLostMoneyAsc(){
+        allClients.getList().sort(Comparator.comparing(Client::getLostMoney));
+        printAllClients();
+    }
+
+    public void sortByLostMoneyDsc(){
+        allClients.getList().sort(Comparator.comparing(Client::getLostMoney).reversed());
         printAllClients();
     }
     public void printAllClients()
     {
-        for (Client client : sortedAllClients.getList())
+        for (Client client : allClients.getList())
             System.out.println(client.getName() + " " + client.getPassword() + " " + client.getAge() + " "
                     + client.getCurrentMoney() + " " + client.getWonMoney() + " " + client.getLostMoney());
 
