@@ -58,9 +58,7 @@ public class DealerController extends DealerRepositoryMemory {
 
     public void printAllDealers()
     {
-        for (Dealer dealer : repo.getAllDealers())
-            System.out.println(dealer.getName() + " " + dealer.getPassword() + " " + dealer.getAge() + " " + dealer.getGamesKnown());
-
+        super.printAllDealers();
     }
     @Override
     public int size(){

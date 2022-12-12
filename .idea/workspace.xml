@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="merg sortarile si afiseaza elemente nu adresa de memorie">
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/DB/ClientRepositoryDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/DB/DealerRepositoryDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/DB/UserRepositoryDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/229613c8-cfd5-42eb-815c-123950dcb18a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/229613c8-cfd5-42eb-815c-123950dcb18a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/229613c8-cfd5-42eb-815c-123950dcb18a/storage_v2/_src_/database/Casino.FXjhdw/schema/INFORMATION_SCHEMA.NBgcMw.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/229613c8-cfd5-42eb-815c-123950dcb18a/storage_v2/_src_/database/Casino.FXjhdw/schema/INFORMATION_SCHEMA.NBgcMw.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/229613c8-cfd5-42eb-815c-123950dcb18a/storage_v2/_src_/database/Casino.FXjhdw/schema/sys.zb4BAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/229613c8-cfd5-42eb-815c-123950dcb18a/storage_v2/_src_/database/Casino.FXjhdw/schema/sys.zb4BAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/229613c8-cfd5-42eb-815c-123950dcb18a/storage_v2/_src_/database/master.YiqNvw/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/229613c8-cfd5-42eb-815c-123950dcb18a/storage_v2/_src_/database/master.YiqNvw/schema/dbo.sYMBAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/229613c8-cfd5-42eb-815c-123950dcb18a/storage_v2/_src_/database/master.YiqNvw/schema/dbo.sYMBAA.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/229613c8-cfd5-42eb-815c-123950dcb18a/storage_v2/_src_/database/master.YiqNvw/schema/dbo.sYMBAA.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/DealerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DealerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ViewLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ViewLayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RegistrationSystem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/InMemory/DealerRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/InMemory/DealerRepositoryMemory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,9 +28,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -194,6 +208,7 @@
       <workItem from="1670775862312" duration="5734000" />
       <workItem from="1670792176394" duration="2200000" />
       <workItem from="1670795795668" duration="13055000" />
+      <workItem from="1670855614840" duration="3037000" />
     </task>
     <task id="LOCAL-00001" summary="Second">
       <created>1666629431147</created>
@@ -265,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670848754352</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="merg sortarile si afiseaza elemente nu adresa de memorie">
+      <created>1670853823662</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670853823662</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
