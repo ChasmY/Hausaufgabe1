@@ -7,6 +7,7 @@ import java.util.Collections;
 import java.util.*;
 
 public class DealerController extends DealerRepositoryMemory {
+<<<<<<< Updated upstream
     private DealerRepositoryMemory allDealers;
 
     public DealerRepositoryMemory getAllDealers() {
@@ -17,6 +18,10 @@ public class DealerController extends DealerRepositoryMemory {
         this.allDealers = allDealers;
     }
 
+=======
+    DealerRepositoryMemory repo = new DealerRepositoryMemory();
+
+>>>>>>> Stashed changes
     @Override
     public void add(Dealer entity) {
         super.add(entity);
