@@ -11,13 +11,6 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        Dealer dealer;
-        DealerController dealerList;
-        Client client;
-        ClientController clientList;
-        User user;
-        UserController userList;
-
         ViewLayer viewLayer = new ViewLayer();
         viewLayer.printingLists();
 //        viewLayer.signIn();

@@ -39,17 +39,14 @@ public class DealerController extends DealerRepositoryMemory {
         return super.findById(s);
     }
 
-    public void sortByNameAsc(){
-//        Comparator<Dealer> compareByName = new Comparator<Dealer>() {
-//            @Override
-//            public int compare(Dealer o1, Dealer o2) {
-//                return o1.getName().compareTo(o2.getName());
-//            }
-//        };
-//        allDealers.getList().sort(compareByName);
+    public List<Dealer> sortByNameAsc(){ //aia buna
+        List<Dealer> sortedDealers = repo.getAllDealers();
+        sortedDealers.sort(Comparator.comparing(Dealer::getName));
+        printAllDealers();
+        return sortedDealers;
     }
 
-    public List<Dealer> sortByNameAsc(List<Dealer> dealers){ //aia buna
+    public List<Dealer> SortByNameAsc(List<Dealer> dealers){
         List<Dealer> sortedDealers = repo.getAllDealers();
         sortedDealers.sort(Comparator.comparing(Dealer::getName));
         printAllDealers();
@@ -62,15 +59,17 @@ public class DealerController extends DealerRepositoryMemory {
         return sortedDealers;
     }
 
-    public void sortByAgeDsc(){
+    public List<Dealer> sortByAgeDsc(){
         List<Dealer> sortedDealers = repo.getAllDealers();
         sortedDealers.sort(Comparator.comparing(Dealer::getAge).reversed());
         printAllDealers();
+        return sortedDealers;
     }
-    public void sortByAgeAsc(){
+    public List<Dealer> sortByAgeAsc(){
         List<Dealer> sortedDealers = repo.getAllDealers();
         sortedDealers.sort(Comparator.comparing(Dealer::getAge));
         printAllDealers();
+        return sortedDealers;
     }
 
     public void printAllDealers()

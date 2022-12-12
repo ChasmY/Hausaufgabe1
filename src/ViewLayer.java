@@ -266,7 +266,13 @@ public class ViewLayer {
         }
     }
     public void printingLists(){
-        System.out.print(dealerList.sortByNameDsc());
+        dealerList.sortByNameAsc();
+        System.out.println();
+        dealerList.sortByNameDsc();
+        System.out.println();
+        dealerList.sortByAgeAsc();
+        System.out.println();
+        dealerList.sortByAgeDsc();
 //        clientList.sortByNameAsc();
     }
 }

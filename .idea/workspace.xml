@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="acum poti juca">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/229613c8-cfd5-42eb-815c-123950dcb18a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/229613c8-cfd5-42eb-815c-123950dcb18a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="merg sortarile si afiseaza elemente nu adresa de memorie">
       <change beforePath="$PROJECT_DIR$/src/Controller/DealerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DealerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DealerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DealerControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/InMemory/DealerRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/InMemory/DealerRepositoryMemory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ViewLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ViewLayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +22,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="New_Rares_Branch" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -259,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670792584683</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="merg sortarile si afiseaza elemente nu adresa de memorie">
+      <created>1670848754352</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670848754352</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +292,8 @@
     <MESSAGE value="am facut pokerul!!!" />
     <MESSAGE value="acum poti juca poker!" />
     <MESSAGE value="am refacut putin la jocuri" />
-    <option name="LAST_COMMIT_MESSAGE" value="am refacut putin la jocuri" />
+    <MESSAGE value="merg sortarile si afiseaza elemente nu adresa de memorie" />
+    <option name="LAST_COMMIT_MESSAGE" value="merg sortarile si afiseaza elemente nu adresa de memorie" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
