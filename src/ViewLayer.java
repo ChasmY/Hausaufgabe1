@@ -22,13 +22,13 @@ public class ViewLayer {
     Client client = new Client("", "", NULL, NULL);
     ClientController clientList=new ClientController();
     User user = new User("", "", NULL, "");
-    UserController userList = new UserController(new ArrayList<>());
+    UserController userList = new UserController();
 
     public void signIn() throws Exception {
-        System.out.println("Welcome to sign in portal!\nDo you already have an account or do you want to create a new one? (y/n)");
+        System.out.println("Welcome to sign in portal!\nDo you want to create (new) account? (y/n)");
         Scanner signin = new Scanner(System.in);
         String s = signin.next();
-        if(Objects.equals(s, "y")){
+        if(Objects.equals(s, "n")){
             System.out.println("Now you will be sent to Log in portal!\n");
             start();
         }
@@ -44,7 +44,7 @@ public class ViewLayer {
         }
     }
 
-    public void signinClient(){
+    public void signinClient() throws Exception {
         Scanner console = new Scanner(System.in);
 
         System.out.println("Name ");
@@ -71,7 +71,7 @@ public class ViewLayer {
         clientList.add(client);
     }
 
-    public void signinDealer(){
+    public void signinDealer() throws Exception {
         Scanner console = new Scanner(System.in);
         System.out.println("Name ");
         user.setName(console.nextLine());
@@ -103,7 +103,7 @@ public class ViewLayer {
         System.out.println("Password ");
         clientLogging.setPassword(console.nextLine());
 
-        for(Client c : clientList.getList()){
+        for(Client c : clientList.getAllClients()){
             if(Objects.equals(c.getName(), clientLogging.getName()) && Objects.equals(c.getPassword(), clientLogging.getPassword()))
                 return true;
         }
@@ -157,13 +157,79 @@ public class ViewLayer {
         }
     }
 
+    public void playGames() throws Exception {
+        boolean found = false;
+        System.out.println("What game would you want to play?");
+        System.out.println("Poker - Play Poker");
+        System.out.println("Roulette - Play Roulette");
+        System.out.println("Blackjack - Play Blackjack");
+        Scanner gameMode = new Scanner(System.in);
+        String game = gameMode.next();
+        found = false;
+        for (AvailableGames availableGames : AvailableGames.values())
+            if (Objects.equals(game, availableGames.name())) {
+                found = true;
+                break;
+            }
+        if (!found)
+            throw new Exception("Incorrect game name. Choose another one");
+        else {
+            if (Objects.equals(game, "Poker")) {
+                System.out.println("Make your bet!");
+                Scanner bet = new Scanner(System.in);
+                int betInt = bet.nextInt();
+
+                int yourHandCode;
+                Poker pokerClient = new Poker();
+                pokerClient.play();
+                yourHandCode = pokerClient.handCode;
+                System.out.println("Keep in mind what you got!\n");
+
+                int dealerHandCode;
+                System.out.println("Now you will play as a dealer. Make him lose!");
+                Poker pokerDealer = new Poker();
+                pokerDealer.play();
+                dealerHandCode = pokerDealer.handCode;
+
+                if(dealerHandCode > yourHandCode){
+                    System.out.println("You lost!");
+                    client.setCurrentMoney(client.getCurrentMoney() - betInt);
+                    client.setLostMoney(betInt);
+                    client.setLostGames(1);
+                }
+                else if (dealerHandCode < yourHandCode){
+                    System.out.println("You won! Congratulations!");
+                    client.setCurrentMoney(client.getCurrentMoney() + bet.nextInt());
+                    client.setWonMoney(betInt);
+                    client.setWonGames(1);
+                }
+                else{
+                    System.out.println("It's a tie!!");
+                }
+            }
+            if (Objects.equals(game, "Roulette")) {
+                Roulette roulette = new Roulette(client.getCurrentMoney(), client.getWonMoney(), client.getLostMoney(), client.getWonGames(), client.getLostGames());
+                roulette.play();
+                client.setCurrentMoney(roulette.getCurrentMoney());
+                client.setLostGames(roulette.getLostGames());
+                client.setWonGames(roulette.getWonGames());
+                client.setWonMoney(roulette.getWonMoney());
+                client.setLostMoney(roulette.getLostMoney());
+            }
+        }
+    }
+
     public void clientLogged() throws Exception {
         System.out.println("1 - Choose game");
         System.out.println("2 - Deposit money");
-        System.out.println("3 - Check current money");
-        System.out.println("4 - Check won money and won games");
-        System.out.println("5 - Check lost money and lost games");
-        System.out.println("6 - Log out as a Client");
+        System.out.println("3 - Check your current money");
+        System.out.println("4 - Check your won money and won games");
+        System.out.println("5 - Check your lost money and lost games");
+        System.out.println("6 - Show all clients sorted by name");
+        System.out.println("7 - Show all clients sorted by age");
+        System.out.println("8 - Show all clients sorted by won money");
+        System.out.println("9 - Show all clients sorted by lost money");
+        System.out.println("10 - Log out as a Client");
         Scanner ok = new Scanner(System.in);
         while(ok.hasNextInt()) {
             int var = ok.nextInt();
@@ -192,7 +258,92 @@ public class ViewLayer {
                 System.out.println("You have lost: " + client.getLostGames() +" games");
                 clientLogged();
             }
-            if (var == 6) {
+            if (var == 6){
+                System.out.println("1 - Show clients sorted by name ascending");
+                System.out.println("2 - Show clients sorted by name descending");
+                System.out.println("0 - Go back");
+                Scanner choice = new Scanner(System.in);
+                while(choice.hasNextInt()){
+                    if(choice.nextInt() == 1){
+                        clientList.sortByNameAsc();
+                        clientList.printAllClients();
+                        clientLogged();
+                    }
+                    else if (choice.nextInt() == 2){
+                        clientList.sortByNameDsc();
+                        clientList.printAllClients();
+                        clientLogged();
+                    }
+                    else{
+                        System.out.println("Back to client portal. Choose another option");
+                        clientLogged();
+                    }
+                }
+            }
+            if (var == 7){
+                System.out.println("1 - Show clients sorted by age ascending");
+                System.out.println("2 - Show clients sorted by age descending");
+                System.out.println("0 - Go back");
+                Scanner choice = new Scanner(System.in);
+                while(choice.hasNextInt()){
+                    if(choice.nextInt() == 1){
+                        clientList.sortByAgeAsc();
+                        clientList.printAllClients();
+                        clientLogged();
+                    }
+                    else if (choice.nextInt() == 2){
+                        clientList.sortByAgeDsc();
+                        clientList.printAllClients();
+                        clientLogged();
+                    }else{
+                        System.out.println("Back to client portal. Choose another option");
+                        clientLogged();
+                    }
+                }
+            }
+            if (var == 8){
+                System.out.println("1 - Show clients sorted by won money ascending");
+                System.out.println("2 - Show clients sorted by won money descending");
+                System.out.println("0 - Go back");
+                Scanner choice = new Scanner(System.in);
+                while(choice.hasNextInt()){
+                    if(choice.nextInt() == 1){
+                        clientList.sortByWonMoneyAsc();
+                        clientList.printAllClients();
+                        clientLogged();
+                    }
+                    else if (choice.nextInt() == 2){
+                        clientList.sortByWonMoneyDsc();
+                        clientList.printAllClients();
+                        clientLogged();
+                    }else{
+                        System.out.println("Back to client portal. Choose another option");
+                        clientLogged();
+                    }
+                }
+            }
+            if (var == 9){
+                System.out.println("1 - Show clients sorted by lost money ascending");
+                System.out.println("2 - Show clients sorted by lost money descending");
+                System.out.println("0 - Go back");
+                Scanner choice = new Scanner(System.in);
+                while(choice.hasNextInt()){
+                    if(choice.nextInt() == 1){
+                        clientList.sortByLostMoneyAsc();
+                        clientList.printAllClients();
+                        clientLogged();
+                    }
+                    else if (choice.nextInt() == 2){
+                        clientList.sortByLostMoneyDsc();
+                        clientList.printAllClients();
+                        clientLogged();
+                    }else{
+                        System.out.println("Back to client portal. Choose another option");
+                        clientLogged();
+                    }
+                }
+            }
+            if (var == 10) {
                 System.out.println("You go back to the main menu, select another option");
                 start();
             }
@@ -210,20 +361,42 @@ public class ViewLayer {
             if (c == 1) {
                 System.out.println("1 - Show dealers sorted by name ascending");
                 System.out.println("2 - Show dealers sorted by name descending");
+                System.out.println("0 - Go back");
                 Scanner secondChoice = new Scanner(System.in);
                 while(secondChoice.hasNextInt()) {
                     if (secondChoice.nextInt() == 1) {
                         dealerList.sortByNameAsc();
-                    } else dealerList.sortByNameDsc();
+                        dealerList.printAllDealers();
+                        dealerLogged();
+                    } else if(secondChoice.nextInt() == 2){
+                        dealerList.sortByNameDsc();
+                        dealerList.printAllDealers();
+                        dealerLogged();
+                    }
+                    else{
+                        System.out.println("Back to dealer portal. Choose another option");
+                        dealerLogged();
+                    }
                 }
             } else if (c == 2) {
                 System.out.println("1 - Show dealers sorted by age ascending");
                 System.out.println("2 - Show dealers sorted by age descending");
+                System.out.println("0 - Go back");
                 Scanner thirdChoice = new Scanner(System.in);
                 while(thirdChoice.hasNextInt()) {
                     if (thirdChoice.nextInt() == 1) {
                         dealerList.sortByAgeAsc();
-                    } else dealerList.sortByAgeDsc();
+                        dealerList.printAllDealers();
+                        dealerLogged();
+                    } else if(thirdChoice.nextInt() == 2){
+                        dealerList.sortByAgeDsc();
+                        dealerList.printAllDealers();
+                        dealerLogged();
+                    }
+                    else{
+                        System.out.println("Back to dealer portal. Choose another option");
+                        dealerLogged();
+                    }
                 }
             } else if (c == 3) {
                 System.out.println("You go back to the main menu, select another option");
@@ -232,46 +405,13 @@ public class ViewLayer {
 
         }
     }
-
-    public void playGames() throws Exception {
-        boolean found = false;
-        System.out.println("What game would you want to play?");
-        System.out.println("Poker - Play Poker");
-        System.out.println("Roulette - Play Roulette");
-        System.out.println("Blackjack - Play Blackjack");
-        Scanner gameMode = new Scanner(System.in);
-        String game = gameMode.next();
-        found = false;
-        for (AvailableGames availableGames : AvailableGames.values())
-            if (Objects.equals(game, availableGames.name())) {
-                found = true;
-                break;
-            }
-        if (!found)
-            throw new Exception("Incorrect game name. Choose another one");
-        else {
-            if (Objects.equals(game, "Poker")) {
-                Poker poker = new Poker();
-                poker.play();
-            }
-            if (Objects.equals(game, "Roulette")) {
-                Roulette roulette = new Roulette(client.getCurrentMoney(), client.getWonMoney(), client.getLostMoney(), client.getWonGames(), client.getLostGames());
-                roulette.play();
-                client.setCurrentMoney(roulette.getCurrentMoney());
-                client.setLostGames(roulette.getLostGames());
-                client.setWonGames(roulette.getWonGames());
-                client.setWonMoney(roulette.getWonMoney());
-                client.setLostMoney(roulette.getLostMoney());
-            }
-        }
-    }
-    public void printingLists(){
-        dealerList.sortByNameAsc();
-        System.out.println();
-        dealerList.sortByNameDsc();
-        System.out.println();
-        dealerList.sortByAgeAsc();
-        System.out.println();
-        dealerList.sortByAgeDsc();
-    }
+//    public void printingLists(){
+//        dealerList.sortByNameAsc();
+//        System.out.println();
+//        dealerList.sortByNameDsc();
+//        System.out.println();
+//        dealerList.sortByAgeAsc();
+//        System.out.println();
+//        dealerList.sortByAgeDsc();
+//    }
 }

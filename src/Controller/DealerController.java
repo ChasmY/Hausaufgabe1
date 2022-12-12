@@ -11,7 +11,7 @@ public class DealerController extends DealerRepositoryMemory {
     DealerRepositoryMemory repo = new DealerRepositoryMemory();
 
     @Override
-    public void add(Dealer entity) {
+    public void add(Dealer entity) throws Exception {
         super.add(entity);
     }
 
@@ -26,41 +26,41 @@ public class DealerController extends DealerRepositoryMemory {
     }
 
     @Override
-    public Dealer findById(String s) {
+    public Dealer findById(String s) throws Exception {
         return super.findById(s);
     }
+
+    @Override
+    public void printAllDealers()
+    {
+        super.printAllDealers();
+    }
+
 
     public List<Dealer> sortByNameAsc(){ //aia buna
         List<Dealer> sortedDealers = repo.getAllDealers();
         sortedDealers.sort(Comparator.comparing(Dealer::getName));
-        printAllDealers();
+        //repo.printAllDealers();
         return sortedDealers;
     }
     public List<Dealer> sortByNameDsc(){
         List<Dealer> sortedDealers = repo.getAllDealers();
         sortedDealers.sort(Comparator.comparing(Dealer::getName).reversed());
-        printAllDealers();
+        //repo.printAllDealers();
         return sortedDealers;
     }
 
     public List<Dealer> sortByAgeDsc(){
         List<Dealer> sortedDealers = repo.getAllDealers();
         sortedDealers.sort(Comparator.comparing(Dealer::getAge).reversed());
-        printAllDealers();
+        //repo.printAllDealers();
         return sortedDealers;
     }
     public List<Dealer> sortByAgeAsc(){
         List<Dealer> sortedDealers = repo.getAllDealers();
         sortedDealers.sort(Comparator.comparing(Dealer::getAge));
-        printAllDealers();
+        //repo.printAllDealers();
         return sortedDealers;
-    }
-
-    public void printAllDealers()
-    {
-        for (Dealer dealer : repo.getAllDealers())
-            System.out.println(dealer.getName() + " " + dealer.getPassword() + " " + dealer.getAge() + " " + dealer.getGamesKnown());
-
     }
     @Override
     public int size(){

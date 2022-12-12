@@ -7,12 +7,10 @@ import java.util.List;
 
 public class UserController extends UserRepositoryMemory {
 
-    public UserController(List<User> allUsers) {
-        super(allUsers);
-    }
+    //UserRepositoryMemory repo = new UserRepositoryMemory();
 
     @Override
-    public void add(User entity) {
+    public void add(User entity) throws Exception {
         super.add(entity);
     }
 
@@ -22,7 +20,7 @@ public class UserController extends UserRepositoryMemory {
     }
 
     @Override
-    public User findById(String s) {
+    public User findById(String s) throws Exception {
         return super.findById(s);
     }
 
@@ -31,5 +29,15 @@ public class UserController extends UserRepositoryMemory {
         super.update(s, newEntity);
     }
 
+    @Override
+    public void printAllUsers()
+    {
+        super.printAllUsers();
+    }
+
+    @Override
+    public int size(){
+        return super.size();
+    }
 
 }

@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import static java.sql.Types.NULL;
+
 public class DealerRepositoryMemory implements CrudRepo<String, Dealer> {
     private final ArrayList<Dealer> allDealers = new ArrayList<Dealer>();
 
@@ -40,20 +42,19 @@ public class DealerRepositoryMemory implements CrudRepo<String, Dealer> {
         allDealers.add(dealer9);
     }
 
-    public void printing(){
-        for(Dealer d :allDealers){
-            System.out.println(d.getName() + " " + d.getGamesKnown());
-
-        }
-    }
-
     public ArrayList<Dealer> getAllDealers() {
         return allDealers;
     }
 
     @Override
-    public void add(Dealer entity) {
-        this.allDealers.add(entity);
+    public void add(Dealer entity) throws Exception {
+        try {
+            if (entity.getAge() > 18)
+                this.allDealers.add(entity);
+        }
+        catch (RuntimeException e){
+            throw new Exception("You are too young!");
+        }
     }
 
     @Override
@@ -69,11 +70,30 @@ public class DealerRepositoryMemory implements CrudRepo<String, Dealer> {
     }
 
     @Override
-    public Dealer findById(String s) {
+    public Dealer findById(String s) throws Exception {
+        boolean found = false;
+        Dealer d = new Dealer("", "", NULL);
         for(Dealer dealer: allDealers)
-            if(Objects.equals(dealer.getName(), s))
-                return dealer;
+            if(Objects.equals(dealer.getName(), s)) {
+                found = true;
+                d = dealer;
+                break;
+            }
+        try{
+            if(found)
+                return d;
+        }
+        catch(RuntimeException e){
+            throw new Exception("No ID found");
+        }
         return null;
+    }
+
+    public void printAllDealers()
+    {
+        for (Dealer dealer : allDealers)
+            System.out.println(dealer.getName() + " " + dealer.getPassword() + " " + dealer.getAge() + " " + dealer.getGamesKnown());
+
     }
 
     public int size(){
