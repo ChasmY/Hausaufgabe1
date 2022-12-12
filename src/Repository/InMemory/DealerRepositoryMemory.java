@@ -8,7 +8,11 @@ import java.util.List;
 import java.util.Objects;
 
 public class DealerRepositoryMemory implements CrudRepo<String, Dealer> {
-    private final List<Dealer> allDealers = new ArrayList<>();
+    private final ArrayList<Dealer> allDealers = new ArrayList<Dealer>();
+
+    public DealerRepositoryMemory() {
+        populateDealers();
+    }
 
     public ArrayList<Dealer> getList(){
         return (ArrayList<Dealer>) this.allDealers;
@@ -28,6 +32,10 @@ public class DealerRepositoryMemory implements CrudRepo<String, Dealer> {
             System.out.println(d.getName() + " " + d.getGamesKnown());
 
         }
+    }
+
+    public ArrayList<Dealer> getAllDealers() {
+        return allDealers;
     }
 
     @Override

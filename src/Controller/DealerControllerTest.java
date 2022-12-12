@@ -58,11 +58,11 @@ class DealerControllerTest {
     }
 
     @Test
-    void sortByNameAsc() {
+    void sortByNameDscD() {
         populate();
         assert(dealers.size() == 10);
-        dealers.sortByNameDsc();
-        assert(true);
+//        dealers.SortByNameAsc(dealers);
+//        assert(true);
 //        Dealer firstDealer = dealers.getList().get(0);
 //        for( Dealer dealer : dealers.getList()){
 //            System.out.println(dealer.getName());

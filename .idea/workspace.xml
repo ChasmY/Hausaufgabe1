@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="am refacut putin la jocuri">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/ClientControllerTest.java" afterDir="false" />
+    <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="acum poti juca">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/229613c8-cfd5-42eb-815c-123950dcb18a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/229613c8-cfd5-42eb-815c-123950dcb18a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/DealerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DealerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/DealerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DealerControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/InMemory/ClientRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/InMemory/ClientRepositoryMemory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/InMemory/DealerRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/InMemory/DealerRepositoryMemory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/InMemory/UserRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/InMemory/UserRepositoryMemory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ViewLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ViewLayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Dealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Dealer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +74,7 @@
       <recent name="Controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DealerControllerTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Hausaufgabe1" />
@@ -104,7 +97,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DealerControllerTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DealerControllerTest.sortByNameAsc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Hausaufgabe1" />
       <extension name="coverage">
         <pattern>
@@ -114,7 +107,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="Controller" />
       <option name="MAIN_CLASS_NAME" value="Controller.DealerControllerTest" />
-      <option name="METHOD_NAME" value="add" />
+      <option name="METHOD_NAME" value="sortByNameAsc" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DealerControllerTest.sortByNameDscD" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hausaufgabe1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Controller" />
+      <option name="MAIN_CLASS_NAME" value="Controller.DealerControllerTest" />
+      <option name="METHOD_NAME" value="sortByNameDscD" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,10 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DealerControllerTest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.DealerControllerTest.sortByNameDscD" />
+        <item itemvalue="JUnit.DealerControllerTest.sortByNameAsc" />
+        <item itemvalue="JUnit.DealerControllerTest" />
         <item itemvalue="JUnit.DealerControllerTest.update" />
-        <item itemvalue="JUnit.DealerControllerTest.add" />
       </list>
     </recent_temporary>
   </component>

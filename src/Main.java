@@ -19,7 +19,8 @@ public class Main {
         UserController userList;
 
         ViewLayer viewLayer = new ViewLayer();
-        viewLayer.signIn();
+        viewLayer.printingLists();
+//        viewLayer.signIn();
         return;
     }
 }

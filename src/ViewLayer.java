@@ -265,8 +265,8 @@ public class ViewLayer {
             }
         }
     }
-//    public void printingLists(){
-//        dealerList.sortByNameAsc();
+    public void printingLists(){
+        System.out.print(dealerList.sortByNameDsc());
 //        clientList.sortByNameAsc();
-//    }
+    }
 }

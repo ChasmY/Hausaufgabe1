@@ -1,17 +1,19 @@
 package Controller;
 
 import Repository.InMemory.DealerRepositoryMemory;
+import com.sun.jmx.mbeanserver.Repository;
 import model.Dealer;
-import java.util.Collections;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class DealerController extends DealerRepositoryMemory {
     private DealerRepositoryMemory allDealers;
+    DealerRepositoryMemory repo = new DealerRepositoryMemory();
 
-    public DealerRepositoryMemory getAllDealers() {
-        return allDealers;
-    }
+//    public DealerRepositoryMemory getAllDealers() {
+//        return allDealers;
+//    }
 
     public void setAllDealers(DealerRepositoryMemory allDealers) {
         this.allDealers = allDealers;
@@ -47,24 +49,33 @@ public class DealerController extends DealerRepositoryMemory {
 //        allDealers.getList().sort(compareByName);
     }
 
-    public void sortByNameDsc(){
-        List<Dealer> sortedDealers = allDealers.getList();
+    public List<Dealer> sortByNameAsc(List<Dealer> dealers){ //aia buna
+        List<Dealer> sortedDealers = repo.getAllDealers();
+        sortedDealers.sort(Comparator.comparing(Dealer::getName));
+        printAllDealers();
+        return sortedDealers;
+    }
+    public List<Dealer> sortByNameDsc(){
+        List<Dealer> sortedDealers = repo.getAllDealers();
         sortedDealers.sort(Comparator.comparing(Dealer::getName).reversed());
         printAllDealers();
+        return sortedDealers;
     }
 
     public void sortByAgeDsc(){
-        allDealers.getList().sort(Comparator.comparing(Dealer::getAge).reversed());
+        List<Dealer> sortedDealers = repo.getAllDealers();
+        sortedDealers.sort(Comparator.comparing(Dealer::getAge).reversed());
         printAllDealers();
     }
     public void sortByAgeAsc(){
-        allDealers.getList().sort(Comparator.comparing(Dealer::getAge));
+        List<Dealer> sortedDealers = repo.getAllDealers();
+        sortedDealers.sort(Comparator.comparing(Dealer::getAge));
         printAllDealers();
     }
 
     public void printAllDealers()
     {
-        for (Dealer dealer : allDealers.getList())
+        for (Dealer dealer : repo.getAllDealers())
             System.out.println(dealer.getName() + " " + dealer.getPassword() + " " + dealer.getAge() + " " + dealer.getGamesKnown());
 
     }
