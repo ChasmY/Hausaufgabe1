@@ -89,11 +89,10 @@ public class DealerRepositoryMemory implements CrudRepo<String, Dealer> {
         return null;
     }
 
-    public void printAllDealers()
-    {
+
+    public void printAllDealers(){
         for (Dealer dealer : allDealers)
             System.out.println(dealer.getName() + " " + dealer.getPassword() + " " + dealer.getAge() + " " + dealer.getGamesKnown());
-
     }
 
     public int size(){

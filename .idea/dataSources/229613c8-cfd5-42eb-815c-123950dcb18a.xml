@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="@DESKTOP-FIFKTTG">
+<dataSource name="@BENNINGTON">
   <database-model serializer="dbm" dbms="MSSQL" family-id="MSSQL" format-version="4.43">
     <root id="1">
       <Grants>2|||2|connect|G
@@ -23,7 +23,6 @@
 0|root||264|connect sql|G
 0|root||265|connect sql|G
 0|root||266|connect sql|G
-0|root||267|connect sql|G
 0|root||105|control server|G
 0|root||2|view any database|G
 0|root||101|view any definition|G
@@ -36,7 +35,7 @@
 0|root||257|view server state|G
 0|root||264|view server state|G
 0|root||265|view server state|G</Grants>
-      <PermissionsCheckSum>47332829657</PermissionsCheckSum>
+      <PermissionsCheckSum>45586761308</PermissionsCheckSum>
       <ServerVersion>15.0.2000</ServerVersion>
     </root>
     <collation id="2" parent="1" name="Albanian_100_BIN">
@@ -16563,11 +16562,15 @@
     <collation id="5509" parent="1" name="Yakut_100_CS_AS_WS_SC_UTF8">
       <Description>Yakut-100, case-sensitive, accent-sensitive, kanatype-insensitive, width-sensitive, supplementary characters, UTF8</Description>
     </collation>
-    <database id="5510" parent="1" name="Aufgabe5">
+    <database id="5510" parent="1" name="Aufgabe3">
+      <ObjectId>6</ObjectId>
+      <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
+    </database>
+    <database id="5511" parent="1" name="Aufgabe3 Teil2">
       <ObjectId>7</ObjectId>
       <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
     </database>
-    <database id="5511" parent="1" name="Casino">
+    <database id="5512" parent="1" name="Aufgabe4">
       <Fingerprint>1.37717/00000000-0000-0000-0000-000000000000@DESKTOP-FIFKTTG\SQLE</Fingerprint>
       <Grants>8|database||1|connect|G
 8|database||0|view any column encryption key definition|G
@@ -16576,11 +16579,24 @@
       <PermissionsCheckSum>3196235284</PermissionsCheckSum>
       <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
     </database>
-    <database id="5512" parent="1" name="Sportkomplex">
-      <ObjectId>6</ObjectId>
+    <database id="5513" parent="1" name="Aufgabe5">
+      <ObjectId>9</ObjectId>
       <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
     </database>
-    <database id="5513" parent="1" name="master">
+    <database id="5514" parent="1" name="Casino">
+      <Fingerprint>1.37717/00000000-0000-0000-0000-000000000000@BENNINGTON\SQLEXPRES</Fingerprint>
+      <Grants>10|database||1|connect|G
+10|database||0|view any column encryption key definition|G
+10|database||0|view any column master key definition|G</Grants>
+      <ObjectId>10</ObjectId>
+      <PermissionsCheckSum>3196235284</PermissionsCheckSum>
+      <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
+    </database>
+    <database id="5515" parent="1" name="Farmacie">
+      <ObjectId>5</ObjectId>
+      <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
+    </database>
+    <database id="5516" parent="1" name="master">
       <Current>1</Current>
       <Fingerprint>1.37717/00000000-0000-0000-0000-000000000000@DESKTOP-FIFKTTG\SQLE</Fingerprint>
       <Grants>1|database||1|connect|G
@@ -16594,290 +16610,550 @@
       <PermissionsCheckSum>7998723517</PermissionsCheckSum>
       <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
     </database>
-    <database id="5514" parent="1" name="model">
+    <database id="5517" parent="1" name="model">
       <ObjectId>3</ObjectId>
       <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
     </database>
-    <database id="5515" parent="1" name="msdb">
+    <database id="5518" parent="1" name="msdb">
       <ObjectId>4</ObjectId>
       <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
     </database>
-    <database id="5516" parent="1" name="tempdb">
+    <database id="5519" parent="1" name="tempdb">
       <ObjectId>2</ObjectId>
       <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
     </database>
-    <database id="5517" parent="1" name="test">
-      <ObjectId>5</ObjectId>
-      <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
-    </database>
-    <linked-server id="5518" parent="1" name="DESKTOP-FIFKTTG\SQLEXPRESS">
-      <DataSource>DESKTOP-FIFKTTG\SQLEXPRESS</DataSource>
+    <linked-server id="5520" parent="1" name="BENNINGTON\SQLEXPRESS">
+      <DataSource>BENNINGTON\SQLEXPRESS</DataSource>
       <Product>SQL Server</Product>
       <ProviderName>SQLNCLI</ProviderName>
     </linked-server>
-    <login id="5519" parent="1" name="sa">
+    <login id="5521" parent="1" name="sa">
       <DefaultDatabase>master</DefaultDatabase>
       <ObjectId>1</ObjectId>
     </login>
-    <login id="5520" parent="1" name="public">
+    <login id="5522" parent="1" name="public">
       <Enabled>1</Enabled>
       <ObjectId>2</ObjectId>
       <Type>server-role</Type>
     </login>
-    <login id="5521" parent="1" name="sysadmin">
+    <login id="5523" parent="1" name="sysadmin">
       <Enabled>1</Enabled>
       <ObjectId>3</ObjectId>
       <Type>server-role</Type>
     </login>
-    <login id="5522" parent="1" name="securityadmin">
+    <login id="5524" parent="1" name="securityadmin">
       <Enabled>1</Enabled>
       <ObjectId>4</ObjectId>
       <Type>server-role</Type>
     </login>
-    <login id="5523" parent="1" name="serveradmin">
+    <login id="5525" parent="1" name="serveradmin">
       <Enabled>1</Enabled>
       <ObjectId>5</ObjectId>
       <Type>server-role</Type>
     </login>
-    <login id="5524" parent="1" name="setupadmin">
+    <login id="5526" parent="1" name="setupadmin">
       <Enabled>1</Enabled>
       <ObjectId>6</ObjectId>
       <Type>server-role</Type>
     </login>
-    <login id="5525" parent="1" name="processadmin">
+    <login id="5527" parent="1" name="processadmin">
       <Enabled>1</Enabled>
       <ObjectId>7</ObjectId>
       <Type>server-role</Type>
     </login>
-    <login id="5526" parent="1" name="diskadmin">
+    <login id="5528" parent="1" name="diskadmin">
       <Enabled>1</Enabled>
       <ObjectId>8</ObjectId>
       <Type>server-role</Type>
     </login>
-    <login id="5527" parent="1" name="dbcreator">
+    <login id="5529" parent="1" name="dbcreator">
       <Enabled>1</Enabled>
       <ObjectId>9</ObjectId>
       <Type>server-role</Type>
     </login>
-    <login id="5528" parent="1" name="bulkadmin">
+    <login id="5530" parent="1" name="bulkadmin">
       <Enabled>1</Enabled>
       <ObjectId>10</ObjectId>
       <Type>server-role</Type>
     </login>
-    <login id="5529" parent="1" name="##MS_SQLResourceSigningCertificate##">
+    <login id="5531" parent="1" name="##MS_SQLResourceSigningCertificate##">
       <DefaultDatabase>master</DefaultDatabase>
       <Enabled>1</Enabled>
       <ObjectId>101</ObjectId>
       <Type>certificate-mapped-login</Type>
     </login>
-    <login id="5530" parent="1" name="##MS_SQLReplicationSigningCertificate##">
+    <login id="5532" parent="1" name="##MS_SQLReplicationSigningCertificate##">
       <DefaultDatabase>master</DefaultDatabase>
       <Enabled>1</Enabled>
       <ObjectId>102</ObjectId>
       <Type>certificate-mapped-login</Type>
     </login>
-    <login id="5531" parent="1" name="##MS_SQLAuthenticatorCertificate##">
+    <login id="5533" parent="1" name="##MS_SQLAuthenticatorCertificate##">
       <DefaultDatabase>master</DefaultDatabase>
       <Enabled>1</Enabled>
       <ObjectId>103</ObjectId>
       <Type>certificate-mapped-login</Type>
     </login>
-    <login id="5532" parent="1" name="##MS_PolicySigningCertificate##">
+    <login id="5534" parent="1" name="##MS_PolicySigningCertificate##">
       <DefaultDatabase>master</DefaultDatabase>
       <Enabled>1</Enabled>
       <ObjectId>105</ObjectId>
       <Type>certificate-mapped-login</Type>
     </login>
-    <login id="5533" parent="1" name="##MS_SmoExtendedSigningCertificate##">
+    <login id="5535" parent="1" name="##MS_SmoExtendedSigningCertificate##">
       <DefaultDatabase>master</DefaultDatabase>
       <Enabled>1</Enabled>
       <ObjectId>106</ObjectId>
       <Type>certificate-mapped-login</Type>
     </login>
-    <login id="5534" parent="1" name="##MS_PolicyEventProcessingLogin##">
+    <login id="5536" parent="1" name="##MS_PolicyEventProcessingLogin##">
       <DefaultDatabase>master</DefaultDatabase>
       <ObjectId>256</ObjectId>
     </login>
-    <login id="5535" parent="1" name="##MS_PolicyTsqlExecutionLogin##">
+    <login id="5537" parent="1" name="##MS_PolicyTsqlExecutionLogin##">
       <DefaultDatabase>master</DefaultDatabase>
       <ObjectId>257</ObjectId>
     </login>
-    <login id="5536" parent="1" name="##MS_AgentSigningCertificate##">
+    <login id="5538" parent="1" name="##MS_AgentSigningCertificate##">
       <DefaultDatabase>master</DefaultDatabase>
       <Enabled>1</Enabled>
       <ObjectId>258</ObjectId>
       <Type>certificate-mapped-login</Type>
     </login>
-    <login id="5537" parent="1" name="DESKTOP-FIFKTTG\Rares">
+    <login id="5539" parent="1" name="BENNINGTON\Claudiu">
       <DefaultDatabase>master</DefaultDatabase>
       <Enabled>1</Enabled>
       <ObjectId>259</ObjectId>
       <Type>windows-login</Type>
     </login>
-    <login id="5538" parent="1" name="NT SERVICE\SQLWriter">
+    <login id="5540" parent="1" name="NT SERVICE\SQLWriter">
       <DefaultDatabase>master</DefaultDatabase>
       <Enabled>1</Enabled>
       <ObjectId>260</ObjectId>
       <Type>windows-login</Type>
     </login>
-    <login id="5539" parent="1" name="NT SERVICE\Winmgmt">
+    <login id="5541" parent="1" name="NT SERVICE\Winmgmt">
       <DefaultDatabase>master</DefaultDatabase>
       <Enabled>1</Enabled>
       <ObjectId>261</ObjectId>
       <Type>windows-login</Type>
     </login>
-    <login id="5540" parent="1" name="NT Service\MSSQL$SQLEXPRESS">
+    <login id="5542" parent="1" name="NT Service\MSSQL$SQLEXPRESS">
       <DefaultDatabase>master</DefaultDatabase>
       <Enabled>1</Enabled>
       <ObjectId>262</ObjectId>
       <Type>windows-login</Type>
     </login>
-    <login id="5541" parent="1" name="BUILTIN\Users">
+    <login id="5543" parent="1" name="BUILTIN\Users">
       <DefaultDatabase>master</DefaultDatabase>
       <Enabled>1</Enabled>
       <ObjectId>263</ObjectId>
       <Type>windows-group</Type>
     </login>
-    <login id="5542" parent="1" name="NT AUTHORITY\SYSTEM">
+    <login id="5544" parent="1" name="NT AUTHORITY\SYSTEM">
       <DefaultDatabase>master</DefaultDatabase>
       <Enabled>1</Enabled>
       <ObjectId>264</ObjectId>
       <Type>windows-login</Type>
     </login>
-    <login id="5543" parent="1" name="NT SERVICE\SQLTELEMETRY$SQLEXPRESS">
+    <login id="5545" parent="1" name="NT SERVICE\SQLTELEMETRY$SQLEXPRESS">
       <DefaultDatabase>master</DefaultDatabase>
       <Enabled>1</Enabled>
       <ObjectId>265</ObjectId>
       <Type>windows-login</Type>
     </login>
-    <login id="5544" parent="1" name="admin">
+    <login id="5546" parent="1" name="admin">
       <DefaultDatabase>master</DefaultDatabase>
       <Enabled>1</Enabled>
       <ObjectId>266</ObjectId>
     </login>
-    <login id="5545" parent="1" name="Administrator">
+    <login id="5547" parent="1" name="Administrator">
       <DefaultDatabase>master</DefaultDatabase>
       <Enabled>1</Enabled>
       <ObjectId>267</ObjectId>
     </login>
-    <role id="5546" parent="5511" name="public">
+    <role id="5548" parent="5514" name="INFORMATION_SCHEMA">
       <AuthType>none</AuthType>
-      <ObjectId>0</ObjectId>
+      <ObjectId>3</ObjectId>
+    </role>
+    <role id="5549" parent="5514" name="db_accessadmin">
+      <AuthType>none</AuthType>
+      <ObjectId>16385</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5547" parent="5511" name="dbo">
+    <role id="5550" parent="5514" name="db_backupoperator">
+      <AuthType>none</AuthType>
+      <ObjectId>16389</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5551" parent="5514" name="db_datareader">
+      <AuthType>none</AuthType>
+      <ObjectId>16390</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5552" parent="5514" name="db_datawriter">
+      <AuthType>none</AuthType>
+      <ObjectId>16391</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5553" parent="5514" name="db_ddladmin">
+      <AuthType>none</AuthType>
+      <ObjectId>16387</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5554" parent="5514" name="db_denydatareader">
+      <AuthType>none</AuthType>
+      <ObjectId>16392</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5555" parent="5514" name="db_denydatawriter">
+      <AuthType>none</AuthType>
+      <ObjectId>16393</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5556" parent="5514" name="db_owner">
+      <AuthType>none</AuthType>
+      <ObjectId>16384</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5557" parent="5514" name="db_securityadmin">
+      <AuthType>none</AuthType>
+      <ObjectId>16386</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5558" parent="5514" name="dbo">
       <AuthType>windows</AuthType>
       <DefaultSchema>dbo</DefaultSchema>
       <ObjectId>1</ObjectId>
       <Type>windows-user</Type>
     </role>
-    <role id="5548" parent="5511" name="guest">
+    <role id="5559" parent="5514" name="guest">
       <AuthType>none</AuthType>
       <DefaultSchema>guest</DefaultSchema>
       <ObjectId>2</ObjectId>
     </role>
-    <role id="5549" parent="5511" name="INFORMATION_SCHEMA">
+    <role id="5560" parent="5514" name="public">
       <AuthType>none</AuthType>
-      <ObjectId>3</ObjectId>
+      <ObjectId>0</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
     </role>
-    <role id="5550" parent="5511" name="sys">
+    <role id="5561" parent="5514" name="sys">
       <AuthType>none</AuthType>
       <ObjectId>4</ObjectId>
     </role>
-    <role id="5551" parent="5511" name="db_owner">
-      <AuthType>none</AuthType>
-      <ObjectId>16384</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5552" parent="5511" name="db_accessadmin">
-      <AuthType>none</AuthType>
-      <ObjectId>16385</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5553" parent="5511" name="db_securityadmin">
-      <AuthType>none</AuthType>
-      <ObjectId>16386</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5554" parent="5511" name="db_ddladmin">
-      <AuthType>none</AuthType>
-      <ObjectId>16387</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5555" parent="5511" name="db_backupoperator">
-      <AuthType>none</AuthType>
-      <ObjectId>16389</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5556" parent="5511" name="db_datareader">
-      <AuthType>none</AuthType>
-      <ObjectId>16390</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5557" parent="5511" name="db_datawriter">
-      <AuthType>none</AuthType>
-      <ObjectId>16391</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5558" parent="5511" name="db_denydatareader">
-      <AuthType>none</AuthType>
-      <ObjectId>16392</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5559" parent="5511" name="db_denydatawriter">
-      <AuthType>none</AuthType>
-      <ObjectId>16393</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <schema id="5560" parent="5511" name="INFORMATION_SCHEMA">
+    <schema id="5562" parent="5514" name="INFORMATION_SCHEMA">
       <ObjectId>3</ObjectId>
     </schema>
-    <schema id="5561" parent="5511" name="db_accessadmin">
+    <schema id="5563" parent="5514" name="db">
+      <IntrospectionTimestamp>2022-12-12.18:44:10.593</IntrospectionTimestamp>
+      <ObjectId>5</ObjectId>
+    </schema>
+    <schema id="5564" parent="5514" name="db_accessadmin">
+      <IntrospectionTimestamp>2022-12-12.18:44:10.603</IntrospectionTimestamp>
       <ObjectId>16385</ObjectId>
     </schema>
-    <schema id="5562" parent="5511" name="db_backupoperator">
+    <schema id="5565" parent="5514" name="db_backupoperator">
+      <IntrospectionTimestamp>2022-12-12.18:44:10.610</IntrospectionTimestamp>
       <ObjectId>16389</ObjectId>
     </schema>
-    <schema id="5563" parent="5511" name="db_datareader">
+    <schema id="5566" parent="5514" name="db_datareader">
+      <IntrospectionTimestamp>2022-12-12.18:44:10.620</IntrospectionTimestamp>
       <ObjectId>16390</ObjectId>
     </schema>
-    <schema id="5564" parent="5511" name="db_datawriter">
+    <schema id="5567" parent="5514" name="db_datawriter">
+      <IntrospectionTimestamp>2022-12-12.18:44:10.627</IntrospectionTimestamp>
       <ObjectId>16391</ObjectId>
     </schema>
-    <schema id="5565" parent="5511" name="db_ddladmin">
+    <schema id="5568" parent="5514" name="db_ddladmin">
+      <IntrospectionTimestamp>2022-12-12.18:44:10.640</IntrospectionTimestamp>
       <ObjectId>16387</ObjectId>
     </schema>
-    <schema id="5566" parent="5511" name="db_denydatareader">
+    <schema id="5569" parent="5514" name="db_denydatareader">
+      <IntrospectionTimestamp>2022-12-12.18:44:10.650</IntrospectionTimestamp>
       <ObjectId>16392</ObjectId>
     </schema>
-    <schema id="5567" parent="5511" name="db_denydatawriter">
+    <schema id="5570" parent="5514" name="db_denydatawriter">
+      <IntrospectionTimestamp>2022-12-12.18:44:10.657</IntrospectionTimestamp>
       <ObjectId>16393</ObjectId>
     </schema>
-    <schema id="5568" parent="5511" name="db_owner">
+    <schema id="5571" parent="5514" name="db_owner">
+      <IntrospectionTimestamp>2022-12-12.18:44:10.667</IntrospectionTimestamp>
       <ObjectId>16384</ObjectId>
     </schema>
-    <schema id="5569" parent="5511" name="db_securityadmin">
+    <schema id="5572" parent="5514" name="db_securityadmin">
+      <IntrospectionTimestamp>2022-12-12.18:44:10.677</IntrospectionTimestamp>
       <ObjectId>16386</ObjectId>
     </schema>
-    <schema id="5570" parent="5511" name="dbo">
+    <schema id="5573" parent="5514" name="dbo">
       <Current>1</Current>
+      <IntrospectionTimestamp>2022-12-12.18:44:10.683</IntrospectionTimestamp>
       <ObjectId>1</ObjectId>
     </schema>
-    <schema id="5571" parent="5511" name="guest">
+    <schema id="5574" parent="5514" name="guest">
+      <IntrospectionTimestamp>2022-12-12.18:44:10.707</IntrospectionTimestamp>
       <ObjectId>2</ObjectId>
     </schema>
-    <schema id="5572" parent="5511" name="sys">
+    <schema id="5575" parent="5514" name="sys">
+      <Grants>-615|||0|select|G
+-614|||0|select|G
+-613|||0|select|G
+-607|||0|select|G
+-606|||0|select|G
+-605|||0|select|G
+-603|||0|select|G
+-602|||0|select|G
+-601|||0|select|G
+-600|||0|select|G
+-599|||0|select|G
+-598|||0|select|G
+-596|||0|select|G
+-589|||0|select|G
+-588|||0|select|G
+-587|||0|select|G
+-586|||0|select|G
+-582|||0|select|G
+-580|||0|select|G
+-572|||0|select|G
+-571|||0|select|G
+-570|||0|select|G
+-569|||0|select|G
+-568|||0|select|G
+-567|||0|select|G
+-566|||0|select|G
+-565|||0|select|G
+-564|||0|select|G
+-563|||0|select|G
+-562|||0|select|G
+-561|||0|select|G
+-560|||0|select|G
+-559|||0|select|G
+-558|||0|select|G
+-557|||0|select|G
+-551|||0|select|G
+-550|||0|select|G
+-549|||0|select|G
+-541|||0|select|G
+-540|||0|select|G
+-539|||0|select|G
+-538|||0|select|G
+-537|||0|select|G
+-536|||0|select|G
+-535|||0|select|G
+-519|||0|select|G
+-518|||0|select|G
+-517|||0|select|G
+-516|||0|select|G
+-515|||0|select|G
+-514|||0|select|G
+-513|||0|select|G
+-505|||0|select|G
+-504|||0|select|G
+-503|||0|select|G
+-502|||0|select|G
+-501|||0|select|G
+-500|||0|select|G
+-499|||0|select|G
+-498|||0|select|G
+-497|||0|select|G
+-496|||0|select|G
+-494|||0|select|G
+-489|||0|select|G
+-485|||0|select|G
+-484|||0|select|G
+-483|||0|select|G
+-482|||0|select|G
+-481|||0|select|G
+-480|||0|select|G
+-479|||0|select|G
+-478|||0|select|G
+-477|||0|select|G
+-476|||0|select|G
+-469|||0|select|G
+-468|||0|select|G
+-467|||0|select|G
+-466|||0|select|G
+-465|||0|select|G
+-464|||0|select|G
+-463|||0|select|G
+-462|||0|select|G
+-461|||0|select|G
+-460|||0|select|G
+-459|||0|select|G
+-458|||0|select|G
+-457|||0|select|G
+-456|||0|select|G
+-455|||0|select|G
+-454|||0|select|G
+-453|||0|select|G
+-452|||0|select|G
+-451|||0|select|G
+-450|||0|select|G
+-449|||0|select|G
+-448|||0|select|G
+-447|||0|select|G
+-446|||0|select|G
+-445|||0|select|G
+-444|||0|select|G
+-443|||0|select|G
+-442|||0|select|G
+-441|||0|select|G
+-440|||0|select|G
+-439|||0|select|G
+-438|||0|select|G
+-437|||0|select|G
+-436|||0|select|G
+-435|||0|select|G
+-434|||0|select|G
+-433|||0|select|G
+-432|||0|select|G
+-431|||0|select|G
+-430|||0|select|G
+-429|||0|select|G
+-428|||0|select|G
+-426|||0|select|G
+-425|||0|select|G
+-424|||0|select|G
+-423|||0|select|G
+-422|||0|select|G
+-421|||0|select|G
+-420|||0|select|G
+-419|||0|select|G
+-418|||0|select|G
+-417|||0|select|G
+-416|||0|select|G
+-415|||0|select|G
+-414|||0|select|G
+-413|||0|select|G
+-412|||0|select|G
+-411|||0|select|G
+-410|||0|select|G
+-409|||0|select|G
+-408|||0|select|G
+-407|||0|select|G
+-406|||0|select|G
+-405|||0|select|G
+-404|||0|select|G
+-403|||0|select|G
+-402|||0|select|G
+-401|||0|select|G
+-400|||0|select|G
+-399|||0|select|G
+-398|||0|select|G
+-397|||0|select|G
+-396|||0|select|G
+-395|||0|select|G
+-394|||0|select|G
+-393|||0|select|G
+-392|||0|select|G
+-391|||0|select|G
+-390|||0|select|G
+-389|||0|select|G
+-388|||0|select|G
+-387|||0|select|G
+-386|||0|select|G
+-385|||0|select|G
+-143|||0|select|G
+-142|||0|select|G
+-141|||0|select|G
+-140|||0|select|G
+-139|||0|select|G
+-138|||0|select|G
+-137|||0|select|G
+-136|||0|select|G
+-135|||0|select|G
+-134|||0|select|G
+-133|||0|select|G
+-132|||0|select|G
+-131|||0|select|G
+-130|||0|select|G
+-129|||0|select|G
+-107|||0|select|G
+-106|||0|select|G
+-105|||0|select|G
+-104|||0|select|G
+-103|||0|select|G
+-102|||0|select|G
+-101|||0|select|G</Grants>
       <ObjectId>4</ObjectId>
+      <PermissionsCheckSum>381669622488</PermissionsCheckSum>
     </schema>
+    <table id="5576" parent="5573" name="Clients">
+      <CreatedTimestamp>2022-12-12.18:16:29.917</CreatedTimestamp>
+      <ModifiedTimestamp>2022-12-12.18:16:29.917</ModifiedTimestamp>
+      <ObjectId>981578535</ObjectId>
+    </table>
+    <table id="5577" parent="5573" name="Dealers">
+      <CreatedTimestamp>2022-12-12.18:16:29.920</CreatedTimestamp>
+      <ModifiedTimestamp>2022-12-12.18:16:29.920</ModifiedTimestamp>
+      <ObjectId>1013578649</ObjectId>
+    </table>
+    <column id="5578" parent="5576" name="id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="5579" parent="5576" name="Name">
+      <DataType>varchar(30 char)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="5580" parent="5576" name="Password">
+      <DataType>varchar(30 char)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <index id="5581" parent="5576" name="PK__Clients__3213E83F0A303144">
+      <Clustering>1</Clustering>
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="5582" parent="5576" name="PK__Clients__3213E83F0A303144">
+      <CreatedTimestamp>2022-12-12.18:16:29.920</CreatedTimestamp>
+      <ModifiedTimestamp>2022-12-12.18:16:29.920</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>997578592</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK__Clients__3213E83F0A303144</UnderlyingIndexName>
+    </key>
+    <column id="5583" parent="5577" name="id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="5584" parent="5577" name="Name">
+      <DataType>varchar(30 char)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="5585" parent="5577" name="Password">
+      <DataType>varchar(30 char)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <index id="5586" parent="5577" name="PK__Dealers__3213E83FFAA2148D">
+      <Clustering>1</Clustering>
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="5587" parent="5577" name="PK__Dealers__3213E83FFAA2148D">
+      <CreatedTimestamp>2022-12-12.18:16:29.920</CreatedTimestamp>
+      <ModifiedTimestamp>2022-12-12.18:16:29.920</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>1029578706</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK__Dealers__3213E83FFAA2148D</UnderlyingIndexName>
+    </key>
   </database-model>
 </dataSource>

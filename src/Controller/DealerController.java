@@ -30,12 +30,6 @@ public class DealerController extends DealerRepositoryMemory {
         return super.findById(s);
     }
 
-    @Override
-    public void printAllDealers()
-    {
-        super.printAllDealers();
-    }
-
 
     public List<Dealer> sortByNameAsc(){ //aia buna
         List<Dealer> sortedDealers = repo.getAllDealers();
@@ -61,6 +55,11 @@ public class DealerController extends DealerRepositoryMemory {
         sortedDealers.sort(Comparator.comparing(Dealer::getAge));
         //repo.printAllDealers();
         return sortedDealers;
+    }
+
+    public void printAllDealers()
+    {
+        super.printAllDealers();
     }
     @Override
     public int size(){
