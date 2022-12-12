@@ -11,20 +11,33 @@ public class DealerRepositoryMemory implements CrudRepo<String, Dealer> {
     private final ArrayList<Dealer> allDealers = new ArrayList<Dealer>();
 
     public DealerRepositoryMemory() {
-        populateDealers();
+        populate();
     }
 
     public ArrayList<Dealer> getList(){
         return (ArrayList<Dealer>) this.allDealers;
     }
-    public void populateDealers(){
+    private void populate() {
+        Dealer dealer = new Dealer("Robi", "3321", 67);
         Dealer dealer1 = new Dealer("Vasile", "4564", 35);
         Dealer dealer2 = new Dealer("George", "4514", 45);
-        dealer1.addGame(AvailableGames.Roulette);
-        dealer2.addGame(AvailableGames.Roulette);
-        dealer2.addGame(AvailableGames.Poker);
-        this.allDealers.add(dealer1);
-        this.allDealers.add(dealer2);
+        Dealer dealer3 = new Dealer("Rares", "48912", 20);
+        Dealer dealer4 = new Dealer("Andrei", "1836", 29);
+        Dealer dealer5 = new Dealer("Andreea","154", 37);
+        Dealer dealer6 = new Dealer("Fabian", "1231", 24);
+        Dealer dealer7 = new Dealer("Luciana", "17752", 59);
+        Dealer dealer8 = new Dealer("Adrian", "1121", 43);
+        Dealer dealer9 = new Dealer("Ovi", "5290", 89);
+        allDealers.add(dealer);
+        allDealers.add(dealer1);
+        allDealers.add(dealer2);
+        allDealers.add(dealer3);
+        allDealers.add(dealer4);
+        allDealers.add(dealer5);
+        allDealers.add(dealer6);
+        allDealers.add(dealer7);
+        allDealers.add(dealer8);
+        allDealers.add(dealer9);
     }
 
     public void printing(){

@@ -273,6 +273,5 @@ public class ViewLayer {
         dealerList.sortByAgeAsc();
         System.out.println();
         dealerList.sortByAgeDsc();
-//        clientList.sortByNameAsc();
     }
 }

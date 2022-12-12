@@ -8,16 +8,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class DealerController extends DealerRepositoryMemory {
-    private DealerRepositoryMemory allDealers;
     DealerRepositoryMemory repo = new DealerRepositoryMemory();
-
-//    public DealerRepositoryMemory getAllDealers() {
-//        return allDealers;
-//    }
-
-    public void setAllDealers(DealerRepositoryMemory allDealers) {
-        this.allDealers = allDealers;
-    }
 
     @Override
     public void add(Dealer entity) {
@@ -40,13 +31,6 @@ public class DealerController extends DealerRepositoryMemory {
     }
 
     public List<Dealer> sortByNameAsc(){ //aia buna
-        List<Dealer> sortedDealers = repo.getAllDealers();
-        sortedDealers.sort(Comparator.comparing(Dealer::getName));
-        printAllDealers();
-        return sortedDealers;
-    }
-
-    public List<Dealer> SortByNameAsc(List<Dealer> dealers){
         List<Dealer> sortedDealers = repo.getAllDealers();
         sortedDealers.sort(Comparator.comparing(Dealer::getName));
         printAllDealers();
