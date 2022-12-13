@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="merg sortarile si afiseaza elemente nu adresa de memorie">
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ClientControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ClientControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DealerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DealerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DealerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DealerControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ClientRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/CrudRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CrudRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/Games/Poker/Poker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/Games/Poker/Poker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/InMemory/ClientRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/InMemory/ClientRepositoryMemory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/InMemory/DealerRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/InMemory/DealerRepositoryMemory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/InMemory/UserRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/InMemory/UserRepositoryMemory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ViewLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ViewLayer.java" afterDir="false" />
-=======
+    <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Repository/DB/ClientRepositoryDB.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Repository/DB/DealerRepositoryDB.java" afterDir="false" />
@@ -32,10 +15,21 @@
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/229613c8-cfd5-42eb-815c-123950dcb18a/storage_v2/_src_/database/master.YiqNvw/schema/dbo.sYMBAA.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/229613c8-cfd5-42eb-815c-123950dcb18a/storage_v2/_src_/database/master.YiqNvw/schema/dbo.sYMBAA.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ClientControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ClientControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/DealerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DealerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DealerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DealerControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RegistrationSystem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ClientRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CrudRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CrudRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/Games/Poker/Poker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/Games/Poker/Poker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/InMemory/ClientRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/InMemory/ClientRepositoryMemory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/InMemory/DealerRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/InMemory/DealerRepositoryMemory.java" afterDir="false" />
->>>>>>> origin/New_Claudiu_Branch
+      <change beforePath="$PROJECT_DIR$/src/Repository/InMemory/UserRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/InMemory/UserRepositoryMemory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ViewLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ViewLayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,13 +220,10 @@
       <workItem from="1670775862312" duration="5734000" />
       <workItem from="1670792176394" duration="2200000" />
       <workItem from="1670795795668" duration="13055000" />
-<<<<<<< HEAD
       <workItem from="1670853968133" duration="8910000" />
       <workItem from="1670863137406" duration="437000" />
       <workItem from="1670866454891" duration="8136000" />
-=======
       <workItem from="1670855614840" duration="3037000" />
->>>>>>> origin/New_Claudiu_Branch
     </task>
     <task id="LOCAL-00001" summary="Second">
       <created>1666629431147</created>
