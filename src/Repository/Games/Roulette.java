@@ -8,11 +8,65 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Roulette extends Gamble {
+    private int currentMoney;
+    private int wonMoney;
+    private int lostMoney;
+    private int wonGames;
+    private int lostGames;
+
+    public Roulette(int currentMoney, int wonMoney, int lostMoney, int wonGames, int lostGames) {
+        this.currentMoney = currentMoney;
+        this.wonMoney = wonMoney;
+        this.lostMoney = lostMoney;
+        this.wonGames = wonGames;
+        this.lostGames = lostGames;
+    }
+
+    public int getCurrentMoney() {
+        return currentMoney;
+    }
+
+    public void setCurrentMoney(int currentMoney) {
+        this.currentMoney = currentMoney;
+    }
+
+    public int getWonMoney() {
+        return wonMoney;
+    }
+
+    public void setWonMoney(int wonMoney) {
+        this.wonMoney += wonMoney;
+    }
+
+    public int getLostMoney() {
+        return lostMoney;
+    }
+
+    public void setLostMoney(int lostMoney) {
+        this.lostMoney += lostMoney;
+    }
+
+    public int getWonGames() {
+        return wonGames;
+    }
+
+    public void setWonGames(int wonGames) {
+        this.wonGames += wonGames;
+    }
+
+    public int getLostGames() {
+        return lostGames;
+    }
+
+    public void setLostGames(int lostGames) {
+        this.lostGames += lostGames;
+    }
+
     public void play() {
         Scanner keyboard = new Scanner(System.in);
         Random generator = new Random();
-        double total = 500;
-        double amount;
+        int total = this.getCurrentMoney();
+        int amount;
         int choice, win = 0, lose = 0, spin = 0;
         int number;
         int rouletteNum;
@@ -23,7 +77,7 @@ public class Roulette extends Gamble {
         while (response == 'y' || response == 'Y' && total <= 0)
         {
             System.out.print("Enter your bet amount: ");
-            amount = keyboard.nextDouble();
+            amount = keyboard.nextInt();
             System.out.print("0 - Even\n1 - Odd\n2 - Number\n");
             choice = -1;
             while (choice < 0 || choice > 2) {
@@ -55,19 +109,21 @@ public class Roulette extends Gamble {
 
             //Print out game result, win/lose amount
             if (result > 0) {
-                System.out.println("Congratulatons!!! You win!");
-                System.out.printf("You have won $%.2f \n", result * amount);
-                System.out.printf("Here's your money back: $%.2f \n",
+                System.out.println("Congratulations! You win!");
+                System.out.printf("You have won $%d%n \n", result * amount);
+                System.out.printf("Here's your money back: $%d%n \n",
                         (result + 1) * amount);
                 total = (result + 1) * amount + total;
+                this.setWonMoney((result+1) * amount);
                 win++;
                 resultArr[rouletteNum]++;
 
             } else {
                 System.out.println("You lose. Better luck next time!");
-                System.out.printf("You have lost $%.2f \n",
+                System.out.printf("You have lost $%d%n \n",
                         (result + 1) * amount);
                 total = total - (result + 1) * (amount);
+                this.setLostMoney((result+1) * amount);
                 lose++;
                 resultArr[rouletteNum]++;
 
@@ -83,6 +139,7 @@ public class Roulette extends Gamble {
                     System.out.println("The number " + totals + " won " + resultArr[totals] + " times.");
                 }
             }
+            this.setCurrentMoney(total);
             System.out.println("You have $" + total + " remaining.");
             System.out.println("You have won " + win + " games.");
             System.out.println("You have lost " + lose + " games.");
@@ -91,6 +148,7 @@ public class Roulette extends Gamble {
             response = keyboard.next().charAt(0);
 
         }
-
+        this.setLostGames(lose);
+        this.setWonGames(win);
     }
 }

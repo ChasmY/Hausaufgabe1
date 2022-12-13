@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/Games/AvailableGames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/Games/AvailableGames.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/Games/Gamble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/Games/Gamble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/Games/Roulette.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/Games/Roulette.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ViewLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ViewLayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,14 +12,19 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Enum" />
-        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="New_Claudiu_Branch" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -55,6 +54,11 @@
     &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Facultate/An II/MAP/Hausaufgabe1&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlserver&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -68,7 +72,7 @@
       <recent name="Controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.UserControllerTest.findById">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Hausaufgabe1" />
@@ -76,7 +80,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DealerControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClientControllerTest.sortByWonMoneyAsc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Hausaufgabe1" />
       <extension name="coverage">
         <pattern>
@@ -85,13 +89,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Controller" />
-      <option name="MAIN_CLASS_NAME" value="Controller.DealerControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="Controller.ClientControllerTest" />
+      <option name="METHOD_NAME" value="sortByWonMoneyAsc" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hausaufgabe1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Controller" />
+      <option name="MAIN_CLASS_NAME" value="Controller.UserControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DealerControllerTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Hausaufgabe1" />
       <extension name="coverage">
         <pattern>
@@ -100,14 +120,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Controller" />
-      <option name="MAIN_CLASS_NAME" value="Controller.DealerControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="Controller.UserControllerTest" />
       <option name="METHOD_NAME" value="add" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DealerControllerTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest.findById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Hausaufgabe1" />
       <extension name="coverage">
         <pattern>
@@ -116,8 +136,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Controller" />
-      <option name="MAIN_CLASS_NAME" value="Controller.DealerControllerTest" />
-      <option name="METHOD_NAME" value="update" />
+      <option name="MAIN_CLASS_NAME" value="Controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="findById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -125,10 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserControllerTest.findById" />
+        <item itemvalue="JUnit.UserControllerTest" />
+        <item itemvalue="JUnit.UserControllerTest.add" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.DealerControllerTest" />
-        <item itemvalue="JUnit.DealerControllerTest.update" />
-        <item itemvalue="JUnit.DealerControllerTest.add" />
+        <item itemvalue="JUnit.ClientControllerTest.sortByWonMoneyAsc" />
       </list>
     </recent_temporary>
   </component>
@@ -169,6 +190,13 @@
       <workItem from="1668869706937" duration="6834000" />
       <workItem from="1670695720201" duration="6000" />
       <workItem from="1670695687210" duration="8000" />
+      <workItem from="1670775862312" duration="5734000" />
+      <workItem from="1670792176394" duration="2200000" />
+      <workItem from="1670795795668" duration="13055000" />
+      <workItem from="1670853968133" duration="8910000" />
+      <workItem from="1670863137406" duration="437000" />
+      <workItem from="1670866454891" duration="8136000" />
+      <workItem from="1670855614840" duration="3037000" />
     </task>
     <task id="LOCAL-00001" summary="Second">
       <created>1666629431147</created>
@@ -226,7 +254,28 @@
       <option name="project" value="LOCAL" />
       <updated>1668876180121</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="am refacut putin la jocuri">
+      <created>1670792584683</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1670792584683</updated>
+    </task>
+    <task id="LOCAL-00010" summary="merg sortarile si afiseaza elemente nu adresa de memorie">
+      <created>1670848754352</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670848754352</updated>
+    </task>
+    <task id="LOCAL-00011" summary="merg sortarile si afiseaza elemente nu adresa de memorie">
+      <created>1670853823662</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670853823662</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +286,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="Final_NO_DB" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -251,7 +312,9 @@
     <MESSAGE value="am modificat la view-layer" />
     <MESSAGE value="am facut pokerul!!!" />
     <MESSAGE value="acum poti juca poker!" />
-    <option name="LAST_COMMIT_MESSAGE" value="acum poti juca poker!" />
+    <MESSAGE value="am refacut putin la jocuri" />
+    <MESSAGE value="merg sortarile si afiseaza elemente nu adresa de memorie" />
+    <option name="LAST_COMMIT_MESSAGE" value="merg sortarile si afiseaza elemente nu adresa de memorie" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

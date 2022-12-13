@@ -9,52 +9,41 @@ import java.util.Scanner;
 
 
 public class Poker extends Gamble {
+    public int handCode;
 
-        private final int HAND_SIZE = 5;
-        private int again = 1;
-
-        // instantiate Deck and Player
-        Scanner scan = new Scanner(System.in);
-        Deck deck = new Deck();
-        Player player = new Player();
-        Card[] hand;
-
-
+    // instantiate Deck and Player
+    Scanner scan = new Scanner(System.in);
+    Deck deck = new Deck();
+    Player player = new Player();
+    Card[] hand;
 
         // plays the game
         public void play()
         {
-            while (again == 1)
-            {
-                // fill deck
-                deck.fillDeck();
+            // fill deck
+            deck.fillDeck();
 
-                // shuffle
-                deck.shuffle();
+            // shuffle
+            deck.shuffle();
 
-                // player draws
-                hand = player.draw(deck);
+            // player draws
+            hand = player.draw(deck);
 
-                // sort hand
-                Arrays.sort(hand);
+            // sort hand
+            Arrays.sort(hand);
 
-                // player redraws
-                this.checkHand();
-                hand = this.redraw();
+            // player redraws
+            this.checkHand();
 
-                // display hand again
-                // this.makeHand(); //<--- TA ! un-comment this and change makeHand()
-                this.checkHand();
+            hand = this.redraw();
 
-                // sort hand
-                Arrays.sort(hand);
+            this.makeHand();
 
-                // evaluate the hand
-                this.evaluate();
+            // sort hand
+            Arrays.sort(hand);
 
-                // play again?
-                this.again();
-            }
+            // evaluate the hand
+            handCode = this.evaluate();
             System.out.println("Thanks for playing! =]");
         }
 
@@ -77,6 +66,7 @@ public class Poker extends Gamble {
         // tells player cards in hand
         public void checkHand()
         {
+            int HAND_SIZE = 5;
             for (int handCounter = 0; handCounter < HAND_SIZE; handCounter++)
             {
                 this.display(hand[handCounter]);
@@ -102,48 +92,58 @@ public class Poker extends Gamble {
 
 
         // evaluates the hand
-        public void evaluate()
+        public int evaluate()
         {
             if (this.royalFlush() == 1)
             {
                 System.out.println("You have a royal flush!");
+                return 10;
             }
             else if (this.straightFlush() == 1)
             {
                 System.out.println("You have a straight flush!");
+                return 9;
             }
             else if (this.fourOfaKind() == 1)
             {
                 System.out.println("You have four of a kind!");
+                return 8;
             }
             else if (this.fullHouse() == 1)
             {
                 System.out.println("You have a full house!");
+                return 7;
             }
             else if (this.flush() == 1)
             {
                 System.out.println("You have a flush!");
+                return 6;
             }
             else if (this.straight() == 1)
             {
                 System.out.println("You have a straight!");
+                return 5;
             }
             else if (this.triple() == 1)
             {
                 System.out.println("You have a triple!");
+                return 4;
             }
             else if (this.twoPairs() == 1)
             {
                 System.out.println("You have two pairs!");
+                return 3;
             }
             else if (this.pair() == 1)
             {
                 System.out.println("You have a pair!");
+                return 2;
             }
             else
             {
                 int highCard = this.highCard();
                 System.out.println("Your highest card is " + highCard);
+                return 1;
             }
         }
 
@@ -296,7 +296,7 @@ public class Poker extends Gamble {
             }
         }
 
-        // find highest card
+        // find the highest card
         public int highCard()
         {
             int highCard = 0;
@@ -308,13 +308,6 @@ public class Poker extends Gamble {
                 }
             }
             return highCard;
-        }
-
-        // asks user if they want to play again
-        public void again()
-        {
-            System.out.print("Play again? (1 for yes, 0 for no)");
-            again = scan.nextInt();
         }
 
         // generates string for each card in hand
@@ -392,7 +385,6 @@ public class Poker extends Gamble {
                 System.out.print("Clubs");
                 System.out.println();
             }
-
         }
 
 }
