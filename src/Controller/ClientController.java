@@ -10,7 +10,8 @@ import java.util.List;
 
 public class ClientController extends ClientRepositoryMemory{
 
-    ClientRepositoryMemory repo = new ClientRepositoryMemory();
+    public ClientRepositoryMemory repo = new ClientRepositoryMemory();
+
     @Override
     public void add(Client entity) throws Exception {
         super.add(entity);
@@ -45,7 +46,7 @@ public class ClientController extends ClientRepositoryMemory{
     public List<Client> sortByNameAsc(){
         List<Client> sortedClients = repo.getAllClients();
         sortedClients.sort(Comparator.comparing(Client::getName));
-        repo.printAllClients();
+        //repo.printAllClients();
         return sortedClients;
     }
     public List<Client> sortByNameDsc(){

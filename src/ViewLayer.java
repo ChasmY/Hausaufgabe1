@@ -68,7 +68,7 @@ public class ViewLayer {
         System.out.println("Money to deposit ");
         client.setCurrentMoney(console.nextInt());
 
-        clientList.add(client);
+        clientList.repo.add(client);
     }
 
     public void signinDealer() throws Exception {
@@ -90,7 +90,7 @@ public class ViewLayer {
         dealer.setPassword(user.getPassword());
         dealer.setAge(user.getAge());
 
-        dealerList.add(dealer);
+        dealerList.repo.add(dealer);
     }
 
     public boolean loginClient(){
@@ -103,7 +103,7 @@ public class ViewLayer {
         System.out.println("Password ");
         clientLogging.setPassword(console.nextLine());
 
-        for(Client c : clientList.getAllClients()){
+        for(Client c : clientList.repo.getAllClients()){
             if(Objects.equals(c.getName(), clientLogging.getName()) && Objects.equals(c.getPassword(), clientLogging.getPassword()))
                 return true;
         }
@@ -120,7 +120,7 @@ public class ViewLayer {
         System.out.println("Password ");
         dealerLogging.setPassword(console.nextLine());
 
-        for(Dealer d : dealerList.getList()){
+        for(Dealer d : dealerList.repo.getList()){
             if(Objects.equals(d.getName(), dealerLogging.getName()) && Objects.equals(d.getPassword(), dealerLogging.getPassword()))
                 return true;
         }
@@ -265,13 +265,13 @@ public class ViewLayer {
                 Scanner choice = new Scanner(System.in);
                 while(choice.hasNextInt()){
                     if(choice.nextInt() == 1){
-                        clientList.sortByNameAsc();
-                        clientList.printAllClients();
+                        List<Client> sortedClients = clientList.sortByNameAsc();
+                        printClients(sortedClients);
                         clientLogged();
                     }
                     else if (choice.nextInt() == 2){
-                        clientList.sortByNameDsc();
-                        clientList.printAllClients();
+                        List<Client> sortedClients = clientList.sortByNameDsc();
+                        printClients(sortedClients);
                         clientLogged();
                     }
                     else{
@@ -287,13 +287,13 @@ public class ViewLayer {
                 Scanner choice = new Scanner(System.in);
                 while(choice.hasNextInt()){
                     if(choice.nextInt() == 1){
-                        clientList.sortByAgeAsc();
-                        clientList.printAllClients();
+                        List<Client> sortedClients = clientList.sortByAgeAsc();
+                        printClients(sortedClients);
                         clientLogged();
                     }
                     else if (choice.nextInt() == 2){
-                        clientList.sortByAgeDsc();
-                        clientList.printAllClients();
+                        List<Client> sortedClients = clientList.sortByAgeDsc();
+                        printClients(sortedClients);
                         clientLogged();
                     }else{
                         System.out.println("Back to client portal. Choose another option");
@@ -308,13 +308,13 @@ public class ViewLayer {
                 Scanner choice = new Scanner(System.in);
                 while(choice.hasNextInt()){
                     if(choice.nextInt() == 1){
-                        clientList.sortByWonMoneyAsc();
-                        clientList.printAllClients();
+                        List<Client> sortedClients = clientList.sortByWonMoneyAsc();
+                        printClients(sortedClients);
                         clientLogged();
                     }
                     else if (choice.nextInt() == 2){
-                        clientList.sortByWonMoneyDsc();
-                        clientList.printAllClients();
+                        List<Client> sortedClients = clientList.sortByWonMoneyDsc();
+                        printClients(sortedClients);
                         clientLogged();
                     }else{
                         System.out.println("Back to client portal. Choose another option");
@@ -329,13 +329,13 @@ public class ViewLayer {
                 Scanner choice = new Scanner(System.in);
                 while(choice.hasNextInt()){
                     if(choice.nextInt() == 1){
-                        clientList.sortByLostMoneyAsc();
-                        clientList.printAllClients();
+                        List<Client> sortedClients = clientList.sortByLostMoneyAsc();
+                        printClients(sortedClients);
                         clientLogged();
                     }
                     else if (choice.nextInt() == 2){
-                        clientList.sortByLostMoneyDsc();
-                        clientList.printAllClients();
+                        List<Client> sortedClients = clientList.sortByLostMoneyDsc();
+                        printClients(sortedClients);
                         clientLogged();
                     }else{
                         System.out.println("Back to client portal. Choose another option");
@@ -365,12 +365,12 @@ public class ViewLayer {
                 Scanner secondChoice = new Scanner(System.in);
                 while(secondChoice.hasNextInt()) {
                     if (secondChoice.nextInt() == 1) {
-                        dealerList.sortByNameAsc();
-                        dealerList.printAllDealers();
+                        List<Dealer> sortedDealers= dealerList.sortByNameAsc();
+                        printDealers(sortedDealers);
                         dealerLogged();
                     } else if(secondChoice.nextInt() == 2){
-                        dealerList.sortByNameDsc();
-                        dealerList.printAllDealers();
+                        List<Dealer> sortedDealers= dealerList.sortByNameDsc();
+                        printDealers(sortedDealers);
                         dealerLogged();
                     }
                     else{
@@ -385,12 +385,12 @@ public class ViewLayer {
                 Scanner thirdChoice = new Scanner(System.in);
                 while(thirdChoice.hasNextInt()) {
                     if (thirdChoice.nextInt() == 1) {
-                        dealerList.sortByAgeAsc();
-                        dealerList.printAllDealers();
+                        List<Dealer> sortedDealers= dealerList.sortByAgeAsc();
+                        printDealers(sortedDealers);
                         dealerLogged();
                     } else if(thirdChoice.nextInt() == 2){
-                        dealerList.sortByAgeDsc();
-                        dealerList.printAllDealers();
+                        List<Dealer> sortedDealers= dealerList.sortByAgeDsc();
+                        printDealers(sortedDealers);
                         dealerLogged();
                     }
                     else{
@@ -405,13 +405,16 @@ public class ViewLayer {
 
         }
     }
-//    public void printingLists(){
-//        dealerList.sortByNameAsc();
-//        System.out.println();
-//        dealerList.sortByNameDsc();
-//        System.out.println();
-//        dealerList.sortByAgeAsc();
-//        System.out.println();
-//        dealerList.sortByAgeDsc();
-//    }
+
+    public void printDealers(List<Dealer> dealerList){
+        for(Dealer dealer1: dealerList){
+            System.out.println(dealer1.getName() + " "+ dealer1.getPassword() +" " + dealer1.getAge() +
+                    " " + dealer1.getGamesKnown());
+        }
+    }
+    public void printClients(List<Client> clientList){
+        for(Client client1: clientList){
+            System.out.println(client1.getName() + " "+client1.getPassword());
+        }
+    }
 }

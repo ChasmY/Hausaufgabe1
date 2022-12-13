@@ -8,7 +8,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class DealerController extends DealerRepositoryMemory {
-    DealerRepositoryMemory repo = new DealerRepositoryMemory();
+    public DealerRepositoryMemory repo = new DealerRepositoryMemory();
 
     @Override
     public void add(Dealer entity) throws Exception {
