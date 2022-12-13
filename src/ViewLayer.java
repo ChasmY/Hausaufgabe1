@@ -104,8 +104,15 @@ public class ViewLayer {
         clientLogging.setPassword(console.nextLine());
 
         for(Client c : clientList.repo.getAllClients()){
-            if(Objects.equals(c.getName(), clientLogging.getName()) && Objects.equals(c.getPassword(), clientLogging.getPassword()))
+            if(Objects.equals(c.getName(), clientLogging.getName()) && Objects.equals(c.getPassword(), clientLogging.getPassword())){
+                client.setCurrentMoney(c.getCurrentMoney());
+                client.setLostMoney(c.getLostMoney());
+                client.setWonMoney(c.getWonMoney());
+                client.setLostGames(c.getLostGames());
+                client.setWonGames(c.getWonGames());
+                client.setAge(c.getAge());
                 return true;
+            }
         }
         return false;
     }
@@ -160,9 +167,9 @@ public class ViewLayer {
     public void playGames() throws Exception {
         boolean found = false;
         System.out.println("What game would you want to play?");
-        System.out.println("Poker - Play Poker");
+        //System.out.println("Poker - Play Poker");
         System.out.println("Roulette - Play Roulette");
-        System.out.println("Blackjack - Play Blackjack");
+//        System.out.println("Blackjack - Play Blackjack");
         Scanner gameMode = new Scanner(System.in);
         String game = gameMode.next();
         found = false;
@@ -174,39 +181,39 @@ public class ViewLayer {
         if (!found)
             throw new Exception("Incorrect game name. Choose another one");
         else {
-            if (Objects.equals(game, "Poker")) {
-                System.out.println("Make your bet!");
-                Scanner bet = new Scanner(System.in);
-                int betInt = bet.nextInt();
-
-                int yourHandCode;
-                Poker pokerClient = new Poker();
-                pokerClient.play();
-                yourHandCode = pokerClient.handCode;
-                System.out.println("Keep in mind what you got!\n");
-
-                int dealerHandCode;
-                System.out.println("Now you will play as a dealer. Make him lose!");
-                Poker pokerDealer = new Poker();
-                pokerDealer.play();
-                dealerHandCode = pokerDealer.handCode;
-
-                if(dealerHandCode > yourHandCode){
-                    System.out.println("You lost!");
-                    client.setCurrentMoney(client.getCurrentMoney() - betInt);
-                    client.setLostMoney(betInt);
-                    client.setLostGames(1);
-                }
-                else if (dealerHandCode < yourHandCode){
-                    System.out.println("You won! Congratulations!");
-                    client.setCurrentMoney(client.getCurrentMoney() + bet.nextInt());
-                    client.setWonMoney(betInt);
-                    client.setWonGames(1);
-                }
-                else{
-                    System.out.println("It's a tie!!");
-                }
-            }
+//            if (Objects.equals(game, "Poker")) {
+//                System.out.println("Make your bet!");
+//                Scanner bet = new Scanner(System.in);
+//                int betInt = bet.nextInt();
+//
+//                int yourHandCode;
+//                Poker pokerClient = new Poker();
+//                pokerClient.play();
+//                yourHandCode = pokerClient.handCode;
+//                System.out.println("Keep in mind what you got!\n");
+//
+//                int dealerHandCode;
+//                System.out.println("Now you will play as a dealer. Make him lose!");
+//                Poker pokerDealer = new Poker();
+//                pokerDealer.play();
+//                dealerHandCode = pokerDealer.handCode;
+//
+//                if(dealerHandCode > yourHandCode){
+//                    System.out.println("You lost!");
+//                    client.setCurrentMoney(client.getCurrentMoney() - betInt);
+//                    client.setLostMoney(betInt);
+//                    client.setLostGames(1);
+//                }
+//                else if (dealerHandCode < yourHandCode){
+//                    System.out.println("You won! Congratulations!");
+//                    client.setCurrentMoney(client.getCurrentMoney() + bet.nextInt());
+//                    client.setWonMoney(betInt);
+//                    client.setWonGames(1);
+//                }
+//                else{
+//                    System.out.println("It's a tie!!");
+//                }
+//            }
             if (Objects.equals(game, "Roulette")) {
                 Roulette roulette = new Roulette(client.getCurrentMoney(), client.getWonMoney(), client.getLostMoney(), client.getWonGames(), client.getLostGames());
                 roulette.play();
@@ -240,8 +247,8 @@ public class ViewLayer {
             if (var == 2) {
                 System.out.println("Enter deposit ");
                 Scanner ok1 = new Scanner(System.in);
-                client.setWonMoney(ok1.nextInt());
-                System.out.println(client.getWonMoney());
+                client.setCurrentMoney(ok1.nextInt()+ client.getCurrentMoney());
+                System.out.println(client.getCurrentMoney());
                 clientLogged();
             }
             if (var == 3) {
@@ -414,7 +421,20 @@ public class ViewLayer {
     }
     public void printClients(List<Client> clientList){
         for(Client client1: clientList){
-            System.out.println(client1.getName() + " "+client1.getPassword());
+            System.out.println(client1.getName() + " "+client1.getPassword() +  " " + client1.getAge()
+             + " " + client1.getCurrentMoney() +  " " + client1.getWonMoney() + " " + client1.getLostMoney() +
+                    " " + client1.getWonGames() + " "+ client1.getLostGames());
+        }
+    }
+
+    public void printBoth(List<Client> clientList, List<Dealer> dealerList){
+        for(Client client1: clientList)
+            System.out.println(client1.getName() + " "+client1.getPassword() +  " " + client1.getAge()
+                    + " " + client1.getCurrentMoney() +  " " + client1.getWonMoney() + " " + client1.getLostMoney() +
+                    " " + client1.getWonGames() + " "+ client1.getLostGames());
+        for(Dealer dealer1: dealerList){
+            System.out.println(dealer1.getName() + " "+ dealer1.getPassword() +" " + dealer1.getAge() +
+                    " " + dealer1.getGamesKnown());
         }
     }
 }

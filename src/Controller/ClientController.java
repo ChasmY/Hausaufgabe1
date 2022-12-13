@@ -51,7 +51,7 @@ public class ClientController extends ClientRepositoryMemory{
     }
     public List<Client> sortByNameDsc(){
         List<Client> sortedClients = repo.getAllClients();
-        sortedClients.sort(Comparator.comparing(Client::getName));
+        sortedClients.sort(Comparator.comparing(Client::getName).reversed());
         //repo.printAllClients();
         return sortedClients;
 
