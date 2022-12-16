@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="">
+    <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="merg sortarile si afiseaza elemente nu adresa de memorie">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ViewLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ViewLayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -202,6 +200,7 @@
       <workItem from="1670855614840" duration="3037000" />
       <workItem from="1670930977732" duration="8500000" />
       <workItem from="1670945412464" duration="1324000" />
+      <workItem from="1670954155857" duration="777000" />
     </task>
     <task id="LOCAL-00001" summary="Second">
       <created>1666629431147</created>

@@ -271,17 +271,18 @@ public class ViewLayer {
                 System.out.println("0 - Go back");
                 Scanner choice = new Scanner(System.in);
                 while(choice.hasNextInt()){
-                    if(choice.nextInt() == 1){
+                    int c = choice.nextInt();
+                    if (c == 1){
                         List<Client> sortedClients = clientList.sortByNameAsc();
                         printClients(sortedClients);
                         clientLogged();
                     }
-                    else if (choice.nextInt() == 2){
+                    if (c == 2){
                         List<Client> sortedClients = clientList.sortByNameDsc();
                         printClients(sortedClients);
                         clientLogged();
                     }
-                    else{
+                    if (c == 0){
                         System.out.println("Back to client portal. Choose another option");
                         clientLogged();
                     }
@@ -293,16 +294,18 @@ public class ViewLayer {
                 System.out.println("0 - Go back");
                 Scanner choice = new Scanner(System.in);
                 while(choice.hasNextInt()){
-                    if(choice.nextInt() == 1){
+                    int c = choice.nextInt();
+                    if(c == 1){
                         List<Client> sortedClients = clientList.sortByAgeAsc();
                         printClients(sortedClients);
                         clientLogged();
                     }
-                    else if (choice.nextInt() == 2){
+                    if (c == 2){
                         List<Client> sortedClients = clientList.sortByAgeDsc();
                         printClients(sortedClients);
                         clientLogged();
-                    }else{
+                    }
+                    if(c == 0){
                         System.out.println("Back to client portal. Choose another option");
                         clientLogged();
                     }
@@ -314,16 +317,18 @@ public class ViewLayer {
                 System.out.println("0 - Go back");
                 Scanner choice = new Scanner(System.in);
                 while(choice.hasNextInt()){
-                    if(choice.nextInt() == 1){
+                    int c = choice.nextInt();
+                    if(c == 1){
                         List<Client> sortedClients = clientList.sortByWonMoneyAsc();
                         printClients(sortedClients);
                         clientLogged();
                     }
-                    else if (choice.nextInt() == 2){
+                    if (c == 2){
                         List<Client> sortedClients = clientList.sortByWonMoneyDsc();
                         printClients(sortedClients);
                         clientLogged();
-                    }else{
+                    }
+                    if (c == 0){
                         System.out.println("Back to client portal. Choose another option");
                         clientLogged();
                     }
@@ -335,16 +340,18 @@ public class ViewLayer {
                 System.out.println("0 - Go back");
                 Scanner choice = new Scanner(System.in);
                 while(choice.hasNextInt()){
-                    if(choice.nextInt() == 1){
+                    int c = choice.nextInt();
+                    if(c == 1){
                         List<Client> sortedClients = clientList.sortByLostMoneyAsc();
                         printClients(sortedClients);
                         clientLogged();
                     }
-                    else if (choice.nextInt() == 2){
+                    if (c == 2){
                         List<Client> sortedClients = clientList.sortByLostMoneyDsc();
                         printClients(sortedClients);
                         clientLogged();
-                    }else{
+                    }
+                    if (c == 0){
                         System.out.println("Back to client portal. Choose another option");
                         clientLogged();
                     }
@@ -371,41 +378,46 @@ public class ViewLayer {
                 System.out.println("0 - Go back");
                 Scanner secondChoice = new Scanner(System.in);
                 while(secondChoice.hasNextInt()) {
-                    if (secondChoice.nextInt() == 1) {
-                        List<Dealer> sortedDealers= dealerList.sortByNameAsc();
+                    int sc = secondChoice.nextInt();
+                    if (sc == 1) {
+                        List<Dealer> sortedDealers = dealerList.sortByNameAsc();
                         printDealers(sortedDealers);
                         dealerLogged();
-                    } else if(secondChoice.nextInt() == 2){
+                    }
+                    if(sc == 2){
                         List<Dealer> sortedDealers= dealerList.sortByNameDsc();
                         printDealers(sortedDealers);
                         dealerLogged();
                     }
-                    else{
+                    if (sc == 0){
                         System.out.println("Back to dealer portal. Choose another option");
                         dealerLogged();
                     }
                 }
-            } else if (c == 2) {
+            }
+            if (c == 2) {
                 System.out.println("1 - Show dealers sorted by age ascending");
                 System.out.println("2 - Show dealers sorted by age descending");
                 System.out.println("0 - Go back");
                 Scanner thirdChoice = new Scanner(System.in);
                 while(thirdChoice.hasNextInt()) {
-                    if (thirdChoice.nextInt() == 1) {
+                    int tc = thirdChoice.nextInt();
+                    if (tc == 1) {
                         List<Dealer> sortedDealers= dealerList.sortByAgeAsc();
                         printDealers(sortedDealers);
                         dealerLogged();
-                    } else if(thirdChoice.nextInt() == 2){
+                    }
+                    if(tc == 2){
                         List<Dealer> sortedDealers= dealerList.sortByAgeDsc();
                         printDealers(sortedDealers);
                         dealerLogged();
                     }
-                    else{
+                    if (tc == 0){
                         System.out.println("Back to dealer portal. Choose another option");
                         dealerLogged();
                     }
                 }
-            } else if (c == 3) {
+            }if (c == 3) {
                 System.out.println("You go back to the main menu, select another option");
                 start();
             }
