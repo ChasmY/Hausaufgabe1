@@ -20,13 +20,13 @@ public class UserController extends UserRepositoryMemory {
     }
 
     @Override
-    public User findById(String s) throws Exception {
-        return super.findById(s);
+    public User findById(Integer id) throws Exception {
+        return super.findById(id);
     }
 
     @Override
-    public void update(String s, User newEntity) {
-        super.update(s, newEntity);
+    public void update(Integer id, User newEntity) {
+        super.update(id, newEntity);
     }
 
     @Override

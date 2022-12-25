@@ -1,20 +1,10 @@
 package Repository.Games;
-
-/***********************
- *  Assignment 4
- *  Andreas Hadjigeorgiou
- *  ahh2131
- *  Deck class
- */
-
 import java.util.Random;
 
 public class Deck
 {
 
     private final int DECK_SIZE = 52;
-    private final int SHUFFLE_EXCHANGES = 2000;
-    private final int HAND_SIZE = 5;
     public int restOfDeck = 6;
 
     Card[] deck = new Card[DECK_SIZE];
@@ -39,6 +29,7 @@ public class Deck
     // shuffle deck
     public void shuffle()
     {
+        int SHUFFLE_EXCHANGES = 2000;
         for (int x = 0; x <= SHUFFLE_EXCHANGES; x++)
         {
             int number1 = r.nextInt(DECK_SIZE);
@@ -52,11 +43,9 @@ public class Deck
     // deals 5 cards
     public Card[] deal()
     {
+        int HAND_SIZE = 5;
         Card[] hand = new Card[HAND_SIZE];
-        for (int deckPosition = 0; deckPosition < 5; deckPosition++)
-        {
-            hand[deckPosition] = deck[deckPosition];
-        }
+        System.arraycopy(deck, 0, hand, 0, 5);
         return hand;
     }
 

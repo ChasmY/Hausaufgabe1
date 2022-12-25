@@ -9,7 +9,15 @@ import java.util.Scanner;
 
 
 public class Poker extends Gamble {
-    public int handCode;
+    private int handCode = 0;
+
+    public int getHandCode() {
+        return handCode;
+    }
+
+    public void setHandCode(int handCode) {
+        this.handCode = handCode;
+    }
 
     // instantiate Deck and Player
     Scanner scan = new Scanner(System.in);
@@ -34,33 +42,15 @@ public class Poker extends Gamble {
 
             // player redraws
             this.checkHand();
-
             hand = this.redraw();
-
-            this.makeHand();
+            this.checkHand();
 
             // sort hand
             Arrays.sort(hand);
 
             // evaluate the hand
             handCode = this.evaluate();
-            System.out.println("Thanks for playing! =]");
-        }
-
-        // makes a hand (for TA; testing purposes)
-        public void makeHand()
-        {
-            hand[0].rank = 1;
-            hand[1].rank = 2;
-            hand[2].rank = 3;
-            hand[3].rank = 4;
-            hand[4].rank = 5;
-
-            hand[0].suit = 1;
-            hand[1].suit = 1;
-            hand[2].suit = 1;
-            hand[3].suit = 1;
-            hand[4].suit = 1;
+            //System.out.println("Thanks for playing! =]");
         }
 
         // tells player cards in hand

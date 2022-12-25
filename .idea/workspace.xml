@@ -5,56 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="merg sortarile si afiseaza elemente nu adresa de memorie">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_microsoft_sqlserver_mssql_jdbc_12_1_0_jre11_preview.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_11_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_6_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_2_3_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_1_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jvnet_staxex_stax_ex_1_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/ManagerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/ManagerControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Repository/InMemory/ManagerRepositoryMemory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hausaufgabe1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Hausaufgabe1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ClientControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/ClientControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DealerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/DealerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DealerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/DealerControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/UserControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/CrudRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/CrudRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/DB/ClientRepositoryDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/DB/ClientRepositoryDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/DB/DealerRepositoryDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/DB/DealerRepositoryDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/DB/UserRepositoryDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/DB/UserRepositoryDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/Games/AvailableGames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Games/AvailableGames.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/Games/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Games/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/Games/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Games/Deck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/Games/Gamble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Games/Gamble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/Games/Poker/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Games/Poker/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/Games/Poker/Poker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Games/Poker/Poker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/Games/Roulette.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Games/Roulette.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/InMemory/ClientRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/InMemory/ClientRepositoryMemory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/InMemory/DealerRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/InMemory/DealerRepositoryMemory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/InMemory/UserRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/InMemory/UserRepositoryMemory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ViewLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewLayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Dealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Dealer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/ClientControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/ClientControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/DealerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/DealerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/DealerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/DealerControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/UserControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/CrudRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/CrudRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/Games/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Games/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/Games/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Games/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/Games/Gamble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Games/Gamble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/Games/Poker/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Games/Poker/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/Games/Poker/Poker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Games/Poker/Poker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/InMemory/ClientRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/InMemory/ClientRepositoryMemory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/InMemory/DealerRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/InMemory/DealerRepositoryMemory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/InMemory/UserRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/InMemory/UserRepositoryMemory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ViewLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewLayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Dealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Dealer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,9 +42,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -78,6 +55,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -105,6 +85,9 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Facultate/An II/MAP/Hausaufgabe1&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -120,6 +103,9 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="Repository.InMemory" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Controller" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="Controller" />
     </key>
@@ -132,7 +118,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClientControllerTest.sortByWonMoneyAsc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManagerControllerTest2.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Hausaufgabe1" />
       <extension name="coverage">
         <pattern>
@@ -141,45 +127,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Controller" />
-      <option name="MAIN_CLASS_NAME" value="Controller.ClientControllerTest" />
-      <option name="METHOD_NAME" value="sortByWonMoneyAsc" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Hausaufgabe1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Controller" />
-      <option name="MAIN_CLASS_NAME" value="Controller.UserControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserControllerTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Hausaufgabe1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Controller" />
-      <option name="MAIN_CLASS_NAME" value="Controller.UserControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="Controller.ManagerControllerTest2" />
       <option name="METHOD_NAME" value="add" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserControllerTest.findById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManagerControllerTest2.sortByNameDsc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Hausaufgabe1" />
       <extension name="coverage">
         <pattern>
@@ -188,8 +143,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Controller" />
-      <option name="MAIN_CLASS_NAME" value="Controller.UserControllerTest" />
-      <option name="METHOD_NAME" value="findById" />
+      <option name="MAIN_CLASS_NAME" value="Controller.ManagerControllerTest2" />
+      <option name="METHOD_NAME" value="sortByNameDsc" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagerControllerTest.filterAge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hausaufgabe1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Controller" />
+      <option name="MAIN_CLASS_NAME" value="Controller.ManagerControllerTest" />
+      <option name="METHOD_NAME" value="filterAge" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagerControllerTest.sortByNameDsc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hausaufgabe1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Controller" />
+      <option name="MAIN_CLASS_NAME" value="Controller.ManagerControllerTest" />
+      <option name="METHOD_NAME" value="sortByNameDsc" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -198,10 +185,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.UserControllerTest.findById" />
-        <item itemvalue="JUnit.UserControllerTest" />
-        <item itemvalue="JUnit.UserControllerTest.add" />
-        <item itemvalue="JUnit.ClientControllerTest.sortByWonMoneyAsc" />
+        <item itemvalue="JUnit.ManagerControllerTest.filterAge" />
+        <item itemvalue="JUnit.ManagerControllerTest.sortByNameDsc" />
+        <item itemvalue="JUnit.ManagerControllerTest2.sortByNameDsc" />
+        <item itemvalue="JUnit.ManagerControllerTest2.add" />
       </list>
     </recent_temporary>
   </component>
@@ -254,6 +241,11 @@
       <workItem from="1670954155857" duration="777000" />
       <workItem from="1671196411853" duration="2037000" />
       <workItem from="1671468618587" duration="644000" />
+      <workItem from="1671545007097" duration="5875000" />
+      <workItem from="1671805710264" duration="4647000" />
+      <workItem from="1671876991464" duration="15920000" />
+      <workItem from="1671904952464" duration="13892000" />
+      <workItem from="1671969179181" duration="4809000" />
     </task>
     <task id="LOCAL-00001" summary="Second">
       <created>1666629431147</created>

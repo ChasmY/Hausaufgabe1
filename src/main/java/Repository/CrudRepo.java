@@ -1,5 +1,6 @@
 package Repository;
 
+import model.Client;
 import model.User;
 
 public interface CrudRepo<ID, E> {
@@ -7,5 +8,4 @@ public interface CrudRepo<ID, E> {
     void delete(E entity);
     void update(ID id,E newEntity);
     E findById(ID id) throws Exception;
-
 }

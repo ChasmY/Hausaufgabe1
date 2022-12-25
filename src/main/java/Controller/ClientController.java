@@ -12,6 +12,10 @@ public class ClientController extends ClientRepositoryMemory{
 
     public ClientRepositoryMemory repo = new ClientRepositoryMemory();
 
+    public ClientController() {
+        super();
+    }
+
     @Override
     public void add(Client entity) throws Exception {
         super.add(entity);
@@ -23,13 +27,13 @@ public class ClientController extends ClientRepositoryMemory{
     }
 
     @Override
-    public Client findById(String s) throws Exception {
-        return super.findById(s);
+    public Client findById(Integer id) throws Exception {
+        return super.findById(id);
     }
 
     @Override
-    public void update(String s, Client newEntity) {
-        super.update(s, newEntity);
+    public void update(Integer id, Client newEntity) {
+        super.update(id, newEntity);
     }
 
     @Override
@@ -41,6 +45,20 @@ public class ClientController extends ClientRepositoryMemory{
     @Override
     public int size(){
         return super.size();
+    }
+
+    public List<Client> sortByIdAsc(){
+        List<Client> sortedClients = repo.getAllClients();
+        sortedClients.sort(Comparator.comparing(Client::getIdClient));
+        //repo.printAllClients();
+        return sortedClients;
+    }
+
+    public List<Client> sortByIdDsc(){
+        List<Client> sortedClients = repo.getAllClients();
+        sortedClients.sort(Comparator.comparing(Client::getIdClient).reversed());
+        //repo.printAllClients();
+        return sortedClients;
     }
 
     public List<Client> sortByNameAsc(){

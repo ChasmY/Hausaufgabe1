@@ -12,17 +12,19 @@ class ClientControllerTest {
 
     ClientController clients = new ClientController();
 
+    ClientControllerTest() throws Exception {}
+
     @Test
     void add() throws Exception {
-        Client client = new Client("Roxi", "2991", 30, 3610);
-        Client client1 = new Client("Ady", "8475", 23, 1090);
+        Client client = new Client(11,"Roxi", "2991", 30, 3610);
+        Client client1 = new Client(12,"Ady", "8475", 23, 1090);
         clients.add(client);
         assert(clients.size() == 11);
         clients.add(client1);
         assert(clients.size() == 12);
 
         try{
-            Client client2 = new Client("Mircea", "243", 15, 100);
+            Client client2 = new Client(13,"Mircea", "243", 15, 100);
             clients.add(client2);
         }
         catch(RuntimeException e){
@@ -30,7 +32,7 @@ class ClientControllerTest {
         }
 
         try{
-            Client client3 = new Client("Mircea", "243", 19, -100);
+            Client client3 = new Client(13,"Mircea", "243", 19, -100);
             clients.add(client3);
         }
         catch(RuntimeException e){
@@ -40,38 +42,38 @@ class ClientControllerTest {
 
     @Test
     void delete() throws Exception {
-        clients.delete(clients.findById("Viorel"));
+        clients.delete(clients.findById(1));
         assert(clients.size() == 9);
-        clients.delete(clients.findById("Ion"));
+        clients.delete(clients.findById(2));
         assert(clients.size() == 8);
-        clients.delete(clients.findById("Georgiana"));
+        clients.delete(clients.findById(3));
         assert(clients.size() == 7);
-        clients.delete(clients.findById("Hagrid"));
+        clients.delete(clients.findById(4));
         assert(clients.size() == 6);
-        clients.delete(clients.findById("Marie"));
+        clients.delete(clients.findById(5));
         assert(clients.size() == 5);
-        clients.delete(clients.findById("Georgica"));
+        clients.delete(clients.findById(6));
         assert(clients.size() == 4);
-        clients.delete(clients.findById("Ioana"));
+        clients.delete(clients.findById(7));
         assert(clients.size() == 3);
-        clients.delete(clients.findById("Riana"));
+        clients.delete(clients.findById(8));
         assert(clients.size() == 2);
-        clients.delete(clients.findById("Traian"));
+        clients.delete(clients.findById(9));
         assert(clients.size() == 1);
-        clients.delete(clients.findById("Claudiu"));
+        clients.delete(clients.findById(10));
         assert(clients.size() == 0);
 
     }
 
     @Test
     void findById() throws Exception {
-        assert(clients.findById("Marie") == clients.getAllClients().get(1));
-        assert(clients.findById("Georgica") == clients.getAllClients().get(3));
-        assert(clients.findById("Ioana") == clients.getAllClients().get(8));
+        assert(clients.findById(2) == clients.getAllClients().get(1));
+        assert(clients.findById(4) == clients.getAllClients().get(3));
+        assert(clients.findById(9) == clients.getAllClients().get(8));
 
         try{
-            Client c = new Client("", "", NULL, NULL);
-            c = clients.findById("Ady");
+            Client c = new Client(NULL, "", "", NULL, NULL);
+            c = clients.findById(17);
         }
         catch (RuntimeException e){
             assert true;
@@ -124,8 +126,6 @@ class ClientControllerTest {
 
     @Test
     void sortByWonMoneyAsc() {
-        assert(clients.size() == 10);
-
         clients.repo.getAllClients().get(0).setWonMoney(7);
         clients.repo.getAllClients().get(1).setWonMoney(15);
         clients.repo.getAllClients().get(2).setWonMoney(2);
@@ -147,8 +147,6 @@ class ClientControllerTest {
 
     @Test
     void sortByWonMoneyDsc() {
-        assert(clients.size() == 10);
-
         clients.repo.getAllClients().get(0).setWonMoney(7);
         clients.repo.getAllClients().get(1).setWonMoney(15);
         clients.repo.getAllClients().get(2).setWonMoney(2);

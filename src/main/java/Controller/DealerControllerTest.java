@@ -16,17 +16,17 @@ import static org.junit.jupiter.api.Assertions.*;
 class DealerControllerTest {
     DealerController dealers = new DealerController();
 
-    @org.junit.jupiter.api.Test
+    @Test
     void add() throws Exception {
-        Dealer dealer = new Dealer("Trevor", "5432", 34);
-        Dealer dealer1 = new Dealer("Gheorghe", "3244", 57);
+        Dealer dealer = new Dealer(11,"Trevor", "5432", 34);
+        Dealer dealer1 = new Dealer(12,"Gheorghe", "3244", 57);
         dealers.add(dealer);
         assert(dealers.size() == 11);
         dealers.add(dealer1);
         assert(dealers.size() == 12);
 
         try{
-            Dealer dealer2 = new Dealer("Mircea", "322", 16);
+            Dealer dealer2 = new Dealer(13,"Mircea", "322", 16);
             dealers.add(dealer2);
         }
         catch (RuntimeException e){
@@ -34,42 +34,41 @@ class DealerControllerTest {
         }
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void delete() throws Exception {
-        dealers.delete(dealers.findById("George"));
+        dealers.delete(dealers.findById(1));
         assert(dealers.size() == 9);
-        dealers.delete(dealers.findById("Adrian"));
+        dealers.delete(dealers.findById(2));
         assert(dealers.size() == 8);
-        dealers.delete(dealers.findById("Vasile"));
+        dealers.delete(dealers.findById(3));
         assert(dealers.size() == 7);
-        dealers.delete(dealers.findById("Robi"));
+        dealers.delete(dealers.findById(4));
         assert(dealers.size() == 6);
-        dealers.delete(dealers.findById("Rares"));
+        dealers.delete(dealers.findById(5));
         assert(dealers.size() == 5);
-        dealers.delete(dealers.findById("Andreea"));
+        dealers.delete(dealers.findById(6));
         assert(dealers.size() == 4);
-        dealers.delete(dealers.findById("Andrei"));
+        dealers.delete(dealers.findById(7));
         assert(dealers.size() == 3);
-        dealers.delete(dealers.findById("Fabian"));
+        dealers.delete(dealers.findById(8));
         assert(dealers.size() == 2);
-        dealers.delete(dealers.findById("Luciana"));
+        dealers.delete(dealers.findById(9));
         assert(dealers.size() == 1);
-        dealers.delete(dealers.findById("Ovi"));
+        dealers.delete(dealers.findById(10));
         assert(dealers.size() == 0);
 
 
 
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void findById() throws Exception {
-        assert(dealers.findById("George") == dealers.getList().get(2));
-        assert(dealers.findById("Adrian") == dealers.getList().get(8));
-        assert(dealers.findById("Andreea") == dealers.getList().get(5));
-
+        assert(dealers.findById(3) == dealers.getAllDealers().get(2));
+        assert(dealers.findById(9) == dealers.getAllDealers().get(8));
+        assert(dealers.findById(6) == dealers.getAllDealers().get(5));
         try{
-            Dealer d = new Dealer("", "", NULL);
-            d = dealers.findById("Adi");
+            Dealer d = new Dealer(NULL, "", "", NULL);
+            d = dealers.findById(15);
         }
         catch (RuntimeException e){
             assert true;

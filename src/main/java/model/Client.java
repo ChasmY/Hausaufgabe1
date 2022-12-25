@@ -1,11 +1,35 @@
 package model;
 
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicLong;
+
 public class Client extends User {
+    //public static final AtomicLong idCounter = new AtomicLong(1);
+    private int idClient;
     private int currentMoney;
     private int wonMoney;
     private int lostMoney;
     private int wonGames;
     private int lostGames;
+
+    public Client(int idClient, String name, String password, int age, int currentMoney) {
+        super(idClient, name, password, age, "Client");
+        this.idClient = idClient;
+        this.currentMoney = currentMoney;
+        this.wonGames = 0;
+        this.lostGames = 0;
+        this.wonMoney = 0;
+        this.lostMoney = 0;
+    }
+
+    public int getIdClient() {
+        return idClient;
+    }
+
+    public void setIdClient(int idClient){
+        this.idClient = idClient;
+    }
+
     public int getCurrentMoney() {
         return currentMoney;
     }
@@ -44,14 +68,5 @@ public class Client extends User {
 
     public void setLostGames(int lostGames) {
         this.lostGames += lostGames;
-    }
-
-    public Client(String name, String password, int age, int currentMoney) {
-        super(name, password, age, "Client");
-        this.currentMoney = currentMoney;
-        this.wonGames = 0;
-        this.lostGames = 0;
-        this.wonMoney = 0;
-        this.lostMoney = 0;
     }
 }

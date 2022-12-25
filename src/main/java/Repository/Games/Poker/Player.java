@@ -9,15 +9,13 @@ public class Player
     // gets 5 cards from deck
     public Card[] draw(Deck deck)
     {
-        Card[] hand = deck.deal();
-        return hand;
+        return deck.deal();
     }
 
     // switches card for a new card
     public Card redraw(int counter, Deck deck)
     {
-        Card card = deck.redeal();
-        return card;
+        return deck.redeal();
     }
 
 }
