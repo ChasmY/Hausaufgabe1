@@ -10,7 +10,7 @@ public class Deck
     Card[] deck = new Card[DECK_SIZE];
     Random r = new Random();
 
-    // fill deck with cards
+    // fill deck with cardss
     public void fillDeck()
     {
         int counter = 0;

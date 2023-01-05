@@ -4,34 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="merg sortarile si afiseaza elemente nu adresa de memorie">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/ManagerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/ManagerControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Repository/InMemory/ManagerRepositoryMemory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+    <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="tot gata, in afara de:&#10;DB&#10;comentarii">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/ClientControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/ClientControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/DealerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/DealerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/DealerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/DealerControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/UserControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/CrudRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/CrudRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/Games/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Games/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/Games/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Games/Deck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/Games/Gamble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Games/Gamble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/Games/Poker/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Games/Poker/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/Games/Poker/Poker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Games/Poker/Poker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/InMemory/ClientRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/InMemory/ClientRepositoryMemory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/InMemory/DealerRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/InMemory/DealerRepositoryMemory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/InMemory/UserRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/InMemory/UserRepositoryMemory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ViewLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewLayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Dealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Dealer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ViewLayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ViewLayer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +220,10 @@
       <workItem from="1671805710264" duration="4647000" />
       <workItem from="1671876991464" duration="15920000" />
       <workItem from="1671904952464" duration="13892000" />
-      <workItem from="1671969179181" duration="4809000" />
+      <workItem from="1671969179181" duration="4903000" />
+      <workItem from="1672227251046" duration="1295000" />
+      <workItem from="1672763642039" duration="749000" />
+      <workItem from="1672841194715" duration="230000" />
     </task>
     <task id="LOCAL-00001" summary="Second">
       <created>1666629431147</created>
@@ -324,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670853823662</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="tot gata, in afara de:&#10;DB&#10;comentarii">
+      <created>1671974142811</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1671974142811</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,7 +348,8 @@
     <MESSAGE value="acum poti juca poker!" />
     <MESSAGE value="am refacut putin la jocuri" />
     <MESSAGE value="merg sortarile si afiseaza elemente nu adresa de memorie" />
-    <option name="LAST_COMMIT_MESSAGE" value="merg sortarile si afiseaza elemente nu adresa de memorie" />
+    <MESSAGE value="tot gata, in afara de:&#10;DB&#10;comentarii" />
+    <option name="LAST_COMMIT_MESSAGE" value="tot gata, in afara de:&#10;DB&#10;comentarii" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
