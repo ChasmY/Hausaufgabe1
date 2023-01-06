@@ -1,22 +1,14 @@
 package Controller;
 
 import Repository.InMemory.DealerRepositoryMemory;
-import com.sun.jmx.mbeanserver.Repository;
 import model.Dealer;
-
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class DealerController extends DealerRepositoryMemory {
     public DealerRepositoryMemory repo = new DealerRepositoryMemory();
 
-    public DealerController(){
-        super();
-    }
-
-    @Override
-    public void add(Dealer entity) throws Exception {
-        super.add(entity);
+    public void add(Dealer entity) throws Exception{
+        super.addList(entity);
     }
 
     @Override

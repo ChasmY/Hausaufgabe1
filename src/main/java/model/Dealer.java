@@ -1,17 +1,20 @@
 package model;
 
 import Repository.Games.AvailableGames;
-import Repository.InMemory.DealerRepositoryMemory;
 
+import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicLong;
 
+@Entity
+@Table(name = "Dealers")
+@DiscriminatorValue("Dealer")
 public class Dealer extends User {
-    //private static final AtomicLong idCounter = new AtomicLong(1);
+
+    @JoinColumn(name = "idUser")
     private int idDealer;
 
+    @Transient
     private List<AvailableGames> gamesKnown;
 
     public List<AvailableGames> getGamesKnown() {
@@ -34,9 +37,12 @@ public class Dealer extends User {
         this.gamesKnown.add(game);
     }
     public Dealer(int idDealer, String name, String password, int age) {
-        super(idDealer, name, password, age, "Dealer");
+        super(name, password, age);
         this.idDealer = idDealer;
         this.gamesKnown = new ArrayList<AvailableGames>();
     }
 
+    public Dealer(){
+        super();
+    }
 }

@@ -1,15 +1,25 @@
 package model;
 
-import java.util.concurrent.atomic.AtomicLong;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "Managers")
 public class Manager {
-    //private static final AtomicLong idCounter = new AtomicLong();
+
+    @Id
     private int idManager;
+
+    @Column
     private String name;
+    @Column
     private int age;
+    @Column
     private String mainUsername;
+    @Column
     private String mainPassword;
+    @Column
     private String newUsername;
+    @Column
     private String newPassword;
 
     public Manager(int idManager, String name, int age, String newUsername, String newPassword) {
@@ -22,6 +32,7 @@ public class Manager {
         this.newPassword = newPassword;
     }
 
+    public Manager(){}
     public int getIdManager() {
         return idManager;
     }

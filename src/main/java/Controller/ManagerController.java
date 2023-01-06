@@ -10,10 +10,10 @@ import java.util.stream.Collectors;
 public class ManagerController extends ManagerRepositoryMemory{
     public ManagerRepositoryMemory repo = new ManagerRepositoryMemory();
 
-    @Override
-    public void add(Manager entity) throws Exception {
-        super.add(entity);
+    public void add(Manager entity)throws Exception{
+        super.addList(entity);
     }
+
 
     @Override
     public void delete(Manager entity) {

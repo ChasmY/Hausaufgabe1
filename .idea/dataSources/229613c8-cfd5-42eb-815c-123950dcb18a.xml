@@ -16586,10 +16586,11 @@
     <database id="5514" parent="1" name="Casino">
       <Fingerprint>1.37717/00000000-0000-0000-0000-000000000000@BENNINGTON\SQLEXPRES</Fingerprint>
       <Grants>10|database||1|connect|G
+10|database||5|connect|G
 10|database||0|view any column encryption key definition|G
 10|database||0|view any column master key definition|G</Grants>
       <ObjectId>10</ObjectId>
-      <PermissionsCheckSum>3196235284</PermissionsCheckSum>
+      <PermissionsCheckSum>4255254626</PermissionsCheckSum>
       <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
     </database>
     <database id="5515" parent="1" name="Farmacie">
@@ -16776,134 +16777,139 @@
       <AuthType>none</AuthType>
       <ObjectId>3</ObjectId>
     </role>
-    <role id="5549" parent="5514" name="db_accessadmin">
+    <role id="5549" parent="5514" name="admin">
+      <AuthType>instance</AuthType>
+      <DefaultSchema>dbo</DefaultSchema>
+      <ObjectId>5</ObjectId>
+    </role>
+    <role id="5550" parent="5514" name="db_accessadmin">
       <AuthType>none</AuthType>
       <ObjectId>16385</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5550" parent="5514" name="db_backupoperator">
+    <role id="5551" parent="5514" name="db_backupoperator">
       <AuthType>none</AuthType>
       <ObjectId>16389</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5551" parent="5514" name="db_datareader">
+    <role id="5552" parent="5514" name="db_datareader">
       <AuthType>none</AuthType>
       <ObjectId>16390</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5552" parent="5514" name="db_datawriter">
+    <role id="5553" parent="5514" name="db_datawriter">
       <AuthType>none</AuthType>
       <ObjectId>16391</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5553" parent="5514" name="db_ddladmin">
+    <role id="5554" parent="5514" name="db_ddladmin">
       <AuthType>none</AuthType>
       <ObjectId>16387</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5554" parent="5514" name="db_denydatareader">
+    <role id="5555" parent="5514" name="db_denydatareader">
       <AuthType>none</AuthType>
       <ObjectId>16392</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5555" parent="5514" name="db_denydatawriter">
+    <role id="5556" parent="5514" name="db_denydatawriter">
       <AuthType>none</AuthType>
       <ObjectId>16393</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5556" parent="5514" name="db_owner">
+    <role id="5557" parent="5514" name="db_owner">
       <AuthType>none</AuthType>
       <ObjectId>16384</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5557" parent="5514" name="db_securityadmin">
+    <role id="5558" parent="5514" name="db_securityadmin">
       <AuthType>none</AuthType>
       <ObjectId>16386</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5558" parent="5514" name="dbo">
+    <role id="5559" parent="5514" name="dbo">
       <AuthType>windows</AuthType>
       <DefaultSchema>dbo</DefaultSchema>
       <ObjectId>1</ObjectId>
       <Type>windows-user</Type>
     </role>
-    <role id="5559" parent="5514" name="guest">
+    <role id="5560" parent="5514" name="guest">
       <AuthType>none</AuthType>
       <DefaultSchema>guest</DefaultSchema>
       <ObjectId>2</ObjectId>
     </role>
-    <role id="5560" parent="5514" name="public">
+    <role id="5561" parent="5514" name="public">
       <AuthType>none</AuthType>
       <ObjectId>0</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5561" parent="5514" name="sys">
+    <role id="5562" parent="5514" name="sys">
       <AuthType>none</AuthType>
       <ObjectId>4</ObjectId>
     </role>
-    <schema id="5562" parent="5514" name="INFORMATION_SCHEMA">
+    <schema id="5563" parent="5514" name="INFORMATION_SCHEMA">
       <ObjectId>3</ObjectId>
     </schema>
-    <schema id="5563" parent="5514" name="db">
+    <schema id="5564" parent="5514" name="db">
       <IntrospectionTimestamp>2022-12-12.18:44:10.593</IntrospectionTimestamp>
       <ObjectId>5</ObjectId>
     </schema>
-    <schema id="5564" parent="5514" name="db_accessadmin">
+    <schema id="5565" parent="5514" name="db_accessadmin">
       <IntrospectionTimestamp>2022-12-12.18:44:10.603</IntrospectionTimestamp>
       <ObjectId>16385</ObjectId>
     </schema>
-    <schema id="5565" parent="5514" name="db_backupoperator">
+    <schema id="5566" parent="5514" name="db_backupoperator">
       <IntrospectionTimestamp>2022-12-12.18:44:10.610</IntrospectionTimestamp>
       <ObjectId>16389</ObjectId>
     </schema>
-    <schema id="5566" parent="5514" name="db_datareader">
+    <schema id="5567" parent="5514" name="db_datareader">
       <IntrospectionTimestamp>2022-12-12.18:44:10.620</IntrospectionTimestamp>
       <ObjectId>16390</ObjectId>
     </schema>
-    <schema id="5567" parent="5514" name="db_datawriter">
+    <schema id="5568" parent="5514" name="db_datawriter">
       <IntrospectionTimestamp>2022-12-12.18:44:10.627</IntrospectionTimestamp>
       <ObjectId>16391</ObjectId>
     </schema>
-    <schema id="5568" parent="5514" name="db_ddladmin">
+    <schema id="5569" parent="5514" name="db_ddladmin">
       <IntrospectionTimestamp>2022-12-12.18:44:10.640</IntrospectionTimestamp>
       <ObjectId>16387</ObjectId>
     </schema>
-    <schema id="5569" parent="5514" name="db_denydatareader">
+    <schema id="5570" parent="5514" name="db_denydatareader">
       <IntrospectionTimestamp>2022-12-12.18:44:10.650</IntrospectionTimestamp>
       <ObjectId>16392</ObjectId>
     </schema>
-    <schema id="5570" parent="5514" name="db_denydatawriter">
+    <schema id="5571" parent="5514" name="db_denydatawriter">
       <IntrospectionTimestamp>2022-12-12.18:44:10.657</IntrospectionTimestamp>
       <ObjectId>16393</ObjectId>
     </schema>
-    <schema id="5571" parent="5514" name="db_owner">
+    <schema id="5572" parent="5514" name="db_owner">
       <IntrospectionTimestamp>2022-12-12.18:44:10.667</IntrospectionTimestamp>
       <ObjectId>16384</ObjectId>
     </schema>
-    <schema id="5572" parent="5514" name="db_securityadmin">
+    <schema id="5573" parent="5514" name="db_securityadmin">
       <IntrospectionTimestamp>2022-12-12.18:44:10.677</IntrospectionTimestamp>
       <ObjectId>16386</ObjectId>
     </schema>
-    <schema id="5573" parent="5514" name="dbo">
+    <schema id="5574" parent="5514" name="dbo">
       <Current>1</Current>
-      <IntrospectionTimestamp>2022-12-12.18:44:10.683</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-01-06.22:43:17.873</IntrospectionTimestamp>
       <ObjectId>1</ObjectId>
     </schema>
-    <schema id="5574" parent="5514" name="guest">
+    <schema id="5575" parent="5514" name="guest">
       <IntrospectionTimestamp>2022-12-12.18:44:10.707</IntrospectionTimestamp>
       <ObjectId>2</ObjectId>
     </schema>
-    <schema id="5575" parent="5514" name="sys">
+    <schema id="5576" parent="5514" name="sys">
       <Grants>-615|||0|select|G
 -614|||0|select|G
 -613|||0|select|G
@@ -17087,73 +17093,209 @@
       <ObjectId>4</ObjectId>
       <PermissionsCheckSum>381669622488</PermissionsCheckSum>
     </schema>
-    <table id="5576" parent="5573" name="Clients">
-      <CreatedTimestamp>2022-12-12.18:16:29.917</CreatedTimestamp>
-      <ModifiedTimestamp>2022-12-12.18:16:29.917</ModifiedTimestamp>
-      <ObjectId>981578535</ObjectId>
+    <table id="5577" parent="5574" name="Clients">
+      <CreatedTimestamp>2023-01-06.17:24:54.283</CreatedTimestamp>
+      <ModifiedTimestamp>2023-01-06.17:24:54.290</ModifiedTimestamp>
+      <ObjectId>1037962774</ObjectId>
     </table>
-    <table id="5577" parent="5573" name="Dealers">
-      <CreatedTimestamp>2022-12-12.18:16:29.920</CreatedTimestamp>
-      <ModifiedTimestamp>2022-12-12.18:16:29.920</ModifiedTimestamp>
-      <ObjectId>1013578649</ObjectId>
+    <table id="5578" parent="5574" name="Dealers">
+      <CreatedTimestamp>2023-01-06.17:24:54.283</CreatedTimestamp>
+      <ModifiedTimestamp>2023-01-06.17:24:54.290</ModifiedTimestamp>
+      <ObjectId>1069962888</ObjectId>
     </table>
-    <column id="5578" parent="5576" name="id">
+    <table id="5579" parent="5574" name="Managers">
+      <CreatedTimestamp>2023-01-06.17:24:54.290</CreatedTimestamp>
+      <ModifiedTimestamp>2023-01-06.17:24:54.290</ModifiedTimestamp>
+      <ObjectId>1117963059</ObjectId>
+    </table>
+    <table id="5580" parent="5574" name="Users">
+      <CreatedTimestamp>2023-01-06.17:24:54.290</CreatedTimestamp>
+      <ModifiedTimestamp>2023-01-06.17:24:54.297</ModifiedTimestamp>
+      <ObjectId>1149963173</ObjectId>
+    </table>
+    <table id="5581" parent="5574" name="hibernate_sequence">
+      <CreatedTimestamp>2023-01-06.17:24:54.287</CreatedTimestamp>
+      <ModifiedTimestamp>2023-01-06.17:24:54.287</ModifiedTimestamp>
+      <ObjectId>1101963002</ObjectId>
+    </table>
+    <column id="5582" parent="5577" name="currentMoney">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="5579" parent="5576" name="Name">
-      <DataType>varchar(30 char)|0s</DataType>
+    <column id="5583" parent="5577" name="idClient">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5580" parent="5576" name="Password">
-      <DataType>varchar(30 char)|0s</DataType>
+    <column id="5584" parent="5577" name="lostGames">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <index id="5581" parent="5576" name="PK__Clients__3213E83F0A303144">
+    <column id="5585" parent="5577" name="lostMoney">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="5586" parent="5577" name="wonGames">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="5587" parent="5577" name="wonMoney">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="5588" parent="5577" name="idUser">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <foreign-key id="5589" parent="5577" name="FKhqq9elfi4q3taqpru14um3rtf">
+      <ColNames>idUser</ColNames>
+      <CreatedTimestamp>2023-01-06.17:24:54.290</CreatedTimestamp>
+      <ModifiedTimestamp>2023-01-06.17:24:54.290</ModifiedTimestamp>
+      <ObjectId>1181963287</ObjectId>
+      <RefColNames>idUser</RefColNames>
+      <RefTableId>1149963173</RefTableId>
+      <RefTableName>Users</RefTableName>
+    </foreign-key>
+    <index id="5590" parent="5577" name="PK__Clients__3717C9826CE5B87D">
       <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
+      <ColNames>idUser</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5582" parent="5576" name="PK__Clients__3213E83F0A303144">
-      <CreatedTimestamp>2022-12-12.18:16:29.920</CreatedTimestamp>
-      <ModifiedTimestamp>2022-12-12.18:16:29.920</ModifiedTimestamp>
+    <key id="5591" parent="5577" name="PK__Clients__3717C9826CE5B87D">
+      <CreatedTimestamp>2023-01-06.17:24:54.283</CreatedTimestamp>
+      <ModifiedTimestamp>2023-01-06.17:24:54.283</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>997578592</ObjectId>
+      <ObjectId>1053962831</ObjectId>
       <Primary>1</Primary>
-      <UnderlyingIndexName>PK__Clients__3213E83F0A303144</UnderlyingIndexName>
+      <UnderlyingIndexName>PK__Clients__3717C9826CE5B87D</UnderlyingIndexName>
     </key>
-    <column id="5583" parent="5577" name="id">
+    <column id="5592" parent="5578" name="idDealer">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="5584" parent="5577" name="Name">
-      <DataType>varchar(30 char)|0s</DataType>
+    <column id="5593" parent="5578" name="idUser">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5585" parent="5577" name="Password">
-      <DataType>varchar(30 char)|0s</DataType>
-      <Position>3</Position>
-    </column>
-    <index id="5586" parent="5577" name="PK__Dealers__3213E83FFAA2148D">
+    <foreign-key id="5594" parent="5578" name="FKi68ay53ojc7f4jjtqhqpqmoi3">
+      <ColNames>idUser</ColNames>
+      <CreatedTimestamp>2023-01-06.17:24:54.290</CreatedTimestamp>
+      <ModifiedTimestamp>2023-01-06.17:24:54.290</ModifiedTimestamp>
+      <ObjectId>1197963344</ObjectId>
+      <RefColNames>idUser</RefColNames>
+      <RefTableId>1149963173</RefTableId>
+      <RefTableName>Users</RefTableName>
+    </foreign-key>
+    <index id="5595" parent="5578" name="PK__Dealers__3717C982938DE2D7">
       <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
+      <ColNames>idUser</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5587" parent="5577" name="PK__Dealers__3213E83FFAA2148D">
-      <CreatedTimestamp>2022-12-12.18:16:29.920</CreatedTimestamp>
-      <ModifiedTimestamp>2022-12-12.18:16:29.920</ModifiedTimestamp>
+    <key id="5596" parent="5578" name="PK__Dealers__3717C982938DE2D7">
+      <CreatedTimestamp>2023-01-06.17:24:54.287</CreatedTimestamp>
+      <ModifiedTimestamp>2023-01-06.17:24:54.287</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1029578706</ObjectId>
+      <ObjectId>1085962945</ObjectId>
       <Primary>1</Primary>
-      <UnderlyingIndexName>PK__Dealers__3213E83FFAA2148D</UnderlyingIndexName>
+      <UnderlyingIndexName>PK__Dealers__3717C982938DE2D7</UnderlyingIndexName>
     </key>
+    <column id="5597" parent="5579" name="idManager">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="5598" parent="5579" name="age">
+      <DataType>int|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="5599" parent="5579" name="mainPassword">
+      <DataType>varchar(255 char)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="5600" parent="5579" name="mainUsername">
+      <DataType>varchar(255 char)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="5601" parent="5579" name="name">
+      <DataType>varchar(255 char)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="5602" parent="5579" name="newPassword">
+      <DataType>varchar(255 char)|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="5603" parent="5579" name="newUsername">
+      <DataType>varchar(255 char)|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <index id="5604" parent="5579" name="PK__Managers__9FF1BDDE8F2B8908">
+      <Clustering>1</Clustering>
+      <ColNames>idManager</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="5605" parent="5579" name="PK__Managers__9FF1BDDE8F2B8908">
+      <CreatedTimestamp>2023-01-06.17:24:54.290</CreatedTimestamp>
+      <ModifiedTimestamp>2023-01-06.17:24:54.290</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>1133963116</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK__Managers__9FF1BDDE8F2B8908</UnderlyingIndexName>
+    </key>
+    <column id="5606" parent="5580" name="type">
+      <DataType>varchar(31 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="5607" parent="5580" name="idUser">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="5608" parent="5580" name="age">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="5609" parent="5580" name="name">
+      <DataType>varchar(255 char)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="5610" parent="5580" name="password">
+      <DataType>varchar(255 char)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <index id="5611" parent="5580" name="PK__Users__3717C982333F6EE0">
+      <Clustering>1</Clustering>
+      <ColNames>idUser</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="5612" parent="5580" name="PK__Users__3717C982333F6EE0">
+      <CreatedTimestamp>2023-01-06.17:24:54.290</CreatedTimestamp>
+      <ModifiedTimestamp>2023-01-06.17:24:54.290</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>1165963230</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK__Users__3717C982333F6EE0</UnderlyingIndexName>
+    </key>
+    <column id="5613" parent="5581" name="next_val">
+      <DataType>numeric(19)|0s</DataType>
+      <Position>1</Position>
+    </column>
   </database-model>
 </dataSource>

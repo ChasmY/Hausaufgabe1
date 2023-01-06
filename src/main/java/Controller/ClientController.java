@@ -2,8 +2,6 @@ package Controller;
 
 import Repository.InMemory.ClientRepositoryMemory;
 import model.Client;
-import model.Dealer;
-import model.User;
 
 import java.util.Comparator;
 import java.util.List;
@@ -16,9 +14,10 @@ public class ClientController extends ClientRepositoryMemory{
         super();
     }
 
-    @Override
-    public void add(Client entity) throws Exception {
-        super.add(entity);
+//    @Override
+    public void add(Client entity) throws Exception{
+        super.addList(entity);
+
     }
 
     @Override

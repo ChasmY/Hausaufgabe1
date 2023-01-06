@@ -3,52 +3,91 @@ package Repository.InMemory;
 import Repository.CrudRepo;
 import model.Dealer;
 import model.Manager;
+import model.User;
 
+import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import static java.sql.Types.NULL;
 
 public class ManagerRepositoryMemory implements CrudRepo<Integer, Manager> {
-    private final ArrayList<Manager> allManagers = new ArrayList<Manager>();
+    private ArrayList<Manager> allManagers = new ArrayList<Manager>();
 
+    EntityManagerFactory factory;
+    EntityManager em;
     public ArrayList<Manager> getAllManagers(){
         return allManagers;
     }
 
     public ManagerRepositoryMemory(){
+        fetch();
         populate();
     }
 
+
+    private void fetch(){
+        factory= Persistence.createEntityManagerFactory("default");
+        em = factory.createEntityManager();
+        allManagers = (ArrayList<Manager>) em.createQuery("Select manager from Manager manager").getResultList();
+    }
     public void populate(){
         Manager manager = new Manager(1,"Rares", 20, "rares123", "casino1");
         Manager manager1 = new Manager(2,"Claudiu", 20, "claudiu123", "casino2");
-        allManagers.add(manager);
-        allManagers.add(manager1);
+        addList(manager);
+        addList(manager1);
     }
 
-    @Override
-    public void add(Manager entity) throws Exception {
-        try{
-            if (entity.getAge() > 18)
-                this.allManagers.add(entity);
-        }
-        catch(RuntimeException e){
-            throw new Exception("You are too young!");
-        }
+    public void addList(Manager entity){
+        String jpql = "FROM Manager WHERE newUsername = :username AND newPassword = :password";
+        TypedQuery<Manager> query = em.createQuery(jpql, Manager.class);
+        query.setParameter("username", entity.getNewUsername());
+        query.setParameter("password", entity.getNewPassword());
+        List<Manager> results = query.getResultList();
+        if (results.isEmpty()) {
+            em.getTransaction().begin();
+            em.persist(entity);
+            em.getTransaction().commit();
+            allManagers = (ArrayList<Manager>) em.createQuery("Select manager from Manager manager").getResultList();
 
+        }
+        else{
+            System.out.println("Manager already exists");
+        }
     }
 
     @Override
     public void delete(Manager entity) {
-        this.allManagers.remove(entity);
+        TypedQuery<Manager> query = em.createQuery("SELECT m FROM Manager m WHERE m.idManager = :idManager", Manager.class);
+        query.setParameter("idManager", entity.getIdManager());
+        Manager manager = query.getSingleResult();
+        if(manager != null){
+            allManagers.remove(entity);
+            em.getTransaction().begin();
+            em.remove(manager);
+            em.getTransaction().commit();
+        }
+
+
     }
 
     @Override
     public void update(Integer id, Manager newEntity) {
-        for(Manager manager: allManagers)
-            if(Objects.equals(manager.getIdManager(), id))
-                manager = newEntity;
+        TypedQuery<Manager> query = em.createQuery("SELECT m FROM Manager m WHERE m.idManager = :idManager", Manager.class);
+        query.setParameter("idManager", id);
+        Manager manager = query.getSingleResult();
+
+        manager.setMainUsername(manager.getNewUsername());
+        manager.setMainPassword(manager.getNewPassword());
+        manager.setNewUsername(newEntity.getNewUsername());
+        manager.setNewPassword(newEntity.getNewPassword());
+
+        em.getTransaction().begin();
+        em.merge(manager);
+        em.getTransaction().commit();
+        allManagers = (ArrayList<Manager>) em.createQuery("Select manager from Manager manager").getResultList();
+
     }
 
     @Override

@@ -1,18 +1,21 @@
 package model;
 
-public class User {
+import net.bytebuddy.build.CachedReturnPlugin;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "Users")
+@Inheritance(strategy = InheritanceType.JOINED)
+@DiscriminatorColumn(name = "type", discriminatorType = DiscriminatorType.STRING)
+public abstract class User {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int idUser;
+    private String name;
+    private String password;
     private int age;
-    private String name, password, socialStatus;
-
-    public int getIdUser() {
-        return idUser;
-    }
-
-    public void setIdUser(int idUser) {
-        this.idUser = idUser;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -35,17 +38,19 @@ public class User {
 
     public void setAge(int age){this.age = age;}
 
-    public String getSocialStatus() {return socialStatus;}
-
-    public void setSocialStatus(String socialStatus) {
-        this.socialStatus = socialStatus;
+    public int getIdUser() {
+        return idUser;
     }
 
-    public User(int idUser, String name, String password, int age, String socialStatus) {
+    public void setIdUser(int idUser) {
         this.idUser = idUser;
+    }
+
+    public User(String name, String password, int age) {
         this.name = name;
         this.age = age;
         this.password = password;
-        this.socialStatus = socialStatus;
     }
+
+    public User(){}
 }

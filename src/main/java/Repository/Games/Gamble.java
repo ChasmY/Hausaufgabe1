@@ -2,9 +2,6 @@ package Repository.Games;
 import model.Client;
 import model.Dealer;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import static java.sql.Types.NULL;
 
 public abstract class Gamble {

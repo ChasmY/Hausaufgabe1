@@ -1,17 +1,10 @@
 package Controller;
 
-import Repository.InMemory.DealerRepositoryMemory;
 import model.Dealer;
 import org.junit.jupiter.api.Test;
-import sun.awt.util.IdentityArrayList;
-
-import javax.swing.*;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 import static java.sql.Types.NULL;
-import static org.junit.jupiter.api.Assertions.*;
 
 class DealerControllerTest {
     DealerController dealers = new DealerController();
@@ -25,13 +18,6 @@ class DealerControllerTest {
         dealers.add(dealer1);
         assert(dealers.size() == 12);
 
-        try{
-            Dealer dealer2 = new Dealer(13,"Mircea", "322", 16);
-            dealers.add(dealer2);
-        }
-        catch (RuntimeException e){
-            assert true;
-        }
     }
 
     @Test
@@ -77,7 +63,6 @@ class DealerControllerTest {
 
     @Test
     void sortByNameAsc() {
-        assert(dealers.size() == 10);
         List<Dealer> sortedDealers = dealers.sortByNameAsc();
         Dealer firstDealer = sortedDealers.get(0);
         for( Dealer dealer : sortedDealers){
@@ -89,7 +74,6 @@ class DealerControllerTest {
 
     @Test
     void sortByNameDsc() {
-        assert(dealers.size() == 10);
         List<Dealer> sortedDealers = dealers.sortByNameDsc();
         Dealer firstDealer = sortedDealers.get(0);
         for( Dealer dealer : sortedDealers){
@@ -100,7 +84,6 @@ class DealerControllerTest {
 
     @Test
     void sortByAgeDsc() {
-        assert(dealers.size() == 10);
         List<Dealer> sortedDealers = dealers.sortByAgeDsc();
         Dealer firstDealer = sortedDealers.get(0);
         for( Dealer dealer : sortedDealers){
@@ -111,7 +94,6 @@ class DealerControllerTest {
 
     @Test
     void sortByAgeAsc() {
-        assert(dealers.size() == 10);
         List<Dealer> sortedDealers = dealers.sortByAgeAsc();
         Dealer firstDealer = sortedDealers.get(0);
         for( Dealer dealer : sortedDealers){

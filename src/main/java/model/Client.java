@@ -1,10 +1,14 @@
 package model;
 
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicLong;
+import org.hibernate.mapping.Join;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "Clients")
+@DiscriminatorValue("Client")
 public class Client extends User {
-    //public static final AtomicLong idCounter = new AtomicLong(1);
+
     private int idClient;
     private int currentMoney;
     private int wonMoney;
@@ -13,7 +17,7 @@ public class Client extends User {
     private int lostGames;
 
     public Client(int idClient, String name, String password, int age, int currentMoney) {
-        super(idClient, name, password, age, "Client");
+        super(name, password, age);
         this.idClient = idClient;
         this.currentMoney = currentMoney;
         this.wonGames = 0;
@@ -22,16 +26,18 @@ public class Client extends User {
         this.lostMoney = 0;
     }
 
+    public Client(){}
+
     public int getIdClient() {
-        return idClient;
+        return this.idClient;
     }
 
-    public void setIdClient(int idClient){
+    public void setIdClient(int idClient) {
         this.idClient = idClient;
     }
 
     public int getCurrentMoney() {
-        return currentMoney;
+        return this.currentMoney;
     }
 
     public void setCurrentMoney(int currentMoney) {
@@ -39,7 +45,7 @@ public class Client extends User {
     }
 
     public int getWonMoney() {
-        return wonMoney;
+        return this.wonMoney;
     }
 
     public void setWonMoney(int wonMoney) {
@@ -47,7 +53,7 @@ public class Client extends User {
     }
 
     public int getLostMoney() {
-        return lostMoney;
+        return this.lostMoney;
     }
 
     public void setLostMoney(int lostMoney) {
@@ -55,7 +61,7 @@ public class Client extends User {
     }
 
     public int getWonGames() {
-        return wonGames;
+        return this.wonGames;
     }
 
     public void setWonGames(int wonGames) {
@@ -63,7 +69,7 @@ public class Client extends User {
     }
 
     public int getLostGames() {
-        return lostGames;
+        return this.lostGames;
     }
 
     public void setLostGames(int lostGames) {

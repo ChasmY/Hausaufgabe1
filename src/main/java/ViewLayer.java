@@ -1,16 +1,19 @@
 import Controller.ClientController;
 import Controller.DealerController;
 import Controller.ManagerController;
-import Controller.UserController;
+//import Controller.UserController;
 import Repository.Games.AvailableGames;
 import Repository.Games.Poker.Poker;
 import Repository.Games.Roulette;
+import model.User;
 import model.Client;
 import model.Dealer;
 import model.Manager;
-import model.User;
-import sun.invoke.empty.Empty;
 
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.util.*;
 
 import static java.sql.Types.NULL;
@@ -22,9 +25,9 @@ public class ViewLayer {
     DealerController dealerList = new DealerController();
     Client client = new Client(NULL, "", "", NULL, NULL);
     ClientController clientList=new ClientController();
-    User user = new User(NULL, "", "", NULL, "");
 
-    UserController userList = new UserController();
+    EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
+    EntityManager em = emf.createEntityManager();
 
 
     public void start() throws Exception {
@@ -62,7 +65,7 @@ public class ViewLayer {
         System.out.println("Password:");
         manager.setNewPassword(console.nextLine());
 
-        managerList.repo.add(manager);
+        managerList.add(manager);
 
         System.out.println("Thanks for creating an account! You will be redirected to Menu Manager");
         managerPortal();
@@ -110,6 +113,8 @@ public class ViewLayer {
         Scanner console = new Scanner(System.in);
         while (console.hasNextInt()){
             int var = console.nextInt();
+            if(var==0)
+                managerPortal();
             if (var == 1){
                 System.out.println("1 - Show managers sorted by ID ascending");
                 System.out.println("2 - Show managers sorted by ID descending");
@@ -117,6 +122,7 @@ public class ViewLayer {
                 Scanner choice = new Scanner(System.in);
                 while(choice.hasNextInt()){
                     int c = choice.nextInt();
+
                     if (c == 1){
                         List<Manager> sortedManagers = managerList.sortByIdAsc();
                         printManagers(sortedManagers);
@@ -413,57 +419,42 @@ public class ViewLayer {
         System.out.println("--- SIGN IN CLIENT ---");
         Scanner console = new Scanner(System.in);
 
-        user.setIdUser(userList.getList().get(userList.size()-1).getIdUser() + 1);
+        client.setIdClient(clientList.getAllClients().get(clientList.size() - 1).getIdClient() + 1);
 
         System.out.println("Name ");
-        user.setName(console.nextLine());
+        client.setName(console.nextLine());
 
         System.out.println("Password ");
-        user.setPassword(console.nextLine());
+        client.setPassword(console.nextLine());
 
         System.out.println("Age ");
-        user.setAge(console.nextInt());
-
-        user.setSocialStatus("Client");
-
-        userList.add(user);
-
-        client.setIdClient(clientList.getAllClients().get(clientList.size() - 1).getIdClient() + 1);
-        client.setName(user.getName());
-        client.setPassword(user.getPassword());
-        client.setAge(user.getAge());
+        client.setAge(console.nextInt());
 
         System.out.println("Money to deposit ");
         client.setCurrentMoney(console.nextInt());
 
-        clientList.repo.add(client);
+
+        clientList.add(client);
     }
 
     public void signinDealer() throws Exception {
         System.out.println("--- SIGN IN DEALER ---");
         Scanner console = new Scanner(System.in);
 
-        user.setIdUser(userList.getList().get(userList.size()-1).getIdUser() + 1);
+//        user.setIdUser(userList.getList().get(userList.size()-1).getIdUser() + 1);
+        dealer.setIdDealer(dealerList.getAllDealers().get(dealerList.size()-1).getIdDealer() + 1);
 
         System.out.println("Name ");
-        user.setName(console.nextLine());
+        dealer.setName(console.nextLine());
 
         System.out.println("Password ");
-        user.setPassword(console.nextLine());
+        dealer.setPassword(console.nextLine());
 
         System.out.println("Age ");
-        user.setAge(console.nextInt());
+        dealer.setAge(console.nextInt());
 
-        user.setSocialStatus("Dealer");
-
-        userList.add(user);
-
-        dealer.setIdDealer(dealerList.getAllDealers().get(dealerList.size()-1).getIdDealer() + 1);
-        dealer.setName(user.getName());
-        dealer.setPassword(user.getPassword());
-        dealer.setAge(user.getAge());
-
-        dealerList.repo.add(dealer);
+        dealerList.add(dealer);
+//        dealerList.repo.add(dealer); //din nou discutabil daca ramane
     }
 
     public boolean loginClient(){
@@ -477,7 +468,8 @@ public class ViewLayer {
         System.out.println("Password ");
         clientLogging.setPassword(console.nextLine());
 
-        for(Client c : clientList.repo.getAllClients()){
+
+        for(Client c : clientList.getAllClients()){
             if(Objects.equals(c.getName(), clientLogging.getName()) && Objects.equals(c.getPassword(), clientLogging.getPassword())){
                 client.setIdClient(c.getIdClient());
                 client.setCurrentMoney(c.getCurrentMoney());
@@ -503,7 +495,7 @@ public class ViewLayer {
         System.out.println("Password ");
         dealerLogging.setPassword(console.nextLine());
 
-        for(Dealer d : dealerList.repo.getAllDealers()){
+        for(Dealer d : dealerList.getAllDealers()){
             if(Objects.equals(d.getName(), dealerLogging.getName()) && Objects.equals(d.getPassword(), dealerLogging.getPassword())) {
                 dealer.setIdDealer(d.getIdDealer());
                 dealer.setName(d.getName());
@@ -600,14 +592,14 @@ public class ViewLayer {
                     client.setCurrentMoney(client.getCurrentMoney() - betInt);
                     client.setLostMoney(betInt);
                     client.setLostGames(1);
-                    clientList.repo.update(client.getIdClient(), client);
+                    clientList.update(client.getIdClient(), client);
                 }
                 else if (dealerHandCode < yourHandCode){
                     System.out.println("You won! Congratulations!");
                     client.setCurrentMoney(client.getCurrentMoney() + bet.nextInt());
                     client.setWonMoney(betInt);
                     client.setWonGames(1);
-                    clientList.repo.update(client.getIdClient(), client);
+                    clientList.update(client.getIdClient(), client);
                 }
                 else{
                     System.out.println("It's a tie!!");
@@ -622,7 +614,7 @@ public class ViewLayer {
                 client.setWonGames(roulette.getWonGames());
                 client.setWonMoney(roulette.getWonMoney());
                 client.setLostMoney(roulette.getLostMoney());
-                clientList.repo.update(client.getIdClient(), client);
+                clientList.update(client.getIdClient(), client);
             }
         }
     }

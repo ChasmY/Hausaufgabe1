@@ -1,19 +1,40 @@
 package Repository.InMemory;
 import Repository.CrudRepo;
-import Repository.Games.AvailableGames;
+import model.Client;
 import model.Dealer;
+import model.Manager;
+import model.User;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 import static java.sql.Types.NULL;
 
+
 public class DealerRepositoryMemory implements CrudRepo<Integer, Dealer> {
-    private final ArrayList<Dealer> allDealers = new ArrayList<>();
+
+    private ArrayList<Dealer> allDealers = new ArrayList<>();
+
+    EntityManager manager;
+    EntityManagerFactory factory;
 
     public DealerRepositoryMemory() {
+        fetch();
         populate();
+    }
+
+    private void fetch(){
+        factory = Persistence.createEntityManagerFactory("default");
+        manager = factory.createEntityManager();
+        allDealers = (ArrayList<Dealer>) manager.createQuery("SELECT dealer FROM Dealer dealer").getResultList();
+
     }
 
     public void populate() {
@@ -27,43 +48,65 @@ public class DealerRepositoryMemory implements CrudRepo<Integer, Dealer> {
         Dealer dealer7 = new Dealer(8,"Luciana", "17752", 59);
         Dealer dealer8 = new Dealer(9,"Adrian", "1121", 43);
         Dealer dealer9 = new Dealer(10, "Ovi", "5290", 89);
-        allDealers.add(dealer);
-        allDealers.add(dealer1);
-        allDealers.add(dealer2);
-        allDealers.add(dealer3);
-        allDealers.add(dealer4);
-        allDealers.add(dealer5);
-        allDealers.add(dealer6);
-        allDealers.add(dealer7);
-        allDealers.add(dealer8);
-        allDealers.add(dealer9);
+        addList(dealer);
+        addList(dealer1);
+        addList(dealer2);
+        addList(dealer3);
+        addList(dealer4);
+        addList(dealer5);
+        addList(dealer6);
+        addList(dealer7);
+        addList(dealer8);
+        addList(dealer9);
     }
 
     public ArrayList<Dealer> getAllDealers() {
         return allDealers;
     }
 
-    @Override
-    public void add(Dealer entity) throws Exception {
-        try {
-            if (entity.getAge() > 18)
-                this.allDealers.add(entity);
-        }
-        catch (RuntimeException e){
-            throw new Exception("You are too young!");
-        }
+    public void addList(Dealer entity) {
+            String jpql = "FROM User WHERE name = :username AND password = :password";
+            TypedQuery<User> query = manager.createQuery(jpql, User.class);
+            query.setParameter("username", entity.getName());
+            query.setParameter("password", entity.getPassword());
+            List<User> results = query.getResultList();
+            if (results.isEmpty()) {
+                manager.getTransaction().begin();
+                manager.persist(entity);
+                manager.getTransaction().commit();
+                allDealers = (ArrayList<Dealer>) manager.createQuery("SELECT dealer FROM Dealer dealer").getResultList();
+
+            }
+            else{
+                System.out.println("Dealer already exists");
+            }
     }
 
     @Override
     public void delete(Dealer entity) {
-        this.allDealers.remove(entity);
+        TypedQuery<Dealer> query = manager.createQuery("SELECT d FROM Dealer d WHERE d.idDealer = :idDealer", Dealer.class);
+        query.setParameter("idDealer", entity.getIdDealer());
+        Dealer dealer = query.getSingleResult();
+
+        if(dealer != null) {
+            this.allDealers.remove(dealer);
+            manager.getTransaction().begin();
+            manager.remove(dealer);
+            manager.getTransaction().commit();
+        }
     }
 
     @Override
     public void update(Integer id, Dealer newEntity) {
-        for (Dealer dealer : allDealers)
-            if (Objects.equals(dealer.getIdDealer(), id))
-                dealer = newEntity;
+        TypedQuery<Dealer> query = manager.createQuery("SELECT d FROM Dealer d WHERE d.idDealer = :idDealer", Dealer.class);
+        query.setParameter("idDealer", id);
+        Dealer dealer = query.getSingleResult();
+
+        dealer.setName(newEntity.getName());
+        manager.getTransaction().begin();
+        manager.merge(manager);
+        manager.getTransaction().commit();
+        allDealers =(ArrayList<Dealer>) manager.createQuery("Select dealer from Dealer dealer").getResultList();
     }
 
     @Override
@@ -98,4 +141,6 @@ public class DealerRepositoryMemory implements CrudRepo<Integer, Dealer> {
             k += 1;
         return k;
     }
+
+
 }

@@ -31,11 +31,11 @@ class ManagerControllerTest {
 
     @Test
     void delete() throws Exception {
-        assert(managers.size() == 2);
+        assert(managers.size() == 5);
         managers.delete(managers.findById(1));
-        assert(managers.size() == 1);
+        assert(managers.size() == 4);
         managers.delete(managers.findById(2));
-        assert(managers.size() == 0);
+        assert(managers.size() == 3);
     }
 
     @Test
