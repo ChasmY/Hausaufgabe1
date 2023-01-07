@@ -1,11 +1,12 @@
 package Repository.InMemory;
 
 import Repository.CrudRepo;
-import model.Dealer;
 import model.Manager;
-import model.User;
 
-import javax.persistence.*;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -67,6 +68,7 @@ public class ManagerRepositoryMemory implements CrudRepo<Integer, Manager> {
             em.getTransaction().begin();
             em.remove(manager);
             em.getTransaction().commit();
+            getTable();
         }
 
 
@@ -108,6 +110,14 @@ public class ManagerRepositoryMemory implements CrudRepo<Integer, Manager> {
             throw new Exception("No ID found");
         }
         return null;
+    }
+
+
+    public List<Manager> getTable(){
+        em.getTransaction().begin();
+        allManagers = (ArrayList<Manager>) em.createQuery("SELECT manager FROM Manager manager").getResultList();
+        em.getTransaction().commit();
+        return allManagers;
     }
 
     public void printAllManagers(){

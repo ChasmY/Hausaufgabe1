@@ -1,16 +1,13 @@
 package Repository.InMemory;
-import Repository.CrudRepo;
-import model.Client;
-import model.Dealer;
-import model.Manager;
-import model.User;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.query.Query;
 
-import javax.persistence.*;
+import Repository.CrudRepo;
+import model.Dealer;
+import model.User;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -74,7 +71,7 @@ public class DealerRepositoryMemory implements CrudRepo<Integer, Dealer> {
                 manager.getTransaction().begin();
                 manager.persist(entity);
                 manager.getTransaction().commit();
-                allDealers = (ArrayList<Dealer>) manager.createQuery("SELECT dealer FROM Dealer dealer").getResultList();
+                getTable();
 
             }
             else{
@@ -89,10 +86,10 @@ public class DealerRepositoryMemory implements CrudRepo<Integer, Dealer> {
         Dealer dealer = query.getSingleResult();
 
         if(dealer != null) {
-            this.allDealers.remove(dealer);
             manager.getTransaction().begin();
             manager.remove(dealer);
             manager.getTransaction().commit();
+            getTable();
         }
     }
 
@@ -104,7 +101,7 @@ public class DealerRepositoryMemory implements CrudRepo<Integer, Dealer> {
 
         dealer.setName(newEntity.getName());
         manager.getTransaction().begin();
-        manager.merge(manager);
+        manager.merge(dealer);
         manager.getTransaction().commit();
         allDealers =(ArrayList<Dealer>) manager.createQuery("Select dealer from Dealer dealer").getResultList();
     }
@@ -129,6 +126,12 @@ public class DealerRepositoryMemory implements CrudRepo<Integer, Dealer> {
         return null;
     }
 
+    public List<Dealer> getTable(){
+        manager.getTransaction().begin();
+        allDealers = (ArrayList<Dealer>) manager.createQuery("SELECT dealer FROM Dealer dealer").getResultList();
+        manager.getTransaction().commit();
+        return allDealers;
+    }
 
     public void printAllDealers(){
         for (Dealer dealer : allDealers)

@@ -2,7 +2,9 @@ package Controller;
 
 import Repository.InMemory.DealerRepositoryMemory;
 import model.Dealer;
-import java.util.*;
+
+import java.util.Comparator;
+import java.util.List;
 
 public class DealerController extends DealerRepositoryMemory {
     public DealerRepositoryMemory repo = new DealerRepositoryMemory();
@@ -27,6 +29,7 @@ public class DealerController extends DealerRepositoryMemory {
     }
 
     public List<Dealer> sortByIdAsc(){
+        repo.getTable();
         List<Dealer> sortedDealers = repo.getAllDealers();
         sortedDealers.sort(Comparator.comparing(Dealer::getIdDealer));
         //repo.printAllDealers();
@@ -34,6 +37,7 @@ public class DealerController extends DealerRepositoryMemory {
     }
 
     public List<Dealer> sortByIdDsc(){
+        repo.getTable();
         List<Dealer> sortedDealers = repo.getAllDealers();
         sortedDealers.sort(Comparator.comparing(Dealer::getIdDealer).reversed());
         //repo.printAllDealers();
@@ -41,12 +45,14 @@ public class DealerController extends DealerRepositoryMemory {
     }
 
     public List<Dealer> sortByNameAsc(){ //aia buna
+        repo.getTable();
         List<Dealer> sortedDealers = repo.getAllDealers();
         sortedDealers.sort(Comparator.comparing(Dealer::getName));
         //repo.printAllDealers();
         return sortedDealers;
     }
     public List<Dealer> sortByNameDsc(){
+        repo.getTable();
         List<Dealer> sortedDealers = repo.getAllDealers();
         sortedDealers.sort(Comparator.comparing(Dealer::getName).reversed());
         //repo.printAllDealers();
@@ -54,12 +60,14 @@ public class DealerController extends DealerRepositoryMemory {
     }
 
     public List<Dealer> sortByAgeDsc(){
+        repo.getTable();
         List<Dealer> sortedDealers = repo.getAllDealers();
         sortedDealers.sort(Comparator.comparing(Dealer::getAge).reversed());
         //repo.printAllDealers();
         return sortedDealers;
     }
     public List<Dealer> sortByAgeAsc(){
+        repo.getTable();
         List<Dealer> sortedDealers = repo.getAllDealers();
         sortedDealers.sort(Comparator.comparing(Dealer::getAge));
         //repo.printAllDealers();

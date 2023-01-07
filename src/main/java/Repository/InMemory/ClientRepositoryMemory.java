@@ -1,20 +1,17 @@
 package Repository.InMemory;
+
 import Repository.CrudRepo;
 import model.Client;
-
-import java.lang.ref.Cleaner;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Objects;
-
-import model.Manager;
 import model.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Objects;
 
 
 public class ClientRepositoryMemory implements CrudRepo<Integer, Client> {
@@ -59,8 +56,7 @@ public class ClientRepositoryMemory implements CrudRepo<Integer, Client> {
         addList(client8);
         addList(client9);
     }
-
-    public void addList(Client client){
+    public void addList(Client client){ //functioneaza cu tot cu modoficare tabel si lista
         String jpql = "FROM User WHERE name = :username AND password = :password";
         TypedQuery<User> query = em.createQuery(jpql, User.class);
         query.setParameter("username", client.getName());
@@ -70,42 +66,49 @@ public class ClientRepositoryMemory implements CrudRepo<Integer, Client> {
             em.getTransaction().begin();
             em.persist(client);
             em.getTransaction().commit();
-            allClients =(ArrayList<Client>) em.createQuery("Select client from Client client").getResultList();
-
+            getTable();
         }
         else{
             System.out.println("Client already exists");
         }
     }
 
-    public void delete(Client entity) {
+    public void delete(Client entity) {//functioneaza cu tot cu modoficare tabel si lista
         TypedQuery<Client> query = em.createQuery("SELECT c FROM Client c WHERE c.idClient = :idClient", Client.class);
         query.setParameter("idClient", entity.getIdClient());
         Client client = query.getSingleResult();
+
         if(client!= null) {
-            this.allClients.remove(client);
             em.getTransaction().begin();
             em.remove(client);
             em.getTransaction().commit();
+            getTable();
         }
     }
 
     public void update(Integer id, Client newEntity) {
+        //la update trebuie vazut ca ase adauga in tabel, functia get table
+        //functioneaza dar cand vine vorba de sorturi functiile respective lucreaza cu tabelul vechi, desi la add si remove
+        //nu e problema asta si e la fel
+
         TypedQuery<Client> query = em.createQuery("SELECT c FROM Client c WHERE c.idClient = :idClient", Client.class);
         query.setParameter("idClient", id);
         Client client = query.getSingleResult();
 
-        client.setWonGames(newEntity.getWonGames());
-        client.setLostGames(newEntity.getLostGames());
-        client.setWonMoney(newEntity.getWonMoney());
-        client.setLostMoney(newEntity.getLostMoney());
-        client.setCurrentMoney(newEntity.getCurrentMoney());
-        em.getTransaction().begin();
-        em.merge(client);
-        em.getTransaction().commit();
-        allClients =(ArrayList<Client>) em.createQuery("Select client from Client client").getResultList();
-    }
+        if(client!= null) {
 
+            client.setWonGames(newEntity.getWonGames());
+            client.setLostGames(newEntity.getLostGames());
+            client.setWonMoney(newEntity.getWonMoney());
+            client.setLostMoney(newEntity.getLostMoney());
+            client.setCurrentMoney(newEntity.getCurrentMoney());
+
+            em.getTransaction().begin();
+            em.merge(client);
+            em.getTransaction().commit();
+            getTable();
+        }
+    }
     public Client findById(Integer id) throws Exception {
         boolean found = false;
         Client c = new Client(0, "", "", 0, 0);
@@ -129,19 +132,28 @@ public class ClientRepositoryMemory implements CrudRepo<Integer, Client> {
 
     public int size() {
         int k = 0;
-
         for(Iterator var2 = this.allClients.iterator(); var2.hasNext(); ++k) {
             User user = (User)var2.next();
         }
-
         return k;
     }
 
+
+    public List<Client> getTable(){
+        em.getTransaction().begin();
+        allClients = (ArrayList<Client>) em.createQuery("SELECT client FROM Client client").getResultList();
+        em.getTransaction().commit();
+        return allClients;
+    }
     public void printAllClients() {
+        System.out.println("ClientId " + "Name " + "Password " + "Age " +
+                "CurrentMoney " + "WonMoney " + "WonGames " + "LostMoney " + "LostGames");
         Iterator var1 = this.allClients.iterator();
         while(var1.hasNext()) {
             Client client = (Client)var1.next();
-            System.out.println(client.getIdClient() + " " + client.getName() + " " + client.getPassword() + " " + client.getAge() + " " + client.getLostMoney() + " " + client.getWonMoney() + " " + client.getCurrentMoney() + " " + client.getLostGames() + " " + client.getWonGames());
+            System.out.println(client.getIdClient() + " " + client.getName() + " " + client.getPassword() + " "
+                    + client.getAge() + " " + client.getCurrentMoney()+ " " + client.getWonMoney() + " " +
+                    client.getWonGames() + " " + client.getLostMoney() + " " + client.getLostGames());
         }
 
     }

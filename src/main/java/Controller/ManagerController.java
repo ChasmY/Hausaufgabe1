@@ -3,7 +3,8 @@ package Controller;
 import Repository.InMemory.ManagerRepositoryMemory;
 import model.Manager;
 
-import java.util.*;
+import java.util.Comparator;
+import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -31,24 +32,28 @@ public class ManagerController extends ManagerRepositoryMemory{
     }
 
     public List<Manager> sortByIdAsc(){
+        repo.getTable();
         List<Manager> sortedManagers = repo.getAllManagers();
         sortedManagers.sort(Comparator.comparing(Manager::getIdManager));
         return sortedManagers;
     }
 
     public List<Manager> sortByIdDsc(){
+        repo.getTable();
         List<Manager> sortedManagers = repo.getAllManagers();
         sortedManagers.sort(Comparator.comparing(Manager::getIdManager).reversed());
         return sortedManagers;
     }
 
     public List<Manager> sortByNameAsc(){
+        repo.getTable();
         List<Manager> sortedManagers = repo.getAllManagers();
         sortedManagers.sort(Comparator.comparing(Manager::getName));
         return sortedManagers;
     }
 
     public List<Manager> sortByNameDsc(){
+        repo.getTable();
         List<Manager> sortedManagers = repo.getAllManagers();
         sortedManagers.sort(Comparator.comparing(Manager::getName).reversed());
         return sortedManagers;

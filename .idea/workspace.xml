@@ -5,78 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/229613c8-cfd5-42eb-815c-123950dcb18a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/229613c8-cfd5-42eb-815c-123950dcb18a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/229613c8-cfd5-42eb-815c-123950dcb18a/storage_v2/_src_/database/master.YiqNvw/schema/dbo.sYMBAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/229613c8-cfd5-42eb-815c-123950dcb18a/storage_v2/_src_/database/master.YiqNvw/schema/dbo.sYMBAA.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_microsoft_sqlserver_mssql_jdbc_12_1_0_jre11_preview.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_microsoft_sqlserver_mssql_jdbc_12_1_0_jre8_preview.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hausaufgabe1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Hausaufgabe1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/ClientControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/ClientControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/DealerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/DealerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/DealerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/DealerControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/ManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/UserControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/CrudRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/CrudRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/DB/ClientRepositoryDB.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/DB/DealerRepositoryDB.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/DB/UserRepositoryDB.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/Games/Gamble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Games/Gamble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/Games/Roulette.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Games/Roulette.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Repository/InMemory/ClientRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/InMemory/ClientRepositoryMemory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Repository/InMemory/DealerRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/InMemory/DealerRepositoryMemory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Repository/InMemory/ManagerRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/InMemory/ManagerRepositoryMemory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/InMemory/UserRepositoryMemory.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ViewLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewLayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Dealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Dealer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controller/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/ClientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/ClientControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/ClientControllerTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controller/DealerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/DealerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/DealerControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/DealerControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/ManagerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/ManagerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/ManagerControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/ManagerControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/UserControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Repository/CrudRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repository/CrudRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Repository/DB/ClientRepositoryDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Repository/DB/DealerRepositoryDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Repository/DB/UserRepositoryDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Repository/Games/AvailableGames.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repository/Games/AvailableGames.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Repository/Games/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repository/Games/Card.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Repository/Games/Deck.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repository/Games/Deck.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Repository/Games/Gamble.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repository/Games/Gamble.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Repository/Games/Poker/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repository/Games/Poker/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Repository/Games/Poker/Poker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repository/Games/Poker/Poker.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Repository/Games/Roulette.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repository/Games/Roulette.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Repository/InMemory/ClientRepositoryMemory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repository/InMemory/ClientRepositoryMemory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Repository/InMemory/DealerRepositoryMemory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repository/InMemory/DealerRepositoryMemory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Repository/InMemory/ManagerRepositoryMemory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repository/InMemory/ManagerRepositoryMemory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Repository/InMemory/UserRepositoryMemory.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ViewLayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ViewLayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Dealer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Dealer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Manager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Controller/ManagerControllerTest2.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +39,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="New_Claudiu_Branch" />
+        <entry key="$PROJECT_DIR$" value="Final_NO_DB" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -307,7 +250,9 @@
       <workItem from="1672931746006" duration="24042000" />
       <workItem from="1672995690606" duration="14889000" />
       <workItem from="1673018386981" duration="6001000" />
-      <workItem from="1673030990416" duration="6319000" />
+      <workItem from="1673030990416" duration="6551000" />
+      <workItem from="1673085829499" duration="13476000" />
+      <workItem from="1673101613969" duration="12267000" />
     </task>
     <task id="LOCAL-00001" summary="Second">
       <created>1666629431147</created>
@@ -393,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671974142811</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="mai trebuie facut view ul + Comentarii">
+      <created>1673039642765</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1673039642765</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,7 +385,8 @@
     <MESSAGE value="am refacut putin la jocuri" />
     <MESSAGE value="merg sortarile si afiseaza elemente nu adresa de memorie" />
     <MESSAGE value="tot gata, in afara de:&#10;DB&#10;comentarii" />
-    <option name="LAST_COMMIT_MESSAGE" value="tot gata, in afara de:&#10;DB&#10;comentarii" />
+    <MESSAGE value="mai trebuie facut view ul + Comentarii" />
+    <option name="LAST_COMMIT_MESSAGE" value="mai trebuie facut view ul + Comentarii" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -444,6 +397,11 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="this" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

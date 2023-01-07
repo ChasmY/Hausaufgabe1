@@ -1,20 +1,20 @@
 import Controller.ClientController;
 import Controller.DealerController;
 import Controller.ManagerController;
-//import Controller.UserController;
 import Repository.Games.AvailableGames;
 import Repository.Games.Poker.Poker;
 import Repository.Games.Roulette;
-import model.User;
 import model.Client;
 import model.Dealer;
 import model.Manager;
 
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
+import java.util.Scanner;
 
 import static java.sql.Types.NULL;
 
@@ -109,6 +109,9 @@ public class ViewLayer {
         System.out.println("9 - Show all dealers sorted by ID");
         System.out.println("10 - Show all dealers sorted by name");
         System.out.println("11 - Show all dealers sorted by age");
+        System.out.println("12 - Remove client");
+        System.out.println("13 - Remove dealer");
+        System.out.println("14 - Remove manager");
         System.out.println("0 - Go back");
         Scanner console = new Scanner(System.in);
         while (console.hasNextInt()){
@@ -351,6 +354,86 @@ public class ViewLayer {
                     }
                 }
             }
+            if(var == 12){
+                System.out.println("Enter client ID");
+                Scanner choice = new Scanner(System.in);
+                while (choice.hasNextInt()) {
+                    int id = choice.nextInt();
+                    while(clientList.findById(id) == null){
+                        System.out.println("Client ID not found");
+                        System.out.println("Enter client ID ");
+                        Scanner choice2 = new Scanner(System.in);
+                        int id2 = choice2.nextInt();
+                        if (clientList.findById(id2) != null){
+                            clientList.delete(clientList.findById(id2));
+                            System.out.println("Client deleted successfully");
+                            List<Client> sortedById = clientList.sortByIdAsc();
+                            printClients(sortedById);
+                            loggedInManager();
+                        }
+                    }
+                    clientList.delete(clientList.findById(id));
+                    System.out.println("Client deleted successfully");
+                    List<Client> sortedById = clientList.sortByIdAsc();
+                    printClients(sortedById);
+                    loggedInManager();
+                }
+            }
+            if(var == 13){
+                System.out.println("Enter dealer ID");
+                Scanner choice = new Scanner(System.in);
+                while(choice.hasNextInt()){
+                    int id = choice.nextInt();
+                    while(dealerList.findById(id) == null){
+                        System.out.println("Dealer ID not found");
+                        System.out.println("Enter dealer ID");
+                        Scanner choice2 = new Scanner(System.in);
+                        int id2 = choice2.nextInt();
+                        if(dealerList.findById(id2) != null) {
+                            dealerList.delete(dealerList.findById(id2));
+                            System.out.println("Dealer deleted successfully");
+                            List<Dealer> sortedById = dealerList.sortByIdAsc();
+                            printDealers(sortedById);
+                            loggedInManager();
+                        }
+                    }
+                    dealerList.delete(dealerList.findById(id));
+                    System.out.println("Dealer deleted successfully");
+                    List<Dealer> sortedById = dealerList.sortByIdAsc();
+                    printDealers(sortedById);
+                    loggedInManager();
+                }
+
+            }
+            if(var == 14){
+                System.out.println("Enter manager ID");
+                Scanner choice = new Scanner(System.in);
+                while(choice.hasNextInt()) {
+                    int id = choice.nextInt();
+                    while(manager.getIdManager() == id || managerList.findById(manager.getIdManager()) == null){
+                        System.out.println("Manager ID not valid");
+                        System.out.println("Try again");
+                        System.out.println("Enter manager ID");
+                        Scanner choice2 = new Scanner(System.in);
+                        int id2 = choice2.nextInt();
+                        if(managerList.findById(id2) != null){
+                            managerList.delete(managerList.findById(id2));
+                            System.out.println("Manager deleted successfully");
+                            List<Manager> sortedById = managerList.sortByIdAsc();
+                            printManagers(sortedById);
+                            loggedInManager();
+                        }
+                    }
+                    if(managerList.findById(id) != null) {
+                        managerList.delete(managerList.findById(id));
+                        System.out.println("Manager deleted successfully");
+                        List<Manager> sortedById = managerList.sortByIdAsc();
+                        printManagers(sortedById);
+                        loggedInManager();
+                    }
+                }
+
+            }
         }
     }
 
@@ -441,7 +524,6 @@ public class ViewLayer {
         System.out.println("--- SIGN IN DEALER ---");
         Scanner console = new Scanner(System.in);
 
-//        user.setIdUser(userList.getList().get(userList.size()-1).getIdUser() + 1);
         dealer.setIdDealer(dealerList.getAllDealers().get(dealerList.size()-1).getIdDealer() + 1);
 
         System.out.println("Name ");
@@ -454,7 +536,6 @@ public class ViewLayer {
         dealer.setAge(console.nextInt());
 
         dealerList.add(dealer);
-//        dealerList.repo.add(dealer); //din nou discutabil daca ramane
     }
 
     public boolean loginClient(){
@@ -609,6 +690,7 @@ public class ViewLayer {
                 System.out.println("NOW START PLAYING!\n");
                 Roulette roulette = new Roulette(client.getCurrentMoney(), client.getWonMoney(), client.getLostMoney(), client.getWonGames(), client.getLostGames());
                 roulette.play();
+
                 client.setCurrentMoney(roulette.getCurrentMoney());
                 client.setLostGames(roulette.getLostGames());
                 client.setWonGames(roulette.getWonGames());
@@ -710,10 +792,11 @@ public class ViewLayer {
         }
     }
     public void printClients(List<Client> clientList){
+        System.out.println("ClientId " + "Name " + "Password " + "Age " + "CurrentMoney " + "WonMoney " + "WonGames " + "LostMoney " + "LostGames");
         for(Client client1: clientList){
             System.out.println(client1.getIdClient() +" " + client1.getName() + " "+client1.getPassword() +  " " + client1.getAge()
-             + " " + client1.getCurrentMoney() +  " " + client1.getWonMoney() + " " + client1.getLostMoney() +
-                    " " + client1.getWonGames() + " "+ client1.getLostGames());
+             + " " + client1.getCurrentMoney() +  " " + client1.getWonMoney() + " " + client1.getWonGames() +
+                    " " + client1.getLostMoney() + " "+ client1.getLostGames());
         }
     }
     public void printManagers(List<Manager> managerList){
@@ -721,4 +804,5 @@ public class ViewLayer {
             System.out.println(manager1.getIdManager()+ " " +manager1.getName() + " " + manager1.getAge());
         }
     }
+
 }
