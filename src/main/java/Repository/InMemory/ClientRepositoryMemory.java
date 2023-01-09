@@ -145,7 +145,7 @@ public class ClientRepositoryMemory implements CrudRepo<Integer, Client> {
         em.getTransaction().commit();
         return allClients;
     }
-    public void printAllClients() {
+    public void printAllClients(List<Client> clientList) {
         System.out.println("ClientId " + "Name " + "Password " + "Age " +
                 "CurrentMoney " + "WonMoney " + "WonGames " + "LostMoney " + "LostGames");
         Iterator var1 = this.allClients.iterator();

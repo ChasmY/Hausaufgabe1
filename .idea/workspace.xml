@@ -7,18 +7,12 @@
     <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/DealerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/DealerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/ManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/Games/Roulette.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Games/Roulette.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Repository/InMemory/ClientRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/InMemory/ClientRepositoryMemory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/InMemory/DealerRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/InMemory/DealerRepositoryMemory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/InMemory/ManagerRepositoryMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/InMemory/ManagerRepositoryMemory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ViewLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ViewLayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/ClientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/DealerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/DealerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Repository/Games/Roulette.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repository/Games/Roulette.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/ManagerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/ManagerController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Repository/InMemory/ClientRepositoryMemory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repository/InMemory/ClientRepositoryMemory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Repository/InMemory/DealerRepositoryMemory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repository/InMemory/DealerRepositoryMemory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Repository/InMemory/ManagerRepositoryMemory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repository/InMemory/ManagerRepositoryMemory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ViewLayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ViewLayer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -252,7 +246,8 @@
       <workItem from="1673018386981" duration="6001000" />
       <workItem from="1673030990416" duration="6551000" />
       <workItem from="1673085829499" duration="13476000" />
-      <workItem from="1673101613969" duration="12267000" />
+      <workItem from="1673101613969" duration="12418000" />
+      <workItem from="1673265621065" duration="2083000" />
     </task>
     <task id="LOCAL-00001" summary="Second">
       <created>1666629431147</created>
@@ -345,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673039642765</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="deci trebuie sa facem comentariile si sa discutam la update clients pe logica din spate">
+      <created>1673115491856</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1673115491856</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,7 +388,9 @@
     <MESSAGE value="merg sortarile si afiseaza elemente nu adresa de memorie" />
     <MESSAGE value="tot gata, in afara de:&#10;DB&#10;comentarii" />
     <MESSAGE value="mai trebuie facut view ul + Comentarii" />
-    <option name="LAST_COMMIT_MESSAGE" value="mai trebuie facut view ul + Comentarii" />
+    <MESSAGE value="deci trebuie sa facem comentariile si sa discutam la update clients pe logica din spate" />
+    <option name="LAST_COMMIT_MESSAGE" value="deci trebuie sa facem comentariile si sa discutam la update clients pe logica din spate" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

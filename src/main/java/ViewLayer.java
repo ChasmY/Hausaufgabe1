@@ -179,12 +179,10 @@ public class ViewLayer {
                     int c = choice.nextInt();
                     if (c == 1){
                         List<Client> sortedClients = clientList.sortByIdAsc();
-                        printClients(sortedClients);
                         loggedInManager();
                     }
                     if (c == 2){
                         List<Client> sortedClients = clientList.sortByIdDsc();
-                        printClients(sortedClients);
                         loggedInManager();
                     }
                     if (c == 0){
@@ -202,12 +200,10 @@ public class ViewLayer {
                     int c = choice.nextInt();
                     if (c == 1){
                         List<Client> sortedClients = clientList.sortByNameAsc();
-                        printClients(sortedClients);
                         loggedInManager();
                     }
                     if (c == 2){
                         List<Client> sortedClients = clientList.sortByNameDsc();
-                        printClients(sortedClients);
                         loggedInManager();
                     }
                     if (c == 0){
@@ -225,12 +221,10 @@ public class ViewLayer {
                     int c = choice.nextInt();
                     if(c == 1){
                         List<Client> sortedClients = clientList.sortByAgeAsc();
-                        printClients(sortedClients);
                         loggedInManager();
                     }
                     if (c == 2){
                         List<Client> sortedClients = clientList.sortByAgeDsc();
-                        printClients(sortedClients);
                         loggedInManager();
                     }
                     if(c == 0){
@@ -248,12 +242,10 @@ public class ViewLayer {
                     int c = choice.nextInt();
                     if(c == 1){
                         List<Client> sortedClients = clientList.sortByWonMoneyAsc();
-                        printClients(sortedClients);
                         loggedInManager();
                     }
                     if (c == 2){
                         List<Client> sortedClients = clientList.sortByWonMoneyDsc();
-                        printClients(sortedClients);
                         loggedInManager();
                     }
                     if (c == 0){
@@ -271,12 +263,10 @@ public class ViewLayer {
                     int c = choice.nextInt();
                     if(c == 1){
                         List<Client> sortedClients = clientList.sortByLostMoneyAsc();
-                        printClients(sortedClients);
                         loggedInManager();
                     }
                     if (c == 2){
                         List<Client> sortedClients = clientList.sortByLostMoneyDsc();
-                        printClients(sortedClients);
                         loggedInManager();
                     }
                     if (c == 0){

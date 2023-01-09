@@ -12,7 +12,6 @@ public class ClientController extends ClientRepositoryMemory{
 
     public ClientRepositoryMemory repo = new ClientRepositoryMemory();
 
-
     public ClientController() {
         super();
     }
@@ -36,14 +35,14 @@ public class ClientController extends ClientRepositoryMemory{
     @Override
     public void update(Integer id, Client newEntity) {
 
-        super.update(id, newEntity);getTable();
-        printAllClients();
+        super.update(id, newEntity);
     }
 
     @Override
-    public void printAllClients()
+    public void printAllClients(List<Client> clientList)
     {
-        super.printAllClients();
+
+        super.printAllClients(clientList);
     }
 
     @Override
@@ -52,13 +51,10 @@ public class ClientController extends ClientRepositoryMemory{
     }
 
     public List<Client> sortByIdAsc(){
-        printAllClients();
         repo.getTable();
-        System.out.println();
-        printAllClients();
-        System.out.println();
         List<Client> sortedClients = repo.getAllClients();
         sortedClients.sort(Comparator.comparing(Client::getIdClient));
+        repo.printAllClients(sortedClients);
         return sortedClients;
     }
 
@@ -66,6 +62,7 @@ public class ClientController extends ClientRepositoryMemory{
         repo.getTable();
         List<Client> sortedClients = repo.getAllClients();
         sortedClients.sort(Comparator.comparing(Client::getIdClient).reversed());
+        repo.printAllClients(sortedClients);
         return sortedClients;
     }
 
@@ -73,12 +70,14 @@ public class ClientController extends ClientRepositoryMemory{
         repo.getTable();
         List<Client> sortedClients = repo.getAllClients();
         sortedClients.sort(Comparator.comparing(Client::getName));
+        repo.printAllClients(sortedClients);
         return sortedClients;
     }
     public List<Client> sortByNameDsc(){
         repo.getTable();
         List<Client> sortedClients = repo.getAllClients();
         sortedClients.sort(Comparator.comparing(Client::getName).reversed());
+        repo.printAllClients(sortedClients);
         return sortedClients;
 
     }
@@ -87,12 +86,14 @@ public class ClientController extends ClientRepositoryMemory{
         repo.getTable();
         List<Client> sortedClients = repo.getAllClients();
         sortedClients.sort(Comparator.comparing(Client::getAge));
+        repo.printAllClients(sortedClients);
         return sortedClients;
     }
     public List<Client> sortByAgeDsc(){
         repo.getTable();
         List<Client> sortedClients = repo.getAllClients();
         sortedClients.sort(Comparator.comparing(Client::getAge).reversed());
+        repo.printAllClients(sortedClients);
         return sortedClients;
     }
 
@@ -100,12 +101,14 @@ public class ClientController extends ClientRepositoryMemory{
         repo.getTable();
         List<Client> sortedClients = repo.getAllClients();
         sortedClients.sort(Comparator.comparing(Client::getWonMoney));
+        repo.printAllClients(sortedClients);
         return sortedClients;
     }
     public List<Client> sortByWonMoneyDsc(){
         repo.getTable();
         List<Client> sortedClients = repo.getAllClients();
         sortedClients.sort(Comparator.comparing(Client::getWonMoney).reversed());
+        repo.printAllClients(sortedClients);
         return sortedClients;
     }
 
@@ -113,6 +116,7 @@ public class ClientController extends ClientRepositoryMemory{
         repo.getTable();
         List<Client> sortedClients = repo.getAllClients();
         sortedClients.sort(Comparator.comparing(Client::getLostMoney));
+        repo.printAllClients(sortedClients);
         return sortedClients;
     }
 
@@ -120,6 +124,7 @@ public class ClientController extends ClientRepositoryMemory{
         repo.getTable();
         List<Client> sortedClients = repo.getAllClients();
         sortedClients.sort(Comparator.comparing(Client::getLostMoney).reversed());
+        repo.printAllClients(sortedClients);
         return sortedClients;
     }
 
