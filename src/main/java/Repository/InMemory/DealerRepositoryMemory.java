@@ -28,6 +28,7 @@ public class DealerRepositoryMemory implements CrudRepo<Integer, Dealer> {
     }
 
     private void fetch(){
+        //Cream conexiunea dintre baza de date si program
         factory = Persistence.createEntityManagerFactory("default");
         manager = factory.createEntityManager();
         allDealers = (ArrayList<Dealer>) manager.createQuery("SELECT dealer FROM Dealer dealer").getResultList();
@@ -62,7 +63,8 @@ public class DealerRepositoryMemory implements CrudRepo<Integer, Dealer> {
     }
 
     public void addList(Dealer entity) {
-            String jpql = "FROM User WHERE name = :username AND password = :password";
+        //cautam daca exista combinatia de user parola pentru a putea fi adaugata in cazul in care nu se gaseste
+        String jpql = "FROM User WHERE name = :username AND password = :password";
             TypedQuery<User> query = manager.createQuery(jpql, User.class);
             query.setParameter("username", entity.getName());
             query.setParameter("password", entity.getPassword());
@@ -81,6 +83,8 @@ public class DealerRepositoryMemory implements CrudRepo<Integer, Dealer> {
 
     @Override
     public void delete(Dealer entity) {
+        //cautam clientul dupa id si il stergem in momentul in care il gasim
+
         TypedQuery<Dealer> query = manager.createQuery("SELECT d FROM Dealer d WHERE d.idDealer = :idDealer", Dealer.class);
         query.setParameter("idDealer", entity.getIdDealer());
         Dealer dealer = query.getSingleResult();
@@ -95,6 +99,7 @@ public class DealerRepositoryMemory implements CrudRepo<Integer, Dealer> {
 
     @Override
     public void update(Integer id, Dealer newEntity) {
+        //Cautam dupa id si facem update la campurile necesare
         TypedQuery<Dealer> query = manager.createQuery("SELECT d FROM Dealer d WHERE d.idDealer = :idDealer", Dealer.class);
         query.setParameter("idDealer", id);
         Dealer dealer = query.getSingleResult();
@@ -127,6 +132,7 @@ public class DealerRepositoryMemory implements CrudRepo<Integer, Dealer> {
     }
 
     public List<Dealer> getTable(){
+        //actualizam lista dupa datele stocate in tabel
         manager.getTransaction().begin();
         allDealers = (ArrayList<Dealer>) manager.createQuery("SELECT dealer FROM Dealer dealer").getResultList();
         manager.getTransaction().commit();

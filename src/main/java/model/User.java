@@ -1,16 +1,15 @@
 package model;
 
-import net.bytebuddy.build.CachedReturnPlugin;
-
 import javax.persistence.*;
 
-@Entity
-@Table(name = "Users")
-@Inheritance(strategy = InheritanceType.JOINED)
+@Entity //Pentru a fi creat tabelul
+@Table(name = "Users") //In ce tabel vor fi stocate datele
+@Inheritance(strategy = InheritanceType.JOINED) //Pentru crearea relatiilor de mostenire intre User-Client si User-Dealer
 @DiscriminatorColumn(name = "type", discriminatorType = DiscriminatorType.STRING)
+//Diferentierea useri-lor cine este Dealer, respectiv Client
 public abstract class User {
 
-    @Id
+    @Id //Stabilirea cheii Primare
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int idUser;
     private String name;

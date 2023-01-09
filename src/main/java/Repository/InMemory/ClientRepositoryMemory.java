@@ -28,7 +28,7 @@ public class ClientRepositoryMemory implements CrudRepo<Integer, Client> {
         return this.allClients;
     }
 
-    private void fetch(){
+    private void fetch(){ //Cream conexiunea dintre baza de date si program
         factory= Persistence.createEntityManagerFactory("default");
         em = factory.createEntityManager();
         allClients = (ArrayList<Client>) em.createQuery("Select client from Client client").getResultList();
@@ -56,7 +56,8 @@ public class ClientRepositoryMemory implements CrudRepo<Integer, Client> {
         addList(client8);
         addList(client9);
     }
-    public void addList(Client client){ //functioneaza cu tot cu modoficare tabel si lista
+    public void addList(Client client){
+        //cautam daca exista combinatia de user parola pentru a putea fi adaugata in cazul in care nu se gaseste
         String jpql = "FROM User WHERE name = :username AND password = :password";
         TypedQuery<User> query = em.createQuery(jpql, User.class);
         query.setParameter("username", client.getName());
@@ -73,7 +74,8 @@ public class ClientRepositoryMemory implements CrudRepo<Integer, Client> {
         }
     }
 
-    public void delete(Client entity) {//functioneaza cu tot cu modoficare tabel si lista
+    public void delete(Client entity) {
+        //cautam clientul dupa id si il stergem in momentul in care il gasim
         TypedQuery<Client> query = em.createQuery("SELECT c FROM Client c WHERE c.idClient = :idClient", Client.class);
         query.setParameter("idClient", entity.getIdClient());
         Client client = query.getSingleResult();
@@ -87,10 +89,7 @@ public class ClientRepositoryMemory implements CrudRepo<Integer, Client> {
     }
 
     public void update(Integer id, Client newEntity) {
-        //la update trebuie vazut ca ase adauga in tabel, functia get table
-        //functioneaza dar cand vine vorba de sorturi functiile respective lucreaza cu tabelul vechi, desi la add si remove
-        //nu e problema asta si e la fel
-
+        //Cautam dupa id si facem update la campurile necesare
         TypedQuery<Client> query = em.createQuery("SELECT c FROM Client c WHERE c.idClient = :idClient", Client.class);
         query.setParameter("idClient", id);
         Client client = query.getSingleResult();
@@ -140,6 +139,7 @@ public class ClientRepositoryMemory implements CrudRepo<Integer, Client> {
 
 
     public List<Client> getTable(){
+        //actualizam lista dupa datele stocate in tabel
         em.getTransaction().begin();
         allClients = (ArrayList<Client>) em.createQuery("SELECT client FROM Client client").getResultList();
         em.getTransaction().commit();

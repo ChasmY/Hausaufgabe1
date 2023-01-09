@@ -29,6 +29,7 @@ public class ManagerRepositoryMemory implements CrudRepo<Integer, Manager> {
 
 
     private void fetch(){
+        //Cream conexiunea dintre baza de date si program
         factory= Persistence.createEntityManagerFactory("default");
         em = factory.createEntityManager();
         allManagers = (ArrayList<Manager>) em.createQuery("Select manager from Manager manager").getResultList();
@@ -41,6 +42,7 @@ public class ManagerRepositoryMemory implements CrudRepo<Integer, Manager> {
     }
 
     public void addList(Manager entity){
+        //cautam daca exista combinatia de user parola pentru a putea fi adaugata in cazul in care nu se gaseste
         String jpql = "FROM Manager WHERE newUsername = :username AND newPassword = :password";
         TypedQuery<Manager> query = em.createQuery(jpql, Manager.class);
         query.setParameter("username", entity.getNewUsername());
@@ -60,6 +62,8 @@ public class ManagerRepositoryMemory implements CrudRepo<Integer, Manager> {
 
     @Override
     public void delete(Manager entity) {
+        //cautam clientul dupa id si il stergem in momentul in care il gasim
+
         TypedQuery<Manager> query = em.createQuery("SELECT m FROM Manager m WHERE m.idManager = :idManager", Manager.class);
         query.setParameter("idManager", entity.getIdManager());
         Manager manager = query.getSingleResult();
@@ -76,6 +80,7 @@ public class ManagerRepositoryMemory implements CrudRepo<Integer, Manager> {
 
     @Override
     public void update(Integer id, Manager newEntity) {
+        //Cautam dupa id si facem update la campurile necesare
         TypedQuery<Manager> query = em.createQuery("SELECT m FROM Manager m WHERE m.idManager = :idManager", Manager.class);
         query.setParameter("idManager", id);
         Manager manager = query.getSingleResult();
@@ -114,6 +119,7 @@ public class ManagerRepositoryMemory implements CrudRepo<Integer, Manager> {
 
 
     public List<Manager> getTable(){
+        //actualizam lista dupa datele stocate in tabel
         em.getTransaction().begin();
         allManagers = (ArrayList<Manager>) em.createQuery("SELECT manager FROM Manager manager").getResultList();
         em.getTransaction().commit();

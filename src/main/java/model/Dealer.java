@@ -6,12 +6,12 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
-@Table(name = "Dealers")
-@DiscriminatorValue("Dealer")
+@Entity //Pentru a fi creat tabelul
+@Table(name = "Dealers") //Mentionam in ce tabel sunt stocate datele
+@DiscriminatorValue("Dealer") //Stabilim tipul user-ului ce va fi salvat in tabela "Useri
 public class Dealer extends User {
 
-    @JoinColumn(name = "idUser")
+    @JoinColumn(name = "idDealer") //pentru a lega cheia principala de cea secundara
     private int idDealer;
 
     @Transient

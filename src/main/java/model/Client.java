@@ -1,14 +1,16 @@
 package model;
 
-import org.hibernate.mapping.Join;
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.Table;
 
-import javax.persistence.*;
-
-@Entity
-@Table(name = "Clients")
-@DiscriminatorValue("Client")
+@Entity //Pentru a fi creat tabelul
+@Table(name = "Clients") //Mentionam in ce tabel sunt stocate datele
+@DiscriminatorValue("Client") //Stabilim tipul user-ului ce va fi salvat in tabela "Useri
 public class Client extends User {
 
+    @JoinColumn(name = "idClient") //pentru a lega cheia principala de cea secundara
     private int idClient;
     private int currentMoney;
     private int wonMoney;

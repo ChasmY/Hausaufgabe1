@@ -1,9 +1,12 @@
 package model;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Entity
-@Table(name = "Managers")
+@Entity //Pentru a fi creat tabelul
+@Table(name = "Managers") //Mentionam in ce tabel sunt stocate datele
 public class Manager {
 
     @Id
