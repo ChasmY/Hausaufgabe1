@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="523049e1-cd1c-4141-8df9-dc554d96a24f" name="Changes" comment="tot gata, in afara de:&#10;DB&#10;comentarii">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ViewLayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ViewLayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/Games/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Games/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/Games/Roulette.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Games/Roulette.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,6 +225,8 @@
       <workItem from="1672227251046" duration="1295000" />
       <workItem from="1672763642039" duration="749000" />
       <workItem from="1672841194715" duration="230000" />
+      <workItem from="1673267778449" duration="3517000" />
+      <workItem from="1673715616641" duration="4000000" />
     </task>
     <task id="LOCAL-00001" summary="Second">
       <created>1666629431147</created>

@@ -4,7 +4,9 @@ import Repository.Games.Gamble;
 
 import java.lang.Object;
 import java.lang.Character;
+
 import java.util.Random;
+
 import java.util.Scanner;
 
 public class Roulette extends Gamble {
@@ -91,7 +93,7 @@ public class Roulette extends Gamble {
                     number = keyboard.nextInt();
                 }
             }
-            rouletteNum = generator.nextInt(37);
+            rouletteNum = generator.nextInt(36);
             spin++;
             System.out.println("Roulette number: " + rouletteNum);
 

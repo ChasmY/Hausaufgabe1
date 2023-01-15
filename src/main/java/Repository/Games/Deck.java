@@ -1,4 +1,5 @@
 package Repository.Games;
+
 import java.util.Random;
 
 public class Deck
